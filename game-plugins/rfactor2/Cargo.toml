@@ -1,0 +1,36 @@
+[package]
+name = "rfactor2-smmp"
+version = "3.0.1"
+edition = "2021"
+license = "GPL-3.0-or-later"
+description = "1:1 Rust rebuild of SRS's rFactor2SharedMemoryMapPlugin64.dll (rF2 Shared Memory Map Plugin v3.0.1.0: rFactor 2 / LMU InternalsPluginV07 -> $rFactor2SMMP_*$ shared memory)"
+publish = false
+
+# Stand-alone project: not a member of the repository's root workspace.
+# harness/ (rf2-host.exe) loads a plugin DLL the way rFactor 2 does, drives a
+# fixed scenario and dumps the mappings and log files; fake-scr/ is a stand-in
+# StockCarRules.dll that records the calls forwarded to it.
+[workspace]
+members = []
+
+[lib]
+name = "rfactor2_smmp"
+crate-type = ["staticlib", "rlib"]
+path = "src/lib.rs"
+doctest = false
+
+[features]
+# The DLL is no_std; `std` is only for linking the crate into std programs.
+std = []
+
+[dependencies]
+
+[profile.release]
+opt-level = 2
+panic = "abort"
+lto = true
+codegen-units = 1
+strip = true
+
+[profile.dev]
+panic = "abort"

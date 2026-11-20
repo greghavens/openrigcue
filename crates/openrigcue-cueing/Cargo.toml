@@ -1,0 +1,20 @@
+[package]
+name = "openrigcue-cueing"
+description = "Motion cueing for openrigcue: telemetry to actuator positions, reproducing the SRS motion helpers"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+
+[dependencies]
+openrigcue-model.workspace = true
+serde.workspace = true
+toml.workspace = true
+thiserror.workspace = true
+rand.workspace = true
+num-bigint = "0.4.8"
+num-traits = "0.2.19"
+tracing.workspace = true
+
+[lints]
+workspace = true

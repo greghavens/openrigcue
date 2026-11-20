@@ -1,0 +1,4 @@
+LIBRARY "ets2-telemetry.dll"
+EXPORTS
+    scs_telemetry_init@8
+    scs_telemetry_shutdown@0

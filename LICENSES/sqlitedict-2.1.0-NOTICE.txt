@@ -1,0 +1,11 @@
+OpenRigCue's queued SQLite request/response worker and pending dictionary
+boundaries are a Rust adaptation of SqliteDict/SqliteMultithread in sqlitedict
+2.1.0, distributed under the Apache License, Version 2.0. The original license
+accompanies this file as sqlitedict-2.1.0.txt.
+
+Source: https://github.com/piskvorky/sqlitedict/tree/2.1.0
+
+Changes: translated the request queue, weak response queues, producer error
+guards, deferred exception delivery, transaction barriers and close behavior
+into Rust using rusqlite. Python pickle objects, logging stack traces and the
+original module/application startup are not included in this implementation.

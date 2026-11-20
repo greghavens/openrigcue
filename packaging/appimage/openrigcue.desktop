@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=OpenRigCue
+Comment=Motion cueing and sim effects for motion platforms, shakers, wind and LEDs
+Exec=openrigcue run
+Icon=openrigcue
+Terminal=true
+Categories=Game;Simulation;

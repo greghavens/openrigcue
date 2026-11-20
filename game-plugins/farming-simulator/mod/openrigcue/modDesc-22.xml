@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<modDesc descVersion="61">
+    <author>OpenRigCue contributors</author>
+    <version>1.0.8.0</version>
+    <title><en>OpenRigCue Telemetry</en><de>OpenRigCue Telemetrie</de></title>
+    <description><en>Motion and accessory telemetry for OpenRigCue.</en><de>Telemetrie für OpenRigCue.</de></description>
+    <iconFilename>icon.png</iconFilename>
+    <multiplayer supported="true"/>
+    <extraSourceFiles><sourceFile filename="TelemetryMod.lua"/></extraSourceFiles>
+</modDesc>

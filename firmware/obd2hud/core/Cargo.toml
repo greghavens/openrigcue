@@ -1,0 +1,9 @@
+[package]
+name = "obd2hud-core"
+description = "Target-independent logic of the OBD2HUD firmware rebuild (protocol encoders/decoders and layouts)"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+publish.workspace = true
+
+[dependencies]

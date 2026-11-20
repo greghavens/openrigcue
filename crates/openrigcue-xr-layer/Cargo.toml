@@ -1,0 +1,38 @@
+[package]
+name = "openrigcue-xr-layer"
+description = "Linux implicit OpenXR API layer that removes motion-rig movement from headset, controller and composition-layer poses"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+# openxr-sys 0.14 is an edition-2024 crate.
+rust-version = "1.85"
+publish = false
+
+[lib]
+# cdylib: libopenrigcue_xr_layer.so, loaded by the OpenXR loader. rlib: in-process tests.
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+openrigcue-rigpose = { path = "../openrigcue-rigpose", version = "0.2.0" }
+openxr-sys = "0.14.0"
+libc = "0.2.189"
+
+[dev-dependencies]
+tempfile = "3.20"
+serde_json = "1.0.151"
+
+# The workspace forbids unsafe code. This crate is a C-ABI plug-in, so it opts out locally; every
+# unsafe block is in src/ffi.rs (or the fake runtime used by the tests) and carries a SAFETY comment.
+[lints.rust]
+unsafe_code = "allow"
+unsafe_op_in_unsafe_fn = "deny"
+
+[lints.clippy]
+all = { level = "warn", priority = -1 }
+undocumented_unsafe_blocks = "warn"
+
+# A fake OpenXR runtime loaded by the system loader in tests/real_loader.rs.
+[[example]]
+name = "fake_runtime"
+crate-type = ["cdylib"]

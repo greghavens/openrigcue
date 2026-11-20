@@ -1,0 +1,45 @@
+[package]
+name = "openrigcue-effects"
+description = "Bass shakers and accessories: shaker synthesis, wind, belt tensioner, LEDs, Intellibox"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+
+[dependencies]
+openrigcue-model.workspace = true
+thiserror.workspace = true
+tracing.workspace = true
+lewton = "0.10.2"
+hound = "3.5.1"
+lzma-rs = "0.3.0"
+cpal = "0.15.3"
+libloading = "0.8.9"
+# accessories (unit 'accessories'): serial transports and port enumeration, handshake nonces
+serialport.workspace = true
+rand.workspace = true
+# accessories: local wall-clock time of the motion-compensation CSV log
+chrono = { version = "0.4.45", default-features = false, features = ["clock", "std"] }
+# obd2hud: BlueZ D-Bus client of the OBD2HUD transport
+zbus = { version = "5.19.0", default-features = false, features = ["async-io", "blocking-api"] }
+futures-util = { version = "0.3.34", default-features = false }
+serde.workspace = true
+serde_json = "1"
+
+[dev-dependencies]
+tempfile = "3"
+
+# accessories: kernel/udev device events that wake the accessory connection scan (netlink)
+[target.'cfg(target_os = "linux")'.dependencies]
+nix = { version = "0.29.0", features = ["socket", "uio"] }
+alsa = "0.9"
+
+# The workspace sets `unsafe_code = "forbid"`, which no inner `allow` can lift. The FMOD FFI
+# (`src/shakers/fmod/ffi.rs`) cannot be written without `unsafe`, so this crate
+# uses `deny` and only that module opts out with `#![allow(unsafe_code)]`. The other workspace
+# lints are repeated unchanged.
+[lints.rust]
+unsafe_code = "deny"
+
+[lints.clippy]
+all = { level = "warn", priority = -1 }

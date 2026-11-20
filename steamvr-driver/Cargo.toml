@@ -1,0 +1,34 @@
+[package]
+name = "openrigcue-steamvr-simracingstudio"
+version = "0.1.0"
+edition = "2021"
+description = "1:1 Rust rebuild of SRS's SteamVR driver driver_simracingstudio (virtual tracker fed by Local\\SimRacingStudioMotionRigPose), built as a Linux SteamVR driver"
+license = "GPL-3.0-or-later"
+publish = false
+
+# Stand-alone project: not a member of the repository workspace.
+[workspace]
+
+[lib]
+name = "driver_simracingstudio"
+path = "src/lib.rs"
+crate-type = ["cdylib", "rlib"]
+
+[features]
+# Test builds only: named sections are looked up in $OPENRIGCUE_TEST_MIRROR_DIR instead of /dev/shm/openrigcue,
+# so the test harness (tools/harness) can run the driver without touching /dev.
+test-mirror-dir = []
+
+[dependencies]
+libc = "0.2"
+
+[dev-dependencies]
+# musl's cos/sin, for host tests of the trigonometry.
+libm = "0.2"
+
+[profile.release]
+debug = 1
+panic = "abort"
+
+[profile.dev]
+panic = "abort"

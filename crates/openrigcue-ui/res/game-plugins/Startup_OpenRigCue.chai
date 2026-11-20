@@ -1,0 +1,35 @@
+// OpenRigCue telemetry for FlyInside Flight Simulator.
+//
+// Place this file in the simulator's Data/Scripts folder and restart the simulator. On every rendered
+// frame it sends one UDP datagram to OpenRigCue with seven comma-separated numbers:
+// true airspeed, bank, pitch, heading (degrees), then the aircraft's forward, sideways and vertical
+// acceleration.
+
+// Where OpenRigCue listens. Change the address when OpenRigCue runs on another computer.
+global openRigCueHost = "127.0.0.1";
+global openRigCuePort = 31234;
+
+global openRigCueSocket = UDPSocket();
+global openRigCueTarget;
+
+def onStart()
+{
+  openRigCueTarget = createNetworkAddress(openRigCueHost, openRigCuePort);
+}
+
+def onGraphicsFrame()
+{
+  auto& aircraft = GetUserAircraft();
+  auto& variables = aircraft.getVariableProvider();
+
+  auto speed = variables.getValueFloat("Aircraft.Position.Airspeed.True", "number").to_string();
+  auto bank = variables.getValueFloat("Aircraft.Position.Bank.Value", "degrees").to_string();
+  auto pitch = variables.getValueFloat("Aircraft.Position.Pitch.Value", "degrees").to_string();
+  auto heading = variables.getValueFloat("Aircraft.Position.Heading.Value", "degrees").to_string();
+  auto forward = variables.getValueFloat("Aircraft.Acceleration.Local.Z", "number").to_string();
+  auto sideways = variables.getValueFloat("Aircraft.Acceleration.Local.X", "number").to_string();
+  auto vertical = variables.getValueFloat("Aircraft.Acceleration.Local.Y", "number").to_string();
+
+  auto datagram = speed + ", " + bank + ", " + pitch + ", " + heading + ", " + forward + ", " + sideways + ", " + vertical;
+  openRigCueSocket.sendData(openRigCueTarget, datagram);
+}

@@ -1,0 +1,30 @@
+[package]
+name = "rfactor1-smm"
+version = "1.0.0"
+edition = "2021"
+description = "1:1 Rust rebuild of SRS's SRS_Rfactor1.dll (rFactorSharedMemoryMap: rFactor 1 InternalsPluginV3 -> $rFactorShared$ shared memory)"
+publish = false
+
+# Stand-alone project: not a member of the repository's root workspace.
+# harness/ (rf1-host.exe) loads a plugin DLL the way rFactor does, drives a
+# fixed call sequence and dumps the mapping.
+[workspace]
+members = []
+
+[lib]
+name = "rfactor1_smm"
+crate-type = ["staticlib", "rlib"]
+path = "src/lib.rs"
+doctest = false
+
+[dependencies]
+
+[profile.release]
+opt-level = 2
+panic = "abort"
+lto = true
+codegen-units = 1
+strip = true
+
+[profile.dev]
+panic = "abort"

@@ -1,0 +1,36 @@
+# openrigcue: give the logged-in user access to the motion controllers, accessories and HID displays openrigcue drives,
+# and create stable names under /dev/openrigcue/. Install to /etc/udev/rules.d/ and replug the device:
+#   sudo install -m 0644 70-openrigcue.rules /etc/udev/rules.d/ && sudo udevadm control --reload
+#
+# Every id below is one a openrigcue driver looks for.
+# ModemManager is told to leave these serial adapters alone: probing a motion controller with AT commands
+# sends bytes to the rig.
+
+# WCH CH340 (1a86:7523): DOF Reality / SMC3 controller boxes, Intellibox, WitMotion IMU, SIM3D, iFlag.
+SUBSYSTEM=="tty", ATTRS{idVendor}=="1a86", ATTRS{idProduct}=="7523", TAG+="uaccess", ENV{ID_MM_DEVICE_IGNORE}="1", SYMLINK+="openrigcue/ch340-%k"
+# WCH CH9102 (1a86:55d4): HaptiCR ESP32 board. The iFlag scan accepts any WCH bridge (1a86:*).
+SUBSYSTEM=="tty", ATTRS{idVendor}=="1a86", ATTRS{idProduct}!="7523", TAG+="uaccess", ENV{ID_MM_DEVICE_IGNORE}="1", SYMLINK+="openrigcue/wch-%k"
+# STMicroelectronics virtual COM port (0483:5740): DOF Reality STM32 controller boxes.
+SUBSYSTEM=="tty", ATTRS{idVendor}=="0483", ATTRS{idProduct}=="5740", TAG+="uaccess", ENV{ID_MM_DEVICE_IGNORE}="1", SYMLINK+="openrigcue/stm32-%k"
+# DOF Reality STM32 firmware loader (HID, 0483:572a).
+SUBSYSTEM=="hidraw", ATTRS{idVendor}=="0483", ATTRS{idProduct}=="572a", TAG+="uaccess"
+# STM32 ROM USB DFU bootloader used by the native firmware maintenance tool.
+SUBSYSTEM=="usb", ATTR{idVendor}=="0483", ATTR{idProduct}=="df11", TAG+="uaccess"
+# FTDI FT232R (0403:6001): Thanos/AMC and PT-Actuator controllers, PROSIMU SCN6 Dyadic axes, SimTech Revolution,
+# Intellibox v5, belt tensioner bridge.
+SUBSYSTEM=="tty", ATTRS{idVendor}=="0403", ATTRS{idProduct}=="6001", TAG+="uaccess", ENV{ID_MM_DEVICE_IGNORE}="1", SYMLINK+="openrigcue/ftdi-%k"
+# Silicon Labs CP210x (10c4:ea60): belt tensioner ESP32 bridge.
+SUBSYSTEM=="tty", ATTRS{idVendor}=="10c4", ATTRS{idProduct}=="ea60", TAG+="uaccess", ENV{ID_MM_DEVICE_IGNORE}="1", SYMLINK+="openrigcue/cp210x-%k"
+# Arduino (2341:*): Intellibox v6 (Leonardo 2341:8036), Thanos main controller (Mega 2560 R3 2341:0042), SIM3D
+# (Uno R3 2341:0043); the iFlag scan accepts any Arduino.
+SUBSYSTEM=="tty", ATTRS{idVendor}=="2341", TAG+="uaccess", ENV{ID_MM_DEVICE_IGNORE}="1", SYMLINK+="openrigcue/arduino-%k"
+# SymProjects "gimax" gear indicator (HID, 04d8:0203).
+SUBSYSTEM=="hidraw", ATTRS{idVendor}=="04d8", ATTRS{idProduct}=="0203", TAG+="uaccess"
+
+# Hotkeys (Setup -> Shortcuts). Game controllers (joysticks, wheels, button boxes) need no line here: systemd's own
+# 70-uaccess.rules already tags every ID_INPUT_JOYSTICK device "uaccess" for the logged-in user.
+# Keyboards are not readable by the user on a standard desktop, so keyboard shortcuts need the line below.
+# It is OFF by default because it lets every program of the logged-in user read every keystroke (passwords
+# included), which is what Wayland normally prevents. openrigcue only reads key events (no grab, nothing is
+# injected); enable it only if you want keyboard shortcuts:
+# SUBSYSTEM=="input", KERNEL=="event*", ENV{ID_INPUT_KEYBOARD}=="1", TAG+="uaccess"

@@ -1,0 +1,15 @@
+# Cross-compilation environment for openrigcue-bridge.exe (x86_64-pc-windows-gnu).
+#
+#   podman build -t openrigcue-bridge-build -f crates/openrigcue-bridge/container/Containerfile crates/openrigcue-bridge/container
+#   podman run --rm -v "$PWD":/src:Z -w /src openrigcue-bridge-build \
+#       cargo build --release -p openrigcue-bridge --target x86_64-pc-windows-gnu
+#
+# The executable lands in target/x86_64-pc-windows-gnu/release/openrigcue-bridge.exe.
+FROM docker.io/library/debian:trixie
+RUN apt-get update \
+ && apt-get install -y --no-install-recommends ca-certificates curl gcc libc6-dev gcc-mingw-w64-x86-64 \
+ && rm -rf /var/lib/apt/lists/*
+ENV RUSTUP_HOME=/opt/rustup CARGO_HOME=/opt/cargo PATH=/opt/cargo/bin:$PATH
+RUN curl -sSf https://sh.rustup.rs | sh -s -- -y --profile minimal --default-toolchain 1.88.0 \
+      --target x86_64-pc-windows-gnu --component clippy \
+ && chmod -R a+rwX /opt/cargo /opt/rustup

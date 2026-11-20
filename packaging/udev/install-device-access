@@ -1,0 +1,9 @@
+#!/bin/sh
+# Called by the app through PolicyKit. Install only the bundled controller rules.
+set -eu
+[ "$#" -eq 1 ] && [ -f "$1" ] || exit 2
+install -Dm0644 -- "$1" /etc/udev/rules.d/70-openrigcue.rules
+udevadm control --reload-rules
+udevadm trigger --action=change --subsystem-match=tty
+udevadm trigger --action=change --subsystem-match=hidraw
+udevadm trigger --action=change --subsystem-match=usb

@@ -1,0 +1,16 @@
+[package]
+name = "openrigcue-esp-idf33-sys"
+version = "0.1.0"
+edition = "2021"
+links = "openrigcue_idf33"
+publish = false
+license = "MIT OR Apache-2.0"
+
+[workspace]
+
+[features]
+nimble = []
+
+[build-dependencies]
+bindgen = "=0.72.1"
+cc = "1"

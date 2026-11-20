@@ -1,0 +1,6 @@
+# Firmware bundled into the AppImage: device<TAB>repository-relative artifact<TAB>SHA256.
+# Only the OBD2HUD image is bundled. Other device firmware comes from the files imported from the user's SRS installer.
+# Device IDs the staging script accepts: intellibox-v5, intellibox-v6, belt, obd2hud.
+# obd2hud: built from this repository and NOT YET TESTED on a real OBD2HUD. It is sent to a HUD only when no
+# firmware has been imported from an SRS installer; an imported image always takes its place.
+obd2hud	firmware/obd2hud/release/firmware.bin	f18a60489df18172c9c81f10b404c0a8b0dd578ef7e0d27ac76ad743afbac8ed

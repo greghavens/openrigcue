@@ -1,0 +1,5 @@
+<ExtraConfig
+phys_out_sim="127.0.0.1:^port^"
+phys_out_sim_rate="3"
+phys_out_nitro_lean="0.5"
+/>

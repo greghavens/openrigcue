@@ -1,0 +1,35 @@
+[package]
+name = "ets2-telemetry"
+version = "0.1.0"
+edition = "2021"
+description = "1:1 Rust rebuild of SRS's ets2-telemetry.dll / ets2-telemetry_32.dll (SCS SDK telemetry plugin for ETS2/ATS -> shared memory Local\\SimTelemetryETS2)"
+publish = false
+
+# Stand-alone project: not a member of the repository's root workspace.
+# `harness` is a Windows test host (scs-host.exe) that loads a plugin DLL the
+# way the SCS games do and dumps what it does (verify/run.sh runs it under Wine).
+[workspace]
+members = []
+
+[lib]
+# cargo cannot name a lib with a hyphen; build.rs gives the DLL its
+# internal name (ets2-telemetry.dll) and scripts/build.sh copies the outputs to
+# their file names.
+name = "ets2_telemetry"
+crate-type = ["cdylib", "rlib"]
+path = "src/lib.rs"
+doctest = false
+
+[features]
+# The release DLL (no features) is no_std and imports only what the plugin
+# calls; `std` is for the scs-host harness, which links the plugin as an rlib.
+std = []
+
+[dependencies]
+
+[profile.release]
+opt-level = 2
+panic = "abort"
+lto = true
+codegen-units = 1
+strip = true

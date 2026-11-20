@@ -1,0 +1,24 @@
+# OpenRigCue OBD2HUD bridge firmware (ESP32): BLE GATT server that takes the
+# telemetry line and answers OBD-II (ISO 15765-4, 11-bit) PID requests on CAN as ECU 0x7E8,
+# plus the CmdMessenger serial identity protocol and BLE OTA.
+# Own workspace: not a member of the repository root workspace.
+[workspace]
+resolver = "2"
+members = ["core", "app"]
+default-members = ["core"]
+
+[workspace.package]
+version = "1.0.0"
+edition = "2021"
+license = "MIT OR Apache-2.0"
+publish = false
+
+[profile.release]
+opt-level = "s"
+lto = "fat"
+codegen-units = 1
+debug = true
+
+[profile.dev]
+opt-level = "z"
+debug = true

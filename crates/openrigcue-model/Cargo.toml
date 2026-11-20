@@ -1,0 +1,17 @@
+[package]
+name = "openrigcue-model"
+description = "Telemetry frame, units and shared data types for openrigcue"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+
+[dependencies]
+serde.workspace = true
+toml.workspace = true
+serde_json = { version = "1", features = ["preserve_order", "float_roundtrip", "raw_value"] }
+num-bigint = "0.4.8"
+num-traits = "0.2.19"
+
+[lints]
+workspace = true

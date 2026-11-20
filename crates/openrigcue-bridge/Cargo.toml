@@ -1,0 +1,51 @@
+[package]
+name = "openrigcue-bridge"
+description = "In-prefix helper that mirrors a Proton game's named shared memory and pipes to Linux for openrigcue"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+
+[[bin]]
+name = "openrigcue-bridge"
+path = "src/main.rs"
+
+[[bin]]
+name = "openrigcue-automation"
+path = "src/automation.rs"
+
+[dependencies]
+clap.workspace = true
+thiserror.workspace = true
+tracing.workspace = true
+tracing-subscriber.workspace = true
+serde_json = "1"
+openrigcue-model.workspace = true
+
+[target.'cfg(windows)'.dependencies]
+windows = { version = "0.54", features = ["Win32_System_Com", "Win32_System_Variant", "Win32_System_Environment", "Win32_System_LibraryLoader", "Win32_UI_Accessibility", "Win32_UI_WindowsAndMessaging", "Win32_UI_Input_KeyboardAndMouse"] }
+windows-sys = { version = "0.59", features = [
+    "Win32_Foundation",
+    "Win32_Networking_WinSock",
+    "Win32_Security",
+    "Win32_Storage_FileSystem",
+    "Win32_System_Console",
+    "Win32_System_IO",
+    "Win32_System_JobObjects",
+    "Win32_System_Memory",
+    "Win32_System_Pipes",
+    "Win32_System_Threading",
+] }
+
+# The mirror loopback test reads back through the Linux-side reader, which only builds on Unix.
+[target.'cfg(unix)'.dev-dependencies]
+openrigcue-sources = { path = "../openrigcue-sources" }
+
+# The workspace sets `unsafe_code = "forbid"`, which no inner `allow` can lift. The Win32 FFI in `src/windows/`
+# cannot be written without `unsafe`, so this crate uses `deny` instead and the `windows` module (and only it)
+# opts out with `#![allow(unsafe_code)]`. All other workspace lints are repeated unchanged.
+[lints.rust]
+unsafe_code = "deny"
+
+[lints.clippy]
+all = { level = "warn", priority = -1 }

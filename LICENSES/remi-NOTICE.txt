@@ -1,0 +1,4 @@
+crates/openrigcue-ui/src/remi/ contains a Rust port of remi, the Python GUI library
+(https://github.com/rawpython/remi), including its browser-side client script and wire
+format. remi is licensed under the Apache License, Version 2.0; the licence text is in
+LICENSES/Apache-2.0.txt.
