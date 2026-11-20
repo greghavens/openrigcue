@@ -1,0 +1,6 @@
+LIBRARY "rFactorSharedMemoryMap.dll"
+EXPORTS
+    GetPluginName @1
+    GetPluginObjectCount @2
+    GetPluginObjectInfo @3
+    GetPluginVersion @4

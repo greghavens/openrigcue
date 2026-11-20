@@ -1,0 +1,851 @@
+# Application tables: effect lists, the iFlag table, motion manufacturers, installer
+# languages and built-in shaker layout names. Do not edit.
+builtin_shaker_layouts = ["1 Speaker - Center", "2 Speakers - Center / Sub", "2 Speakers - Front Left / Right", "4 Speakers - FL,FR,RL,RR", "6 Speakers - 5.1", "SRS Shakebox Elite + Sub + Center", "SRS ShakeKit or SRS Shakebox Elite", "SRS UShake6", "SRS UShake6 Enhanced"]
+channels = ["FL", "FR", "CE", "SUB", "RL", "RR"]
+
+[installer_languages]
+"1033" = "en"
+"1025" = "ar"
+"1031" = "de"
+"3082" = "es"
+"1036" = "fr"
+"1040" = "it"
+"1041" = "ja"
+"1042" = "ko"
+"1043" = "nl"
+"2070" = "pt"
+"1066" = "vi"
+"2052" = "zh"
+
+[[shaker_effect]]
+id = "engine"
+label = "Engine"
+index = 2
+category = "Common"
+shortcut = false
+
+[[shaker_effect]]
+id = "gear"
+label = "Gear"
+index = 3
+category = "Racing"
+shortcut = false
+
+[[shaker_effect]]
+id = "suspension"
+label = "Suspension"
+index = 1
+category = "Racing"
+shortcut = false
+
+[[shaker_effect]]
+id = "road_bump"
+label = "Vert G"
+index = 0
+category = "Common"
+shortcut = false
+
+[[shaker_effect]]
+id = "impact"
+label = "Impact"
+index = 4
+category = "Common"
+shortcut = false
+
+[[shaker_effect]]
+id = "acceleration"
+label = "Long G Acceleration"
+index = 6
+category = "Common"
+shortcut = false
+
+[[shaker_effect]]
+id = "deceleration"
+label = "Long G Deceleration"
+index = 5
+category = "Common"
+shortcut = false
+
+[[shaker_effect]]
+id = "lateral_acceleration"
+label = "Lateral G"
+index = 7
+category = "Common"
+shortcut = false
+
+[[shaker_effect]]
+id = "traction_loss"
+label = "Traction Loss Rear"
+index = 8
+category = "Racing"
+shortcut = false
+
+[[shaker_effect]]
+id = "wheel_slip"
+label = "Wheel Slip / Lock"
+index = 9
+category = "Racing"
+shortcut = false
+
+[[shaker_effect]]
+id = "afterburner"
+label = "Afterburner"
+index = 10
+category = "Flight"
+shortcut = false
+
+[[shaker_effect]]
+id = "cannon_firing"
+label = "Cannon Firing"
+index = 11
+category = "Flight"
+shortcut = true
+
+[[shaker_effect]]
+id = "canopy"
+label = "Canopy"
+index = 13
+category = "Flight"
+shortcut = false
+
+[[shaker_effect]]
+id = "landing_gear"
+label = "Landing Gear"
+index = 12
+category = "Flight"
+shortcut = false
+
+[[shaker_effect]]
+id = "missile_firing"
+label = "Missile Firing"
+index = 11
+category = "Flight"
+shortcut = true
+
+[[shaker_effect]]
+id = "abs_lock"
+label = "ABS Lock"
+index = 15
+category = "Racing"
+shortcut = false
+
+[[shaker_effect]]
+id = "touchdown"
+label = "Touchdown"
+index = 16
+category = "Flight"
+shortcut = false
+
+[[shaker_effect]]
+id = "turbulence"
+label = "Turbulence"
+index = 17
+category = "Flight"
+shortcut = false
+
+[[shaker_channel_effect]]
+id = "engine"
+name = "Engine"
+parent = ""
+visible = true
+
+[[shaker_channel_effect]]
+id = "gear"
+name = "Gear"
+parent = ""
+visible = true
+
+[[shaker_channel_effect]]
+id = "afterburner"
+name = "Afterburner"
+parent = ""
+visible = true
+
+[[shaker_channel_effect]]
+id = "cannon_firing"
+name = "Cannon Firing"
+parent = ""
+visible = true
+
+[[shaker_channel_effect]]
+id = "missile_firing"
+name = "Missile Firing"
+parent = ""
+visible = true
+
+[[shaker_channel_effect]]
+id = "landing_gear_left"
+name = "Left"
+parent = "Landing Gear"
+visible = true
+
+[[shaker_channel_effect]]
+id = "landing_gear_nose"
+name = "Nose"
+parent = "Landing Gear"
+visible = true
+
+[[shaker_channel_effect]]
+id = "landing_gear_right"
+name = "Right"
+parent = "Landing Gear"
+visible = true
+
+[[shaker_channel_effect]]
+id = "touchdown_left"
+name = "Left"
+parent = "Touchdown"
+visible = true
+
+[[shaker_channel_effect]]
+id = "touchdown_nose"
+name = "Nose"
+parent = "Touchdown"
+visible = true
+
+[[shaker_channel_effect]]
+id = "touchdown_right"
+name = "Right"
+parent = "Touchdown"
+visible = true
+
+[[shaker_channel_effect]]
+id = "turbulence"
+name = "Turbulence"
+parent = ""
+visible = true
+
+[[shaker_channel_effect]]
+id = "canopy"
+name = "Canopy"
+parent = ""
+visible = true
+
+[[shaker_channel_effect]]
+id = "suspension_lf"
+name = "Front Left"
+parent = "Suspension"
+visible = true
+
+[[shaker_channel_effect]]
+id = "suspension_rf"
+name = "Front Right"
+parent = "Suspension"
+visible = true
+
+[[shaker_channel_effect]]
+id = "suspension_lr"
+name = "Rear Left"
+parent = "Suspension"
+visible = true
+
+[[shaker_channel_effect]]
+id = "suspension_rr"
+name = "Rear Right"
+parent = "Suspension"
+visible = true
+
+[[shaker_channel_effect]]
+id = "wheel_slip_lf"
+name = "Front Left"
+parent = "Wheel Slip / Lock"
+visible = true
+
+[[shaker_channel_effect]]
+id = "wheel_slip_rf"
+name = "Front Right"
+parent = "Wheel Slip / Lock"
+visible = true
+
+[[shaker_channel_effect]]
+id = "wheel_slip_lr"
+name = "Rear Left"
+parent = "Wheel Slip / Lock"
+visible = true
+
+[[shaker_channel_effect]]
+id = "wheel_slip_rr"
+name = "Rear Right"
+parent = "Wheel Slip / Lock"
+visible = true
+
+[[shaker_channel_effect]]
+id = "road_bump"
+name = "Vert G"
+parent = ""
+visible = true
+
+[[shaker_channel_effect]]
+id = "brake"
+name = "Long G Deceleration"
+parent = "Long G Deceleration"
+visible = false
+
+[[shaker_channel_effect]]
+id = "abs_lock"
+name = "ABS Lock"
+parent = ""
+visible = true
+
+[[shaker_channel_effect]]
+id = "accel"
+name = "Long G Acceleration"
+parent = "Long G Acceleration"
+visible = false
+
+[[shaker_channel_effect]]
+id = "impact"
+name = "Impact"
+parent = ""
+visible = true
+
+[[shaker_channel_effect]]
+id = "brake_lf"
+name = "Front Left"
+parent = "Long G Deceleration"
+visible = true
+
+[[shaker_channel_effect]]
+id = "brake_rf"
+name = "Front Right"
+parent = "Long G Deceleration"
+visible = true
+
+[[shaker_channel_effect]]
+id = "accel_lr"
+name = "Rear Left"
+parent = "Long G Acceleration"
+visible = true
+
+[[shaker_channel_effect]]
+id = "accel_rr"
+name = "Rear Right"
+parent = "Long G Acceleration"
+visible = true
+
+[[shaker_channel_effect]]
+id = "lat_l"
+name = "Left"
+parent = "Lateral G"
+visible = true
+
+[[shaker_channel_effect]]
+id = "lat_r"
+name = "Right"
+parent = "Lateral G"
+visible = true
+
+[[shaker_channel_effect]]
+id = "traction_loss_l"
+name = "Rear Left"
+parent = "Traction Loss Rear"
+visible = true
+
+[[shaker_channel_effect]]
+id = "traction_loss_r"
+name = "Rear Right"
+parent = "Traction Loss Rear"
+visible = true
+
+[[motion_effect]]
+id = "pitch"
+label = "Pitch"
+allow_max = true
+category = "Common"
+shortcut = false
+intellitune = true
+
+[[motion_effect]]
+id = "roll"
+label = "Roll"
+allow_max = true
+category = "Common"
+shortcut = false
+intellitune = true
+
+[[motion_effect]]
+id = "yaw"
+label = "Yaw"
+allow_max = true
+category = "Common"
+shortcut = false
+intellitune = true
+
+[[motion_effect]]
+id = "sway"
+label = "Lat G Sway"
+allow_max = true
+category = "Common"
+shortcut = false
+intellitune = true
+
+[[motion_effect]]
+id = "surge_acceleration"
+label = "Long G Surge Accel"
+allow_max = true
+category = "Common"
+shortcut = false
+intellitune = true
+
+[[motion_effect]]
+id = "surge_deceleration"
+label = "Long G Surge Decel"
+allow_max = true
+category = "Common"
+shortcut = false
+intellitune = true
+
+[[motion_effect]]
+id = "heave"
+label = "Vert G Heave"
+allow_max = true
+category = "Common"
+shortcut = false
+intellitune = true
+
+[[motion_effect]]
+id = "traction_loss"
+label = "Traction Loss Rear"
+allow_max = true
+category = "Racing"
+shortcut = false
+intellitune = true
+
+[[motion_effect]]
+id = "traction_loss_front"
+label = "Traction Loss Front"
+allow_max = true
+category = "Racing"
+shortcut = false
+intellitune = false
+
+[[motion_effect]]
+id = "wheel_slip"
+label = "Wheel Slip / Lock"
+allow_max = false
+category = "Racing"
+shortcut = false
+intellitune = true
+
+[[motion_effect]]
+id = "rumble_strips"
+label = "Rumble Strips"
+allow_max = false
+category = "Racing"
+shortcut = false
+intellitune = true
+
+[[motion_effect]]
+id = "engine"
+label = "Engine Haptic"
+allow_max = false
+category = "Common"
+shortcut = false
+intellitune = false
+
+[[motion_effect]]
+id = "afterburner"
+label = "Afterburner"
+allow_max = false
+category = "Flight"
+shortcut = false
+intellitune = false
+
+[[motion_effect]]
+id = "cannon_firing"
+label = "Cannon Firing"
+allow_max = false
+category = "Flight"
+shortcut = true
+intellitune = false
+
+[[motion_effect]]
+id = "canopy"
+label = "Canopy"
+allow_max = false
+category = "Flight"
+shortcut = false
+intellitune = false
+
+[[motion_effect]]
+id = "landing_gear"
+label = "Landing Gear"
+allow_max = false
+category = "Flight"
+shortcut = false
+intellitune = false
+
+[[motion_effect]]
+id = "missile_firing"
+label = "Missile Firing"
+allow_max = false
+category = "Flight"
+shortcut = true
+intellitune = false
+
+[[motion_effect]]
+id = "abs_lock"
+label = "ABS Lock"
+allow_max = false
+category = "Racing"
+shortcut = false
+intellitune = false
+
+[[rumble_effect]]
+id = "throttle_wheel_slip"
+group = "throttle"
+label = "Wheel Slip"
+
+[[rumble_effect]]
+id = "throttle_gear"
+group = "throttle"
+label = "Gear"
+
+[[rumble_effect]]
+id = "throttle_heave"
+group = "throttle"
+label = "Heave"
+
+[[rumble_effect]]
+id = "throttle_rumble_strips"
+group = "throttle"
+label = "Rumble Strips"
+
+[[rumble_effect]]
+id = "throttle_surge_acceleration"
+group = "throttle"
+label = "Long G Surge Acceleration"
+
+[[rumble_effect]]
+id = "throttle_traction_loss"
+group = "throttle"
+label = "Traction Loss"
+
+[[rumble_effect]]
+id = "throttle_engine"
+group = "throttle"
+label = "Engine Haptic"
+
+[[rumble_effect]]
+id = "brake_wheel_slip"
+group = "brake"
+label = "Wheel Lock"
+
+[[rumble_effect]]
+id = "brake_abs_lock"
+group = "brake"
+label = "ABS Lock"
+
+[[rumble_effect]]
+id = "brake_surge_deceleration"
+group = "brake"
+label = "Long G Surge Deceleration"
+
+[[rumble_effect]]
+id = "brake_gear"
+group = "brake"
+label = "Gear"
+
+[[rumble_effect]]
+id = "brake_heave"
+group = "brake"
+label = "Heave"
+
+[[rumble_effect]]
+id = "brake_rumble_strips"
+group = "brake"
+label = "Rumble Strips"
+
+[[rumble_effect]]
+id = "brake_traction_loss"
+group = "brake"
+label = "Traction Loss"
+
+[[rumble_effect]]
+id = "clutch_gear"
+group = "clutch"
+label = "Gear"
+
+[[rumble_effect]]
+id = "seat_wheel_slip"
+group = "seat"
+label = "Wheel Slip"
+
+[[rumble_effect]]
+id = "seat_gear"
+group = "seat"
+label = "Gear"
+
+[[rumble_effect]]
+id = "seat_heave"
+group = "seat"
+label = "Heave"
+
+[[rumble_effect]]
+id = "seat_rumble_strips"
+group = "seat"
+label = "Rumble Strips"
+
+[[rumble_effect]]
+id = "seat_surge_acceleration"
+group = "seat"
+label = "Long G Surge Acceleration"
+
+[[rumble_effect]]
+id = "seat_traction_loss"
+group = "seat"
+label = "Traction Loss"
+
+[[rumble_effect]]
+id = "seat_engine"
+group = "seat"
+label = "Engine Haptic"
+
+[[haptic_effect]]
+id = "wheel_wheel_slip"
+group = "wheel"
+label = "Wheel Slip"
+
+[[haptic_effect]]
+id = "wheel_abs_lock"
+group = "wheel"
+label = "ABS Lock"
+
+[[haptic_effect]]
+id = "wheel_gear"
+group = "wheel"
+label = "Gear"
+
+[[haptic_effect]]
+id = "wheel_heave"
+group = "wheel"
+label = "Heave"
+
+[[haptic_effect]]
+id = "wheel_rumble_strips"
+group = "wheel"
+label = "Rumble Strips"
+
+[[haptic_effect]]
+id = "wheel_surge_acceleration"
+group = "wheel"
+label = "Long G Surge Acceleration"
+
+[[haptic_effect]]
+id = "wheel_surge_deceleration"
+group = "wheel"
+label = "Long G Surge Deceleration"
+
+[[haptic_effect]]
+id = "wheel_traction_loss"
+group = "wheel"
+label = "Traction Loss"
+
+[[haptic_effect]]
+id = "wheel_engine"
+group = "wheel"
+label = "Engine Haptic"
+
+[[flag]]
+code = 0
+group = "none"
+name = "none"
+description = "None"
+
+[[flag]]
+code = 1
+group = "flag"
+name = "green"
+description = "Green"
+
+[[flag]]
+code = 2
+group = "flag"
+name = "blue"
+description = "Blue"
+
+[[flag]]
+code = 3
+group = "flag"
+name = "white"
+description = "White"
+
+[[flag]]
+code = 5
+group = "flag"
+name = "red"
+description = "Red"
+
+[[flag]]
+code = 6
+group = "flag"
+name = "yellow"
+description = "Yellow"
+
+[[flag]]
+code = 7
+group = "flag"
+name = "yellow_waving"
+description = "Yellow Waving"
+
+[[flag]]
+code = 9
+group = "flag"
+name = "repair"
+description = "Meat Ball"
+
+[[flag]]
+code = 10
+group = "flag"
+name = "black"
+description = "Black"
+
+[[flag]]
+code = 11
+group = "flag"
+name = "checkered"
+description = "Checkered"
+
+[[flag]]
+code = 20
+group = "start"
+name = "start_ready"
+description = "Ready"
+
+[[flag]]
+code = 21
+group = "start"
+name = "start_set"
+description = "Set"
+
+[[flag]]
+code = 22
+group = "start"
+name = "start_go"
+description = "Go"
+
+[[flag]]
+code = 30
+group = "flag"
+name = "disqualify"
+description = "Disqualify"
+
+[[flag]]
+code = 31
+group = "flag"
+name = "debris"
+description = "Debris"
+
+[[flag]]
+code = 32
+group = "flag"
+name = "one_lap_to_green"
+description = "One To Green"
+
+[[flag]]
+code = 34
+group = "flag"
+name = "caution_waving"
+description = "Caution"
+
+[[flag]]
+code = 35
+group = "flag"
+name = "furled"
+description = "Furled Black"
+
+[[flag]]
+code = 36
+group = "spotter"
+name = "spotter_left"
+description = "Spotter Left"
+
+[[flag]]
+code = 50
+group = "pit"
+name = "pit_hold"
+description = "Hold"
+
+[[flag]]
+code = 51
+group = "pit"
+name = "pit_release"
+description = "Go"
+
+[[flag]]
+code = 52
+group = "pit"
+name = "pit_done"
+description = "All done. Go"
+
+[[flag]]
+code = 53
+group = "pit"
+name = "pit_limit"
+description = "Pit limit"
+
+[[flag]]
+code = 37
+group = "spotter"
+name = "spotter_right"
+description = "Spotter Right"
+
+[[flag]]
+code = 38
+group = "rpm"
+name = "rpm"
+description = "RPM"
+
+[[flag]]
+code = 39
+group = "rpm"
+name = "gear_display"
+description = "Gear"
+
+[[flag]]
+code = 40
+group = "rpm"
+name = "sli"
+description = "Shift Light Indicator"
+
+[[flag]]
+code = 41
+group = "none"
+name = "spotter_both"
+description = "Spotter Both"
+
+
+[[motion_manufacturer]]
+name = "None"
+default_refresh_rate = 30
+windows_only = false
+
+[[motion_manufacturer]]
+name = "DOF REALITY"
+default_refresh_rate = 30
+windows_only = false
+
+[[motion_manufacturer]]
+name = "PROSIMU"
+default_refresh_rate = 500
+windows_only = true
+
+[[motion_manufacturer]]
+name = "PT-ACTUATOR"
+default_refresh_rate = 400
+windows_only = true
+
+[[motion_manufacturer]]
+name = "THANOS"
+default_refresh_rate = 500
+windows_only = true
+
+[[motion_manufacturer]]
+name = "VNM SIMULATION"
+default_refresh_rate = 500
+windows_only = true
+
+[[motion_manufacturer]]
+name = "Yaw VR"
+default_refresh_rate = 500
+windows_only = true

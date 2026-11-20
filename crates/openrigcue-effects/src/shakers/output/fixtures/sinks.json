@@ -1,0 +1,147 @@
+[
+  {
+    "index": 58,
+    "name": "alsa_output.usb-Generic_USB_Audio-00.HiFi__SPDIF__sink",
+    "description": "USB Audio S/PDIF Output",
+    "state": "IDLE",
+    "sample_specification": "s16le 2ch 48000Hz",
+    "channel_map": "front-left,front-right",
+    "ports": [
+      {
+        "name": "[Out] SPDIF",
+        "description": "S/PDIF Output",
+        "type": "SPDIF",
+        "priority": 100,
+        "availability_group": "",
+        "availability": "availability unknown"
+      }
+    ],
+    "active_port": "[Out] SPDIF",
+    "properties": {
+      "alsa.card": "0",
+      "alsa.card_name": "USB Audio",
+      "alsa.device": "3",
+      "api.alsa.path": "hw:Audio,3",
+      "device.profile.description": "S/PDIF Output",
+      "device.profile.name": "HiFi: SPDIF: sink",
+      "device.description": "USB Audio",
+      "node.name": "alsa_output.usb-Generic_USB_Audio-00.HiFi__SPDIF__sink"
+    }
+  },
+  {
+    "index": 59,
+    "name": "alsa_output.usb-Generic_USB_Audio-00.HiFi__Speaker__sink",
+    "description": "USB Audio Speakers",
+    "state": "RUNNING",
+    "sample_specification": "s32le 2ch 48000Hz",
+    "channel_map": "front-left,front-right",
+    "ports": [
+      {
+        "name": "[Out] Speaker",
+        "description": "Speakers",
+        "type": "Speaker",
+        "priority": 200,
+        "availability_group": "Speaker - Output",
+        "availability": "available"
+      }
+    ],
+    "active_port": "[Out] Speaker",
+    "properties": {
+      "alsa.card": "0",
+      "alsa.card_name": "USB Audio",
+      "alsa.device": "0",
+      "api.alsa.path": "hw:Audio,0",
+      "device.profile.description": "Speakers",
+      "device.profile.name": "HiFi: Speaker: sink",
+      "device.description": "USB Audio",
+      "node.name": "alsa_output.usb-Generic_USB_Audio-00.HiFi__Speaker__sink"
+    }
+  },
+  {
+    "index": 60,
+    "name": "alsa_output.usb-Generic_USB_Audio-00.HiFi__Headphones__sink",
+    "description": "USB Audio Front Headphones",
+    "state": "SUSPENDED",
+    "sample_specification": "s32le 2ch 48000Hz",
+    "channel_map": "front-left,front-right",
+    "ports": [
+      {
+        "name": "[Out] Headphones",
+        "description": "Front Headphones",
+        "type": "Headphones",
+        "priority": 300,
+        "availability_group": "Headphone - Output",
+        "availability": "not available"
+      }
+    ],
+    "active_port": "[Out] Headphones",
+    "properties": {
+      "alsa.card": "0",
+      "alsa.card_name": "USB Audio",
+      "alsa.device": "1",
+      "api.alsa.path": "hw:Audio,1",
+      "device.profile.description": "Front Headphones",
+      "device.profile.name": "HiFi: Headphones: sink",
+      "device.description": "USB Audio",
+      "node.name": "alsa_output.usb-Generic_USB_Audio-00.HiFi__Headphones__sink"
+    }
+  },
+  {
+    "index": 31079,
+    "name": "alsa_output.usb-Creative_Technology_Ltd_Sound_Blaster_X4_93D266431EAD61F3-03.analog-stereo",
+    "description": "Sound Blaster X4 Analog Stereo",
+    "state": "IDLE",
+    "sample_specification": "s24le 2ch 48000Hz",
+    "channel_map": "front-left,front-right",
+    "ports": [
+      {
+        "name": "analog-output-speaker",
+        "description": "Speakers",
+        "type": "Speaker",
+        "priority": 10000,
+        "availability_group": "",
+        "availability": "availability unknown"
+      }
+    ],
+    "active_port": "analog-output-speaker",
+    "properties": {
+      "alsa.card": "4",
+      "alsa.card_name": "Sound Blaster X4",
+      "alsa.device": "0",
+      "api.alsa.path": "front:4",
+      "device.profile.description": "Analog Stereo",
+      "device.profile.name": "analog-stereo",
+      "device.description": "Sound Blaster X4",
+      "node.name": "alsa_output.usb-Creative_Technology_Ltd_Sound_Blaster_X4_93D266431EAD61F3-03.analog-stereo"
+    }
+  },
+  {
+    "index": 71460,
+    "name": "alsa_output.pci-0000_01_00.1.hdmi-stereo",
+    "description": "GB202 High Definition Audio Controller Digital Stereo (HDMI)",
+    "state": "IDLE",
+    "sample_specification": "s32le 2ch 48000Hz",
+    "channel_map": "front-left,front-right",
+    "ports": [
+      {
+        "name": "hdmi-output-0",
+        "description": "HDMI / DisplayPort",
+        "type": "HDMI",
+        "priority": 5900,
+        "availability_group": "Legacy 1",
+        "availability": "available"
+      }
+    ],
+    "active_port": "hdmi-output-0",
+    "properties": {
+      "alsa.card": "1",
+      "alsa.card_name": "HDA NVidia",
+      "alsa.device": "3",
+      "api.alsa.path": "hdmi:1",
+      "device.profile.description": "Digital Stereo (HDMI)",
+      "device.profile.name": "hdmi-stereo",
+      "device.description": "GB202 High Definition Audio Controller",
+      "node.name": "alsa_output.pci-0000_01_00.1.hdmi-stereo"
+    }
+  }
+]

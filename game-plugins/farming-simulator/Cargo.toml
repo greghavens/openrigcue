@@ -1,0 +1,30 @@
+[package]
+name = "openrigcue-fs-mods"
+version = "0.1.0"
+edition = "2021"
+license = "GPL-3.0-or-later"
+description = "OpenRigCue telemetry scripts and packet/pipe tools for Farming Simulator 19, 22 and 25"
+publish = false
+
+# Stand-alone project: not a member of the repository's root workspace.
+[workspace]
+
+[lib]
+name = "openrigcue_fs_mods"
+path = "src/lib.rs"
+
+[[bin]]
+name = "package-fs-mods"
+path = "src/bin/package-fs-mods.rs"
+
+[dependencies]
+flate2 = "1"
+crc32fast = "1"
+
+[dev-dependencies]
+# Executes only the authored scripts in mock game environments.
+mlua = { version = "0.10", features = ["lua51", "vendored"] }
+# an independent reader to prove the hand-written container is a valid zip
+zip = { version = "2", default-features = false, features = ["deflate"] }
+# decodes the icons in the package tests
+png = "0.17"

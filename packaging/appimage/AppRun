@@ -1,0 +1,12 @@
+#!/bin/bash
+# openrigcue AppImage entry point: `openrigcue.AppImage <subcommand>` runs the CLI; without arguments it runs the service.
+here=$(dirname "$(readlink -f "$0")")
+export APPDIR="${APPDIR:-$here}"
+export LD_LIBRARY_PATH="$here/usr/lib${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}"
+# shellcheck source=packaging/appimage/graphics-env.sh
+. "$here/usr/lib/openrigcue/graphics-env.sh" || exit
+openrigcue_apply_graphics_compatibility /sys/module/nvidia/version "$@"
+if [ $# -eq 0 ]; then
+    exec "$here/usr/bin/openrigcue" run
+fi
+exec "$here/usr/bin/openrigcue" "$@"

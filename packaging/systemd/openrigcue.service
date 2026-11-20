@@ -1,0 +1,23 @@
+# openrigcue as a systemd user service.
+#   install -Dm0644 openrigcue.service ~/.config/systemd/user/openrigcue.service
+#   systemctl --user daemon-reload && systemctl --user enable --now openrigcue
+#
+# Game detection by window title reads $DISPLAY (X11/XWayland). A user service sees it once the session exports
+# it (`systemctl --user import-environment DISPLAY`, which most desktops do at login).
+#
+# Stopping the service ends every loop without moving the platform.
+
+[Unit]
+Description=openrigcue motion cueing and sim effects
+Documentation=https://github.com/greghavens/openrigcue
+After=graphical-session.target sound.target
+
+[Service]
+Type=simple
+ExecStart=%h/.local/bin/openrigcue run
+Restart=on-failure
+RestartSec=2
+TimeoutStopSec=10
+
+[Install]
+WantedBy=default.target

@@ -1,0 +1,27 @@
+[package]
+name = "openrigcue-desktop"
+description = "Native desktop shell and original launcher window policy"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+
+[dependencies]
+openrigcue-model.workspace = true
+openrigcue-cueing.workspace = true
+thiserror.workspace = true
+serde.workspace = true
+libloading = "0.8.9"
+tracing.workspace = true
+zbus = { version = "5.19.0", default-features = false, features = ["async-io", "blocking-api"] }
+
+[dev-dependencies]
+serde_json = { version = "1", features = ["preserve_order"] }
+
+# Only the GTK/WebKit ABI boundary opts out of this deny. The public API is safe
+# and main-thread-only; no other desktop module may contain unsafe code.
+[lints.rust]
+unsafe_code = "deny"
+
+[lints.clippy]
+all = { level = "warn", priority = -1 }

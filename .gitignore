@@ -1,0 +1,15 @@
+# Rust / build outputs
+target/
+**/*.rs.bk
+# Firmware and plugin builds write here
+/firmware/*/target/
+/game-plugins/*/target/
+/game-plugins/*/verify/work/
+# Private inputs: never commit installers, imported files, keys or captured profile data
+*.exe.part
+/*.exe
+*.key
+# Local tooling
+/.idea/
+/.vscode/
+*.swp

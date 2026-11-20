@@ -1,0 +1,4 @@
+#!/bin/sh
+# Keep the firmware tool's distro libraries out of the desktop's GTK search path.
+helper_dir=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
+LD_LIBRARY_PATH="$helper_dir/avrdude-libs" exec "$helper_dir/avrdude-bin" "$@"

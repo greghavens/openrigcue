@@ -1,0 +1,21 @@
+<article class="game-setup">
+<h3>IL-2 Sturmovik</h3>
+<ol>
+<li>Close the simulator and open data/startup.cfg inside its installation directory.</li>
+<li>Update both motiondevice and telemetrydevice as shown below, then save the file.</li>
+<li>Restart the simulator.</li>
+</ol>
+<pre>[KEY = motiondevice]
+addr = "127.0.0.1"
+decimation = 1
+enable = true
+port = ^port^
+[END]
+
+[KEY = telemetrydevice]
+addr = "127.0.0.1"
+decimation = 1
+enable = true
+port = ^port^
+[END]</pre>
+</article>

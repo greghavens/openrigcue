@@ -1,0 +1,30 @@
+[package]
+name = "openrigcue"
+description = "Motion cueing and sim effects for motion platforms, shakers, wind and LEDs"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+
+[dependencies]
+openrigcue-tools = { path = "../openrigcue-tools" }
+openrigcue-model.workspace = true
+openrigcue-cueing.workspace = true
+openrigcue-devices.workspace = true
+openrigcue-daemon = { path = "../openrigcue-daemon" }
+openrigcue-config = { path = "../openrigcue-config" }
+openrigcue-desktop = { path = "../openrigcue-desktop" }
+anyhow.workspace = true
+clap.workspace = true
+tracing.workspace = true
+tracing-subscriber.workspace = true
+ctrlc = { version = "3", features = ["termination"] }
+reqwest = { version = "0.12", default-features = false, features = ["blocking", "rustls-tls"] }
+serde.workspace = true
+serde_json = { version = "1", features = ["preserve_order"] }
+ring = "0.17"
+tempfile = "3"
+zip = { version = "2", default-features = false, features = ["deflate"] }
+
+[lints]
+workspace = true

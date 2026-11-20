@@ -1,0 +1,3 @@
+# Preserve upstream source whitespace while checking local changes normally.
+src/audio.rs -whitespace
+CHANGELOG.md -whitespace

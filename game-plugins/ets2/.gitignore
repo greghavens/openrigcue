@@ -1,0 +1,4 @@
+# build outputs and the Wine test work dir
+/dist/
+/verify/work/
+/target/

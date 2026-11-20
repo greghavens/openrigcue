@@ -1,0 +1,27 @@
+[package]
+name = "aerofly-fs2-telemetry"
+version = "0.1.0"
+edition = "2021"
+description = "1:1 Rust rebuild of SRS's Aerofly_FS_2_GamePlugin_Telemetry.dll (Aerofly FS 2 external DLL -> UDP 127.0.0.1:4123)"
+publish = false
+
+# Stand-alone project: not a member of the repository's root workspace.
+[workspace]
+
+[lib]
+# The game loads the plugin by file name; it is installed as
+# Aerofly_FS_2_GamePlugin_Telemetry.dll, so the cdylib has that name.
+name = "Aerofly_FS_2_GamePlugin_Telemetry"
+crate-type = ["cdylib"]
+path = "src/lib.rs"
+
+[dependencies]
+
+[profile.dev]
+panic = "abort"
+
+[profile.release]
+opt-level = 2
+panic = "abort"
+lto = true
+codegen-units = 1

@@ -1,0 +1,144 @@
+{
+   "background_color" : "#15171b",
+   "display" : "standalone",
+   "icons" : [
+      {
+         "sizes" : "144x144",
+         "src" : "/res:images/openrigcue/iconsizes/android144.png",
+         "type" : "image/png"
+      },
+      {
+         "sizes" : "192x192",
+         "src" : "/res:images/openrigcue/iconsizes/android192.png",
+         "type" : "image/png"
+      },
+      {
+         "sizes" : "36x36",
+         "src" : "/res:images/openrigcue/iconsizes/android36.png",
+         "type" : "image/png"
+      },
+      {
+         "sizes" : "48x48",
+         "src" : "/res:images/openrigcue/iconsizes/android48.png",
+         "type" : "image/png"
+      },
+      {
+         "sizes" : "512x512",
+         "src" : "/res:images/openrigcue/iconsizes/android512.png",
+         "type" : "image/png"
+      },
+      {
+         "sizes" : "72x72",
+         "src" : "/res:images/openrigcue/iconsizes/android72.png",
+         "type" : "image/png"
+      },
+      {
+         "sizes" : "96x96",
+         "src" : "/res:images/openrigcue/iconsizes/android96.png",
+         "type" : "image/png"
+      },
+      {
+         "sizes" : "16x16",
+         "src" : "/res:images/openrigcue/iconsizes/favicon16.png",
+         "type" : "image/png"
+      },
+      {
+         "sizes" : "1024x1024",
+         "src" : "/res:images/openrigcue/iconsizes/ios1024.png",
+         "type" : "image/png"
+      },
+      {
+         "sizes" : "120x120",
+         "src" : "/res:images/openrigcue/iconsizes/ios120.png",
+         "type" : "image/png"
+      },
+      {
+         "sizes" : "152x152",
+         "src" : "/res:images/openrigcue/iconsizes/ios152.png",
+         "type" : "image/png"
+      },
+      {
+         "sizes" : "167x167",
+         "src" : "/res:images/openrigcue/iconsizes/ios167.png",
+         "type" : "image/png"
+      },
+      {
+         "sizes" : "180x180",
+         "src" : "/res:images/openrigcue/iconsizes/ios180.png",
+         "type" : "image/png"
+      },
+      {
+         "sizes" : "22x22",
+         "src" : "/res:images/openrigcue/iconsizes/ios22.png",
+         "type" : "image/png"
+      },
+      {
+         "sizes" : "29x29",
+         "src" : "/res:images/openrigcue/iconsizes/ios29.png",
+         "type" : "image/png"
+      },
+      {
+         "sizes" : "44x44",
+         "src" : "/res:images/openrigcue/iconsizes/ios44.png",
+         "type" : "image/png"
+      },
+      {
+         "sizes" : "50x50",
+         "src" : "/res:images/openrigcue/iconsizes/ios50.png",
+         "type" : "image/png"
+      },
+      {
+         "sizes" : "58x58",
+         "src" : "/res:images/openrigcue/iconsizes/ios58.png",
+         "type" : "image/png"
+      },
+      {
+         "sizes" : "60x60",
+         "src" : "/res:images/openrigcue/iconsizes/ios60.png",
+         "type" : "image/png"
+      },
+      {
+         "sizes" : "66x66",
+         "src" : "/res:images/openrigcue/iconsizes/ios66.png",
+         "type" : "image/png"
+      },
+      {
+         "sizes" : "76x76",
+         "src" : "/res:images/openrigcue/iconsizes/ios76.png",
+         "type" : "image/png"
+      },
+      {
+         "sizes" : "80x80",
+         "src" : "/res:images/openrigcue/iconsizes/ios80.png",
+         "type" : "image/png"
+      },
+      {
+         "sizes" : "22x22",
+         "src" : "/res:images/openrigcue/iconsizes/systray22.png",
+         "type" : "image/png"
+      },
+      {
+         "sizes" : "16x16",
+         "src" : "/res:images/openrigcue/iconsizes/windows16.png",
+         "type" : "image/png"
+      },
+      {
+         "sizes" : "256x256",
+         "src" : "/res:images/openrigcue/iconsizes/windows256.png",
+         "type" : "image/png"
+      },
+      {
+         "sizes" : "48x48",
+         "src" : "/res:images/openrigcue/iconsizes/windows48.png",
+         "type" : "image/png"
+      },
+      {
+         "sizes" : "96x96",
+         "src" : "/res:images/openrigcue/iconsizes/windows96.png",
+         "type" : "image/png"
+      }
+   ],
+   "name" : "OpenRigCue",
+   "short_name" : "OpenRigCue",
+   "theme_color" : "#15171b"
+}

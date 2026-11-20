@@ -1,0 +1,67 @@
+# Settings of the OBD2HUD firmware (wemos_d1_mini32 board, Arduino-ESP32 1.0.6 on
+# ESP-IDF v3.3.5, NimBLE-Arduino 1.x).
+# FreeRTOS tick 1 kHz: the main loop waits 3 ticks (= 3 ms) on the CAN RX queue.
+CONFIG_FREERTOS_HZ=1000
+# The CPU runs at 240 MHz.
+CONFIG_ESP_DEFAULT_CPU_FREQ_MHZ_240=y
+# Flash mode DIO, 40 MHz, 4 MB.
+CONFIG_ESPTOOLPY_FLASHMODE_DIO=y
+CONFIG_ESPTOOLPY_FLASHFREQ_40M=y
+CONFIG_ESPTOOLPY_FLASHSIZE_4MB=y
+# Partition table: Arduino default 4 MB OTA layout (app0 = ota_0 @ 0x10000).
+# An update arrives over BLE into the other OTA slot, so the image must fit 0x140000.
+# Absolute path: the IDF project esp-idf-sys generates lives in the cargo out dir.
+CONFIG_PARTITION_TABLE_CUSTOM=y
+CONFIG_PARTITION_TABLE_CUSTOM_FILENAME="partitions.csv"
+CONFIG_PARTITION_TABLE_FILENAME="partitions.csv"
+# Log level: errors only; the bootloader carries no log strings.
+CONFIG_LOG_DEFAULT_LEVEL_ERROR=y
+CONFIG_BOOTLOADER_LOG_LEVEL_NONE=y
+# Console on UART0 at 115200 (the serial link shares UART0).
+CONFIG_ESP_CONSOLE_UART_DEFAULT=y
+CONFIG_ESP_CONSOLE_UART_BAUDRATE=115200
+# Task watchdog: 5 s, panic on timeout, idle task of CPU0 only.
+CONFIG_ESP_TASK_WDT_EN=y
+CONFIG_ESP_TASK_WDT_INIT=y
+CONFIG_ESP_TASK_WDT_PANIC=y
+CONFIG_ESP_TASK_WDT_TIMEOUT_S=5
+CONFIG_ESP_TASK_WDT_CHECK_IDLE_TASK_CPU0=y
+CONFIG_ESP_TASK_WDT_CHECK_IDLE_TASK_CPU1=n
+CONFIG_ESP_BROWNOUT_DET=y
+# Stack protector in its normal mode: functions with character arrays carry canaries.
+CONFIG_COMPILER_STACK_CHECK_MODE_NORM=y
+# Rust std main needs more than the IDF default; app_main only spawns the loop task.
+CONFIG_ESP_MAIN_TASK_STACK_SIZE=8192
+# No rollback: setting the boot partition after an update is final.
+CONFIG_BOOTLOADER_APP_ROLLBACK_ENABLE=n
+
+# ---- Bluetooth: NimBLE host, BLE-only controller (at most 3 connections,
+# classic BT memory released).
+CONFIG_BT_ENABLED=y
+CONFIG_BT_NIMBLE_ENABLED=y
+CONFIG_BTDM_CTRL_MODE_BLE_ONLY=y
+CONFIG_BTDM_CTRL_BLE_MAX_CONN=3
+CONFIG_BT_NIMBLE_MAX_CONNECTIONS=3
+# Preferred ATT MTU 255.
+CONFIG_BT_NIMBLE_ATT_PREFERRED_MTU=255
+# Mempools: 64 prepare-write entries, 4 GATT client procs, 3 conns.
+CONFIG_BT_NIMBLE_ATT_MAX_PREP_ENTRIES=64
+CONFIG_BT_NIMBLE_GATT_MAX_PROCS=4
+# GAP service: Device Name (read) + Appearance (read) only.
+CONFIG_BT_NIMBLE_GAP_SERVICE=y
+CONFIG_BT_NIMBLE_SVC_GAP_DEVICE_NAME="nimble"
+CONFIG_BT_NIMBLE_GAP_DEVICE_NAME_MAX_LEN=31
+CONFIG_BT_NIMBLE_SVC_GAP_APPEARANCE=0x0
+CONFIG_BT_NIMBLE_SVC_GAP_CAR_CHAR_NOT_SUPP=y
+CONFIG_BT_NIMBLE_SVC_GAP_PPCP_MAX_CONN_INTERVAL=0
+CONFIG_BT_NIMBLE_SVC_GAP_PPCP_MIN_CONN_INTERVAL=0
+CONFIG_BT_NIMBLE_SVC_GAP_PPCP_SLAVE_LATENCY=0
+CONFIG_BT_NIMBLE_SVC_GAP_PPCP_SUPERVISION_TMO=0
+CONFIG_BT_NIMBLE_GATT_CACHING=n
+# Bonds/CCCDs persisted in NVS (the "nimble_bond" namespace).
+CONFIG_BT_NIMBLE_NVS_PERSIST=y
+# NimBLE host logging is compiled out.
+CONFIG_BT_NIMBLE_LOG_LEVEL_NONE=y
+
+# The IDF/Arduino libraries are built for size (-Os).
+CONFIG_COMPILER_OPTIMIZATION_SIZE=y

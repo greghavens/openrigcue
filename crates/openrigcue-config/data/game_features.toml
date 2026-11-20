@@ -1,0 +1,435 @@
+# Per-game feature table. Do not edit.
+# `columns` is the column order; each game lists the columns it provides.
+columns = ["speed", "engine", "gear", "suspension", "pitch", "roll", "yaw", "sway", "surge_acceleration", "surge_deceleration", "heave", "traction_loss", "wheel_slip", "rumble_strips", "afterburner", "landing_gear", "canopy", "cannon_firing", "missile_firing", "abs_lock", "green", "blue", "white", "red", "yellow", "yellow_waving", "disqualify", "checkered", "start_ready", "start_set", "start_go", "caution_waving", "one_lap_to_green", "debris", "repair", "black", "furled", "pit_hold", "pit_release", "pit_done", "pit_limit", "spotter_left", "spotter_right", "rpm", "gear_display", "sli", "touchdown", "turbulence"]
+
+[[game]]
+id = "warplanes_ww1"
+enabled = ["pitch", "roll", "yaw", "sway", "surge_acceleration", "surge_deceleration", "heave", "cannon_firing"]
+
+[[game]]
+id = "warplanes_bop"
+enabled = ["pitch", "roll", "yaw", "sway", "surge_acceleration", "surge_deceleration", "heave", "cannon_firing"]
+
+[[game]]
+id = "fs22"
+enabled = ["speed", "engine", "pitch", "roll", "yaw", "sway", "heave", "rpm"]
+
+[[game]]
+id = "fs19"
+enabled = ["speed", "engine", "pitch", "roll", "yaw", "sway", "heave", "rpm"]
+
+[[game]]
+id = "gt7"
+enabled = ["speed", "engine", "gear", "pitch", "roll", "yaw", "sway", "surge_acceleration", "surge_deceleration", "heave", "traction_loss", "rpm", "gear_display", "sli"]
+
+[[game]]
+id = "gtsport"
+enabled = ["speed", "engine", "gear", "pitch", "roll", "yaw", "sway", "surge_acceleration", "surge_deceleration", "heave", "traction_loss", "rpm", "gear_display", "sli"]
+
+[[game]]
+id = "redrover"
+enabled = ["speed", "engine", "gear", "pitch", "roll", "yaw", "afterburner", "cannon_firing", "missile_firing", "rpm", "gear_display", "sli"]
+
+[[game]]
+id = "trackmania2"
+enabled = ["speed", "engine", "gear", "suspension", "pitch", "roll", "yaw", "rpm", "gear_display", "sli"]
+
+[[game]]
+id = "trackmaniaturbo"
+enabled = ["speed", "engine", "gear", "suspension", "pitch", "roll", "yaw", "rpm", "gear_display", "sli"]
+
+[[game]]
+id = "ac"
+enabled = ["speed", "engine", "gear", "suspension", "pitch", "roll", "yaw", "sway", "surge_acceleration", "surge_deceleration", "heave", "traction_loss", "wheel_slip", "abs_lock", "rpm", "gear_display", "sli"]
+
+[[game]]
+id = "acudp"
+enabled = ["speed", "engine", "gear", "suspension", "sway", "surge_acceleration", "surge_deceleration", "heave", "rpm", "gear_display", "sli"]
+
+[[game]]
+id = "acc"
+enabled = ["speed", "engine", "gear", "suspension", "pitch", "roll", "yaw", "sway", "surge_acceleration", "surge_deceleration", "heave", "traction_loss", "wheel_slip", "abs_lock", "green", "blue", "white", "yellow", "checkered", "black", "rpm", "gear_display", "sli"]
+
+[[game]]
+id = "acrally"
+enabled = ["speed", "engine", "gear", "suspension", "pitch", "roll", "yaw", "sway", "surge_acceleration", "surge_deceleration", "heave", "traction_loss", "wheel_slip", "abs_lock", "green", "blue", "white", "yellow", "checkered", "black", "rpm", "gear_display", "sli"]
+
+[[game]]
+id = "actc"
+enabled = ["speed", "engine", "gear", "suspension", "pitch", "roll", "yaw", "sway", "surge_acceleration", "surge_deceleration", "heave", "traction_loss", "wheel_slip", "rumble_strips", "yellow", "yellow_waving", "start_ready", "start_set", "start_go", "rpm", "gear_display", "sli"]
+
+[[game]]
+id = "aeroflyfs2"
+enabled = ["speed", "engine", "pitch", "roll", "yaw", "sway", "surge_acceleration", "surge_deceleration", "heave", "cannon_firing", "missile_firing", "rpm", "gear_display", "sli"]
+
+[[game]]
+id = "api"
+enabled = ["speed", "engine", "gear", "suspension", "pitch", "roll", "yaw", "sway", "surge_acceleration", "surge_deceleration", "heave", "traction_loss", "wheel_slip", "cannon_firing", "missile_firing", "rpm", "gear_display", "sli"]
+
+[[game]]
+id = "arca"
+enabled = ["speed", "engine", "gear", "suspension", "pitch", "roll", "yaw", "sway", "surge_acceleration", "surge_deceleration", "heave", "traction_loss", "wheel_slip", "rumble_strips", "yellow", "yellow_waving", "start_ready", "start_set", "start_go", "rpm", "gear_display", "sli"]
+
+[[game]]
+id = "ats"
+enabled = ["speed", "engine", "gear", "suspension", "pitch", "roll", "yaw", "sway", "surge_acceleration", "surge_deceleration", "heave", "traction_loss", "wheel_slip", "rpm", "gear_display", "sli"]
+
+[[game]]
+id = "automobilista"
+enabled = ["speed", "engine", "gear", "suspension", "pitch", "roll", "yaw", "sway", "surge_acceleration", "surge_deceleration", "heave", "traction_loss", "wheel_slip", "rumble_strips", "yellow", "yellow_waving", "start_ready", "start_set", "start_go", "rpm", "gear_display", "sli"]
+
+[[game]]
+id = "automobilista2"
+enabled = ["speed", "engine", "gear", "suspension", "pitch", "roll", "yaw", "sway", "surge_acceleration", "surge_deceleration", "heave", "traction_loss", "wheel_slip", "rumble_strips", "abs_lock", "green", "blue", "white", "red", "yellow", "yellow_waving", "disqualify", "checkered", "start_go", "black", "rpm", "gear_display", "sli"]
+
+[[game]]
+id = "beamng"
+enabled = ["speed", "engine", "gear", "pitch", "roll", "yaw", "sway", "surge_acceleration", "surge_deceleration", "heave", "traction_loss", "rpm", "gear_display", "sli"]
+
+[[game]]
+id = "ccd"
+enabled = ["speed", "engine", "gear", "suspension", "pitch", "roll", "yaw", "sway", "surge_acceleration", "surge_deceleration", "heave", "traction_loss", "rpm", "gear_display", "sli"]
+
+[[game]]
+id = "condor"
+enabled = ["speed", "engine", "pitch", "roll", "yaw", "sway", "surge_acceleration", "surge_deceleration", "heave", "cannon_firing", "missile_firing", "rpm", "gear_display", "sli"]
+
+[[game]]
+id = "dcs"
+enabled = ["speed", "engine", "pitch", "roll", "yaw", "sway", "surge_acceleration", "surge_deceleration", "heave", "landing_gear", "canopy", "cannon_firing", "missile_firing", "rpm", "gear_display", "sli"]
+
+[[game]]
+id = "dirt2"
+enabled = ["speed", "engine", "gear", "suspension", "pitch", "roll", "yaw", "sway", "surge_acceleration", "surge_deceleration", "heave", "traction_loss", "rpm", "gear_display", "sli"]
+
+[[game]]
+id = "dirt3"
+enabled = ["speed", "engine", "gear", "suspension", "pitch", "roll", "yaw", "sway", "surge_acceleration", "surge_deceleration", "heave", "traction_loss", "rpm", "gear_display", "sli"]
+
+[[game]]
+id = "dirtshowdown"
+enabled = ["speed", "engine", "gear", "suspension", "pitch", "roll", "yaw", "sway", "surge_acceleration", "surge_deceleration", "heave", "traction_loss", "rpm", "gear_display", "sli"]
+
+[[game]]
+id = "dirt4"
+enabled = ["speed", "engine", "gear", "suspension", "pitch", "roll", "yaw", "sway", "surge_acceleration", "surge_deceleration", "heave", "traction_loss", "rpm", "gear_display", "sli"]
+
+[[game]]
+id = "dirtrally"
+enabled = ["speed", "engine", "gear", "suspension", "pitch", "roll", "yaw", "sway", "surge_acceleration", "surge_deceleration", "heave", "traction_loss", "rpm", "gear_display", "sli"]
+
+[[game]]
+id = "wrcg"
+enabled = ["speed", "engine", "gear", "suspension", "roll", "yaw", "sway", "surge_acceleration", "surge_deceleration", "heave", "traction_loss", "rpm", "gear_display", "sli"]
+
+[[game]]
+id = "dirtrally2.0"
+enabled = ["speed", "engine", "gear", "suspension", "pitch", "roll", "yaw", "sway", "surge_acceleration", "surge_deceleration", "heave", "traction_loss", "rpm", "gear_display", "sli"]
+
+[[game]]
+id = "ed"
+enabled = ["speed", "pitch", "roll", "yaw", "sway", "surge_acceleration", "surge_deceleration", "heave", "cannon_firing", "missile_firing", "rpm", "gear_display", "sli"]
+
+[[game]]
+id = "emulator"
+enabled = ["speed", "pitch", "roll", "yaw", "sway", "surge_acceleration", "surge_deceleration", "heave", "rpm", "gear_display", "sli"]
+
+[[game]]
+id = "epic"
+enabled = ["speed", "engine", "gear", "suspension", "pitch", "roll", "yaw", "sway", "surge_acceleration", "surge_deceleration", "heave", "traction_loss", "rpm", "gear_display", "sli"]
+
+[[game]]
+id = "ets"
+enabled = ["speed", "engine", "gear", "suspension", "pitch", "roll", "yaw", "sway", "surge_acceleration", "surge_deceleration", "heave", "traction_loss", "rpm", "gear_display", "sli"]
+
+[[game]]
+id = "f12013"
+enabled = ["speed", "engine", "gear", "suspension", "pitch", "roll", "yaw", "sway", "surge_acceleration", "surge_deceleration", "heave", "traction_loss", "rpm", "gear_display", "sli"]
+
+[[game]]
+id = "f12014"
+enabled = ["speed", "engine", "gear", "suspension", "pitch", "roll", "yaw", "sway", "surge_acceleration", "surge_deceleration", "heave", "traction_loss", "rpm", "gear_display", "sli"]
+
+[[game]]
+id = "f12015"
+enabled = ["speed", "engine", "gear", "suspension", "pitch", "roll", "yaw", "sway", "surge_acceleration", "surge_deceleration", "heave", "traction_loss", "rpm", "gear_display", "sli"]
+
+[[game]]
+id = "f12016"
+enabled = ["speed", "engine", "gear", "suspension", "pitch", "roll", "yaw", "sway", "surge_acceleration", "surge_deceleration", "heave", "traction_loss", "rpm", "gear_display", "sli"]
+
+[[game]]
+id = "f12017"
+enabled = ["speed", "engine", "gear", "suspension", "pitch", "roll", "yaw", "sway", "surge_acceleration", "surge_deceleration", "heave", "traction_loss", "rpm", "gear_display", "sli"]
+
+[[game]]
+id = "f12018"
+enabled = ["speed", "engine", "gear", "suspension", "pitch", "roll", "yaw", "sway", "surge_acceleration", "surge_deceleration", "heave", "traction_loss", "wheel_slip", "abs_lock", "green", "blue", "red", "yellow", "rpm", "gear_display", "sli"]
+
+[[game]]
+id = "f12019"
+enabled = ["speed", "engine", "gear", "suspension", "pitch", "roll", "yaw", "sway", "surge_acceleration", "surge_deceleration", "heave", "traction_loss", "wheel_slip", "rumble_strips", "abs_lock", "green", "blue", "red", "yellow", "rpm", "gear_display", "sli"]
+
+[[game]]
+id = "f12020"
+enabled = ["speed", "engine", "gear", "suspension", "pitch", "roll", "yaw", "sway", "surge_acceleration", "surge_deceleration", "heave", "traction_loss", "wheel_slip", "rumble_strips", "abs_lock", "green", "blue", "red", "yellow", "rpm", "gear_display", "sli"]
+
+[[game]]
+id = "f12021"
+enabled = ["speed", "engine", "gear", "suspension", "pitch", "roll", "yaw", "sway", "surge_acceleration", "surge_deceleration", "heave", "traction_loss", "wheel_slip", "rumble_strips", "abs_lock", "green", "blue", "red", "yellow", "rpm", "gear_display", "sli"]
+
+[[game]]
+id = "fernbus"
+enabled = ["speed", "engine", "gear", "suspension", "pitch", "roll", "yaw", "rpm", "gear_display", "sli"]
+
+[[game]]
+id = "thebus"
+enabled = ["speed", "engine", "gear", "suspension", "pitch", "roll", "yaw", "rpm", "gear_display", "sli"]
+
+[[game]]
+id = "flyinside"
+enabled = ["speed", "pitch", "roll", "yaw", "sway", "surge_acceleration", "surge_deceleration", "heave", "rpm", "gear_display", "sli"]
+
+[[game]]
+id = "forzahorizon4"
+enabled = ["speed", "engine", "gear", "suspension", "pitch", "roll", "yaw", "sway", "surge_acceleration", "surge_deceleration", "heave", "traction_loss", "wheel_slip", "rumble_strips", "rpm", "gear_display", "sli"]
+
+[[game]]
+id = "forzamotorsports7"
+enabled = ["speed", "engine", "gear", "suspension", "pitch", "roll", "yaw", "sway", "surge_acceleration", "surge_deceleration", "heave", "traction_loss", "wheel_slip", "rumble_strips", "rpm", "gear_display", "sli"]
+
+[[game]]
+id = "fs2020"
+enabled = ["speed", "engine", "pitch", "roll", "yaw", "sway", "surge_acceleration", "surge_deceleration", "heave", "afterburner", "landing_gear", "canopy", "cannon_firing", "missile_firing", "rpm", "gear_display", "sli", "touchdown", "turbulence"]
+
+[[game]]
+id = "fsx"
+enabled = ["speed", "engine", "pitch", "roll", "yaw", "sway", "surge_acceleration", "surge_deceleration", "heave", "afterburner", "landing_gear", "canopy", "cannon_firing", "missile_firing", "rpm", "gear_display", "sli", "touchdown", "turbulence"]
+
+[[game]]
+id = "ftruck2013"
+enabled = ["speed", "engine", "gear", "suspension", "pitch", "roll", "yaw", "sway", "surge_acceleration", "surge_deceleration", "heave", "traction_loss", "wheel_slip", "rumble_strips", "yellow", "yellow_waving", "start_ready", "start_set", "start_go", "rpm", "gear_display", "sli"]
+
+[[game]]
+id = "furidashi"
+enabled = ["speed", "engine", "gear", "suspension", "pitch", "roll", "yaw", "sway", "surge_acceleration", "surge_deceleration", "heave", "traction_loss", "rpm", "gear_display", "sli"]
+
+[[game]]
+id = "gpbikes"
+enabled = ["speed", "engine", "gear", "suspension", "pitch", "roll", "yaw", "sway", "surge_acceleration", "surge_deceleration", "heave", "traction_loss", "rpm", "gear_display", "sli"]
+
+[[game]]
+id = "grid2"
+enabled = ["speed", "engine", "gear", "suspension", "pitch", "roll", "yaw", "sway", "surge_acceleration", "surge_deceleration", "heave", "traction_loss", "rpm", "gear_display", "sli"]
+
+[[game]]
+id = "grid2019"
+enabled = ["speed", "engine", "gear", "suspension", "pitch", "roll", "yaw", "sway", "surge_acceleration", "surge_deceleration", "heave", "traction_loss", "rpm", "gear_display", "sli"]
+
+[[game]]
+id = "gridlegends"
+enabled = ["speed", "engine", "gear", "suspension", "pitch", "roll", "yaw", "sway", "surge_acceleration", "surge_deceleration", "heave", "traction_loss", "wheel_slip", "rpm", "gear_display", "sli"]
+
+[[game]]
+id = "gsc2012"
+enabled = ["speed", "engine", "gear", "suspension", "pitch", "roll", "yaw", "sway", "surge_acceleration", "surge_deceleration", "heave", "traction_loss", "wheel_slip", "rumble_strips", "yellow", "yellow_waving", "start_ready", "start_set", "start_go", "rpm", "gear_display", "sli"]
+
+[[game]]
+id = "gtav"
+enabled = ["speed", "engine", "gear", "suspension", "pitch", "roll", "yaw", "sway", "surge_acceleration", "surge_deceleration", "heave", "traction_loss", "cannon_firing", "missile_firing", "rpm", "gear_display", "sli"]
+
+[[game]]
+id = "gtl"
+enabled = ["speed", "engine", "gear", "suspension", "pitch", "roll", "yaw", "sway", "surge_acceleration", "surge_deceleration", "heave", "traction_loss", "rpm", "gear_display", "sli"]
+
+[[game]]
+id = "gtr"
+enabled = ["speed", "engine", "gear", "suspension", "pitch", "roll", "yaw", "sway", "surge_acceleration", "surge_deceleration", "heave", "traction_loss", "rpm", "gear_display", "sli"]
+
+[[game]]
+id = "gtr2"
+enabled = ["speed", "engine", "gear", "suspension", "pitch", "roll", "yaw", "sway", "surge_acceleration", "surge_deceleration", "heave", "traction_loss", "rpm", "gear_display", "sli"]
+
+[[game]]
+id = "il2"
+enabled = ["speed", "engine", "pitch", "roll", "yaw", "sway", "surge_acceleration", "surge_deceleration", "heave", "cannon_firing", "missile_firing", "rpm", "gear_display", "sli"]
+
+[[game]]
+id = "iracing"
+enabled = ["speed", "engine", "gear", "suspension", "pitch", "roll", "yaw", "sway", "surge_acceleration", "surge_deceleration", "heave", "traction_loss", "wheel_slip", "rumble_strips", "abs_lock", "green", "blue", "white", "red", "yellow", "yellow_waving", "disqualify", "checkered", "start_ready", "start_set", "start_go", "caution_waving", "one_lap_to_green", "debris", "repair", "black", "furled", "spotter_left", "spotter_right", "rpm", "gear_display", "sli"]
+
+[[game]]
+id = "joy"
+enabled = ["speed", "engine", "gear", "suspension", "pitch", "roll", "yaw", "sway", "surge_acceleration", "surge_deceleration", "heave", "traction_loss", "wheel_slip", "cannon_firing", "missile_firing", "rpm", "gear_display", "sli"]
+
+[[game]]
+id = "kart"
+enabled = ["speed", "engine", "gear", "suspension", "pitch", "roll", "yaw", "sway", "surge_acceleration", "surge_deceleration", "heave", "traction_loss", "rpm", "gear_display", "sli"]
+
+[[game]]
+id = "kartkraft"
+enabled = ["speed", "engine", "gear", "suspension", "pitch", "roll", "yaw", "sway", "surge_acceleration", "surge_deceleration", "heave", "traction_loss", "wheel_slip", "rumble_strips", "rpm", "gear_display", "sli"]
+
+[[game]]
+id = "lfs"
+enabled = ["speed", "engine", "gear", "suspension", "pitch", "roll", "yaw", "sway", "surge_acceleration", "surge_deceleration", "heave", "traction_loss", "rpm", "gear_display", "sli"]
+
+[[game]]
+id = "marcas"
+enabled = ["speed", "engine", "gear", "suspension", "pitch", "roll", "yaw", "sway", "surge_acceleration", "surge_deceleration", "heave", "traction_loss", "wheel_slip", "rumble_strips", "yellow", "yellow_waving", "start_ready", "start_set", "start_go", "rpm", "gear_display", "sli"]
+
+[[game]]
+id = "motogp"
+enabled = ["speed", "engine", "gear", "suspension", "pitch", "roll", "yaw", "sway", "surge_acceleration", "surge_deceleration", "heave", "traction_loss", "rpm", "gear_display", "sli"]
+
+[[game]]
+id = "mxbikes"
+enabled = ["speed", "engine", "gear", "suspension", "pitch", "roll", "yaw", "sway", "surge_acceleration", "surge_deceleration", "heave", "traction_loss", "rpm", "gear_display", "sli"]
+
+[[game]]
+id = "nl2"
+enabled = ["speed", "pitch", "roll", "yaw", "sway", "surge_acceleration", "surge_deceleration", "heave", "rpm", "gear_display", "sli"]
+
+[[game]]
+id = "p3d"
+enabled = ["speed", "engine", "pitch", "roll", "yaw", "sway", "surge_acceleration", "surge_deceleration", "heave", "afterburner", "landing_gear", "canopy", "cannon_firing", "missile_firing", "rpm", "gear_display", "sli", "touchdown", "turbulence"]
+
+[[game]]
+id = "projectcars"
+enabled = ["speed", "engine", "gear", "suspension", "pitch", "roll", "yaw", "sway", "surge_acceleration", "surge_deceleration", "heave", "traction_loss", "wheel_slip", "rumble_strips", "abs_lock", "green", "blue", "white", "red", "yellow", "yellow_waving", "disqualify", "checkered", "start_go", "black", "rpm", "gear_display", "sli"]
+
+[[game]]
+id = "projectcars2"
+enabled = ["speed", "engine", "gear", "suspension", "pitch", "roll", "yaw", "sway", "surge_acceleration", "surge_deceleration", "heave", "traction_loss", "wheel_slip", "rumble_strips", "abs_lock", "green", "blue", "white", "red", "yellow", "yellow_waving", "disqualify", "checkered", "start_go", "black", "rpm", "gear_display", "sli"]
+
+[[game]]
+id = "projectcars2udp"
+enabled = ["speed", "engine", "gear", "suspension", "pitch", "roll", "yaw", "sway", "surge_acceleration", "surge_deceleration", "heave", "traction_loss", "rumble_strips", "rpm", "gear_display", "sli"]
+
+[[game]]
+id = "projectcars3"
+enabled = ["speed", "engine", "gear", "suspension", "pitch", "roll", "yaw", "sway", "surge_acceleration", "surge_deceleration", "heave", "traction_loss", "wheel_slip", "rumble_strips", "green", "blue", "white", "red", "yellow", "yellow_waving", "disqualify", "checkered", "start_go", "black", "rpm", "gear_display", "sli"]
+
+[[game]]
+id = "projectcars3udp"
+enabled = ["speed", "engine", "gear", "suspension", "pitch", "roll", "yaw", "sway", "surge_acceleration", "surge_deceleration", "heave", "traction_loss", "rumble_strips", "rpm", "gear_display", "sli"]
+
+[[game]]
+id = "projectcarspro"
+enabled = ["speed", "engine", "gear", "suspension", "pitch", "roll", "yaw", "sway", "surge_acceleration", "surge_deceleration", "heave", "traction_loss", "wheel_slip", "rumble_strips", "green", "blue", "white", "red", "yellow", "yellow_waving", "disqualify", "checkered", "start_go", "black", "rpm", "gear_display", "sli"]
+
+[[game]]
+id = "projectcarsudp"
+enabled = ["speed", "engine", "gear", "suspension", "pitch", "roll", "yaw", "sway", "surge_acceleration", "surge_deceleration", "heave", "traction_loss", "rumble_strips", "rpm", "gear_display", "sli"]
+
+[[game]]
+id = "race07"
+enabled = ["speed", "engine", "gear", "pitch", "roll", "yaw", "sway", "surge_acceleration", "surge_deceleration", "heave", "rpm", "gear_display", "sli"]
+
+[[game]]
+id = "raceinjection"
+enabled = ["speed", "engine", "gear", "pitch", "roll", "yaw", "sway", "surge_acceleration", "surge_deceleration", "heave", "rpm", "gear_display", "sli"]
+
+[[game]]
+id = "rbr"
+enabled = ["speed", "engine", "gear", "suspension", "pitch", "roll", "yaw", "sway", "surge_acceleration", "surge_deceleration", "heave", "traction_loss", "rpm", "gear_display", "sli"]
+
+[[game]]
+id = "rds"
+enabled = ["speed", "engine", "gear", "suspension", "pitch", "roll", "yaw", "sway", "surge_acceleration", "surge_deceleration", "heave", "traction_loss", "rpm", "gear_display", "sli"]
+
+[[game]]
+id = "rf1"
+enabled = ["speed", "engine", "gear", "suspension", "pitch", "roll", "yaw", "sway", "surge_acceleration", "surge_deceleration", "heave", "traction_loss", "wheel_slip", "rumble_strips", "yellow", "yellow_waving", "start_ready", "start_set", "start_go", "rpm", "gear_display", "sli"]
+
+[[game]]
+id = "rf2"
+enabled = ["speed", "engine", "gear", "suspension", "pitch", "roll", "yaw", "sway", "surge_acceleration", "surge_deceleration", "heave", "traction_loss", "wheel_slip", "rumble_strips", "blue", "yellow", "yellow_waving", "start_ready", "start_set", "start_go", "rpm", "gear_display", "sli"]
+
+[[game]]
+id = "rre"
+enabled = ["speed", "engine", "gear", "suspension", "pitch", "roll", "yaw", "sway", "surge_acceleration", "surge_deceleration", "heave", "traction_loss", "rumble_strips", "green", "blue", "white", "yellow", "yellow_waving", "disqualify", "checkered", "start_ready", "start_set", "start_go", "black", "rpm", "gear_display", "sli"]
+
+[[game]]
+id = "silentwings"
+enabled = ["speed", "gear", "pitch", "roll", "yaw", "sway", "surge_acceleration", "surge_deceleration", "heave", "cannon_firing", "missile_firing", "rpm", "gear_display", "sli"]
+
+[[game]]
+id = "aceshigh"
+enabled = ["speed", "gear", "pitch", "roll", "yaw", "sway", "surge_acceleration", "surge_deceleration", "heave", "cannon_firing", "missile_firing", "rpm", "gear_display", "sli"]
+
+[[game]]
+id = "simraceway"
+enabled = ["speed", "engine", "gear", "suspension", "pitch", "roll", "yaw", "sway", "surge_acceleration", "surge_deceleration", "heave", "traction_loss", "wheel_slip", "rumble_strips", "yellow", "yellow_waving", "start_ready", "start_set", "start_go", "rpm", "gear_display", "sli"]
+
+[[game]]
+id = "thecrew"
+enabled = ["speed", "engine", "gear", "suspension", "pitch", "roll", "yaw", "sway", "surge_acceleration", "surge_deceleration", "heave", "traction_loss", "rpm", "gear_display", "sli"]
+
+[[game]]
+id = "thecrew2"
+enabled = ["speed", "engine", "gear", "suspension", "pitch", "roll", "yaw", "sway", "surge_acceleration", "surge_deceleration", "heave", "traction_loss", "rpm", "gear_display", "sli"]
+
+[[game]]
+id = "touringkarts"
+enabled = ["speed", "pitch", "roll", "yaw", "rpm", "gear_display", "sli"]
+
+[[game]]
+id = "touristbus"
+enabled = ["speed", "engine", "gear", "suspension", "pitch", "roll", "yaw", "heave", "rpm", "gear_display", "sli"]
+
+[[game]]
+id = "volvo"
+enabled = ["speed", "engine", "gear", "pitch", "roll", "yaw", "sway", "surge_acceleration", "surge_deceleration", "heave", "rpm", "gear_display", "sli"]
+
+[[game]]
+id = "vracer"
+enabled = ["speed", "engine", "gear", "suspension", "pitch", "roll", "yaw", "sway", "surge_acceleration", "surge_deceleration", "heave", "traction_loss", "cannon_firing", "missile_firing", "rpm", "gear_display", "sli"]
+
+[[game]]
+id = "warthunder"
+enabled = ["speed", "engine", "gear", "pitch", "roll", "yaw", "sway", "surge_acceleration", "surge_deceleration", "heave", "cannon_firing", "missile_firing", "rpm", "gear_display", "sli"]
+
+[[game]]
+id = "wrs"
+enabled = ["speed", "engine", "gear", "suspension", "pitch", "roll", "yaw", "sway", "surge_acceleration", "surge_deceleration", "heave", "traction_loss", "rpm", "gear_display", "sli"]
+
+[[game]]
+id = "wtcc"
+enabled = ["speed", "engine", "gear", "pitch", "roll", "yaw", "sway", "surge_acceleration", "surge_deceleration", "heave", "rpm", "gear_display", "sli"]
+
+[[game]]
+id = "xplane"
+enabled = ["speed", "engine", "pitch", "roll", "yaw", "sway", "surge_acceleration", "surge_deceleration", "heave", "afterburner", "landing_gear", "canopy", "cannon_firing", "missile_firing", "rpm", "gear_display", "sli", "touchdown", "turbulence"]
+
+[[game]]
+id = "falconbms"
+enabled = ["speed", "engine", "pitch", "roll", "yaw", "sway", "surge_acceleration", "surge_deceleration", "heave", "landing_gear", "cannon_firing", "missile_firing", "rpm", "gear_display", "sli"]
+
+[[game]]
+id = "spacemonkey"
+enabled = ["speed", "engine", "gear", "suspension", "pitch", "roll", "yaw", "sway", "surge_acceleration", "surge_deceleration", "heave", "traction_loss", "wheel_slip", "rumble_strips", "afterburner", "landing_gear", "canopy", "cannon_firing", "missile_firing", "rpm", "gear_display", "sli"]
+
+[[game]]
+id = "f12011"
+enabled = ["speed", "engine", "gear", "suspension", "pitch", "roll", "yaw", "sway", "surge_acceleration", "surge_deceleration", "heave", "traction_loss", "rpm", "gear_display", "sli"]
+
+[[game]]
+id = "f12012"
+enabled = ["speed", "engine", "gear", "suspension", "pitch", "roll", "yaw", "sway", "surge_acceleration", "surge_deceleration", "heave", "traction_loss", "rpm", "gear_display", "sli"]
+
+[[game]]
+id = "f12022"
+enabled = ["speed", "engine", "gear", "suspension", "pitch", "roll", "yaw", "sway", "surge_acceleration", "surge_deceleration", "heave", "traction_loss", "wheel_slip", "rumble_strips", "abs_lock", "green", "blue", "red", "yellow", "rpm", "gear_display", "sli"]
+
+[[game]]
+id = "f12023"
+enabled = ["speed", "engine", "gear", "suspension", "pitch", "roll", "yaw", "sway", "surge_acceleration", "surge_deceleration", "heave", "traction_loss", "wheel_slip", "rumble_strips", "abs_lock", "green", "blue", "red", "yellow", "rpm", "gear_display", "sli"]
+
+[[game]]
+id = "wrc2023"
+enabled = ["speed", "engine", "gear", "suspension", "pitch", "roll", "yaw", "sway", "surge_acceleration", "surge_deceleration", "heave", "traction_loss", "rpm", "gear_display", "sli"]
+
+[[game]]
+id = "forzamotorsports8"
+enabled = ["speed", "engine", "gear", "suspension", "pitch", "roll", "yaw", "sway", "surge_acceleration", "surge_deceleration", "heave", "traction_loss", "wheel_slip", "rumble_strips", "rpm", "gear_display", "sli"]

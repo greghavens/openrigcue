@@ -1,0 +1,47 @@
+#!/bin/bash
+# openrigcue-bridge-run: Steam launch option wrapper for Proton games.
+#
+#   Steam > game > Properties > Launch options:   openrigcue-bridge-run %command%
+#
+# Steam expands %command% to the Proton invocation, for example
+#   .../SteamLinuxRuntime_sniper/_v2-entry-point --verb=waitforexitandrun -- \
+#   .../Proton 10.0/proton waitforexitandrun /path/to/Game.exe -arg
+# This wrapper inserts openrigcue-bridge.exe right after Proton's verb, so Proton starts the bridge (in the game's
+# prefix, wineserver and runtime container) and the bridge starts the game and exits after it:
+#   .../proton waitforexitandrun /path/to/openrigcue-bridge.exe -- /path/to/Game.exe -arg
+#
+# Environment:
+#   OPENRIGCUE_BRIDGE_EXE   path of openrigcue-bridge.exe (default: next to this script). It must be visible inside
+#                       the Steam runtime container; anything under $HOME is.
+#   OPENRIGCUE_BRIDGE_LOG   bridge log filter (default info), read by the bridge itself.
+set -u
+
+here=$(dirname "$(readlink -f "$0")")
+bridge=${OPENRIGCUE_BRIDGE_EXE:-$here/openrigcue-bridge.exe}
+
+if [ $# -eq 0 ]; then
+    echo "usage: openrigcue-bridge-run %command%" >&2
+    exit 2
+fi
+if [ ! -f "$bridge" ]; then
+    echo "openrigcue-bridge-run: $bridge not found, starting the game without the bridge" >&2
+    exec "$@"
+fi
+
+command=()
+inserted=0
+previous=""
+for arg in "$@"; do
+    command+=("$arg")
+    if [ "$inserted" -eq 0 ] && [ "${previous##*/}" = proton ] \
+        && { [ "$arg" = waitforexitandrun ] || [ "$arg" = run ]; }; then
+        command+=("$bridge" --)
+        inserted=1
+    fi
+    previous=$arg
+done
+
+if [ "$inserted" -eq 0 ]; then
+    echo "openrigcue-bridge-run: no Proton command found (native game?), starting it without the bridge" >&2
+fi
+exec "${command[@]}"

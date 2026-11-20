@@ -1,0 +1,15 @@
+{
+    "file_format_version": "1.0.0",
+    "api_layer": {
+        "name": "XR_APILAYER_OPENRIGCUE_motion_compensation",
+        "library_path": "@LIBRARY_PATH@",
+        "api_version": "1.0",
+        "implementation_version": "1",
+        "description": "OpenRigCue motion compensation: removes motion-rig movement from headset, controller and layer poses",
+        "functions": {
+            "xrNegotiateLoaderApiLayerInterface": "xrNegotiateLoaderApiLayerInterface"
+        },
+        "enable_environment": "OPENRIGCUE_XR_LAYER_ENABLE",
+        "disable_environment": "OPENRIGCUE_XR_LAYER_DISABLE"
+    }
+}

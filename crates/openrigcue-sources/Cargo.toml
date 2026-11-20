@@ -1,0 +1,46 @@
+[package]
+name = "openrigcue-sources"
+description = "Game telemetry sources: one listener per game, producing the shared Telemetry"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+
+[dependencies]
+openrigcue-model.workspace = true
+serde.workspace = true
+# Joystick mapping reads the stored profile values, including None/bytes and field order.
+openrigcue-config = { path = "../openrigcue-config" }
+thiserror.workspace = true
+tracing.workspace = true
+# HTTP clients of the War Thunder, bus simulator and Elite Dangerous offset listeners (the last one over TLS).
+ureq = { version = "2.12", default-features = false, features = ["tls"] }
+# Elite Dangerous offsets archive (ZIP) and XML.
+zip = { version = "2", default-features = false, features = ["deflate", "bzip2", "lzma"] }
+roxmltree = "0.21"
+# Used by shared_memory/raceroom.rs and shared_memory/iracing.
+# preserve_order: `r3e-data.json` cars are loaded in file order, see raceroom.rs.
+serde_json = { version = "1", features = ["preserve_order"] }
+yaml-rust2 = "0.10"
+# Racing UDP listeners: SO_REUSEADDR, SO_BROADCAST and multicast membership before bind.
+socket2 = { version = "0.6", features = ["all"] }
+# Joystick motion on Linux: controllers read through /dev/input/event* (pure Rust, no system C library).
+evdev = "0.13"
+libloading = "0.8.9"
+# Waiting on a controller with a timeout, so its reader thread notices a stop request (pure Rust on Linux).
+rustix = { version = "1.1", default-features = false, features = ["event", "fs", "std"] }
+crc32fast = "1"
+lzma-rs = "0.3"
+flate2 = { version = "1", default-features = false, features = ["rust_backend"] }
+bzip2 = "0.5"
+
+[dev-dependencies]
+tempfile = "3"
+
+# Only api/joystick/sdl/ffi.rs opts out of this deny for SDL2's C ABI.
+# All other source modules retain the workspace's unsafe-code restriction.
+[lints.rust]
+unsafe_code = "deny"
+
+[lints.clippy]
+all = { level = "warn", priority = -1 }

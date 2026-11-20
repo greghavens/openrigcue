@@ -1,0 +1,21 @@
+OpenRigCue ESP32 firmware runtime notices
+
+The Belt and OBD2HUD application images are built from the Rust application
+sources in firmware/belt and firmware/obd2hud. Their crates declare
+MIT OR Apache-2.0. The distributed files are application-only images;
+they do not contain a merged bootloader, partition table or flash dump.
+
+Runtime components linked into these application images include:
+- Espressif ESP-IDF 3.3.5 / Arduino-ESP32 1.0.6 runtime components;
+- Espressif controller, radio and PHY binary components;
+- FreeRTOS, newlib, and GCC runtime support;
+- NimBLE-Arduino 1.3.1 C host/transport and TinyCrypt (OBD2HUD).
+
+Each component retains its own license. Unmodified license and notice
+texts are included beside this file. GCC runtime support uses the GCC
+Runtime Library Exception; this distribution does not include the compiler.
+
+Source and dependency pins:
+https://github.com/espressif/arduino-esp32/releases/tag/1.0.6
+https://github.com/espressif/esp-idf/tree/85c43024c
+https://github.com/h2zero/NimBLE-Arduino/tree/725079ade938d5e0f4de16695ba2b9039f5ffeb8

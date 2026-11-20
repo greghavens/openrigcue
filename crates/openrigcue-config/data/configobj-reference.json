@@ -1,0 +1,543 @@
+{
+  "reference": {
+    "version": "5.1.0",
+    "module_sha256": "62e94546e977a2348b043bfec1bff4b078875982317222df9ec2a2f3a411eb8a"
+  },
+  "cases": [
+    {
+      "name": "scalar-0",
+      "source": null,
+      "data": {
+        "x": ""
+      },
+      "edit": null,
+      "parsed": null,
+      "output": "x = \"\"\n",
+      "error": false
+    },
+    {
+      "name": "scalar-1",
+      "source": null,
+      "data": {
+        "x": "a,b"
+      },
+      "edit": null,
+      "parsed": null,
+      "output": "x = \"a,b\"\n",
+      "error": false
+    },
+    {
+      "name": "scalar-2",
+      "source": null,
+      "data": {
+        "x": "#comment"
+      },
+      "edit": null,
+      "parsed": null,
+      "output": "x = \"#comment\"\n",
+      "error": false
+    },
+    {
+      "name": "scalar-3",
+      "source": null,
+      "data": {
+        "x": " spaces "
+      },
+      "edit": null,
+      "parsed": null,
+      "output": "x = \" spaces \"\n",
+      "error": false
+    },
+    {
+      "name": "scalar-4",
+      "source": null,
+      "data": {
+        "x": "a\"b"
+      },
+      "edit": null,
+      "parsed": null,
+      "output": "x = a\"b\n",
+      "error": false
+    },
+    {
+      "name": "scalar-5",
+      "source": null,
+      "data": {
+        "x": "a'b"
+      },
+      "edit": null,
+      "parsed": null,
+      "output": "x = a'b\n",
+      "error": false
+    },
+    {
+      "name": "scalar-6",
+      "source": null,
+      "data": {
+        "x": "a'\"b"
+      },
+      "edit": null,
+      "parsed": null,
+      "output": "x = '''a'\"b'''\n",
+      "error": false
+    },
+    {
+      "name": "scalar-7",
+      "source": null,
+      "data": {
+        "x": "first\nsecond"
+      },
+      "edit": null,
+      "parsed": null,
+      "output": "x = '''first\nsecond'''\n",
+      "error": false
+    },
+    {
+      "name": "scalar-8",
+      "source": null,
+      "data": {
+        "x": "x'''\ny"
+      },
+      "edit": null,
+      "parsed": null,
+      "output": "x = \"\"\"x'''\ny\"\"\"\n",
+      "error": false
+    },
+    {
+      "name": "scalar-9",
+      "source": null,
+      "data": {
+        "x": "a\n'"
+      },
+      "edit": null,
+      "parsed": null,
+      "output": "x = '''a\n''''\n",
+      "error": false
+    },
+    {
+      "name": "scalar-10",
+      "source": null,
+      "data": {
+        "x": "a\n\""
+      },
+      "edit": null,
+      "parsed": null,
+      "output": "x = '''a\n\"'''\n",
+      "error": false
+    },
+    {
+      "name": "scalar-11",
+      "source": null,
+      "data": {
+        "x": "a'''b\"\"\"c"
+      },
+      "edit": null,
+      "error": true,
+      "error_name": "ConfigObjError"
+    },
+    {
+      "name": "scalar-12",
+      "source": null,
+      "data": {
+        "x": "é １２"
+      },
+      "edit": null,
+      "parsed": null,
+      "output": "x = é １２\n",
+      "error": false
+    },
+    {
+      "name": "scalar-13",
+      "source": null,
+      "data": {
+        "x": " a"
+      },
+      "edit": null,
+      "parsed": null,
+      "output": "x = \" a\"\n",
+      "error": false
+    },
+    {
+      "name": "scalar-14",
+      "source": null,
+      "data": {
+        "x": "a "
+      },
+      "edit": null,
+      "parsed": null,
+      "output": "x = \"a \"\n",
+      "error": false
+    },
+    {
+      "name": "scalar-15",
+      "source": null,
+      "data": {
+        "x": "a#b"
+      },
+      "edit": null,
+      "parsed": null,
+      "output": "x = \"a#b\"\n",
+      "error": false
+    },
+    {
+      "name": "scalar-16",
+      "source": null,
+      "data": {
+        "x": "a\tb"
+      },
+      "edit": null,
+      "parsed": null,
+      "output": "x = a\tb\n",
+      "error": false
+    },
+    {
+      "name": "lists",
+      "source": null,
+      "data": {
+        "empty": [],
+        "single": [
+          "one"
+        ],
+        "two": [
+          "a,b",
+          "#comment"
+        ],
+        "quote": [
+          "a'\"b",
+          " a "
+        ],
+        "number": [
+          1,
+          false,
+          null
+        ]
+      },
+      "edit": null,
+      "parsed": null,
+      "output": "empty = ,\nsingle = one,\ntwo = \"a,b\", \"#comment\"\nquote = a'\"b, \" a \"\nnumber = 1, False, None\n",
+      "error": false
+    },
+    {
+      "name": "sections",
+      "source": null,
+      "data": {
+        "root": "yes",
+        "APP": {
+          "x": "1",
+          "child": {
+            "x": "2"
+          }
+        },
+        "EMPTY": {}
+      },
+      "edit": null,
+      "parsed": null,
+      "output": "root = yes\n[APP]\n    x = 1\n    [[child]]\n        x = 2\n[EMPTY]\n",
+      "error": false
+    },
+    {
+      "name": "plain",
+      "source": "root=yes\n[APP]\nx=1\n[[child]]\nx=2\n",
+      "data": null,
+      "edit": null,
+      "parsed": {
+        "root": "yes",
+        "APP": {
+          "x": "1",
+          "child": {
+            "x": "2"
+          }
+        }
+      },
+      "output": "root = yes\n[APP]\nx = 1\n[[child]]\nx = 2\n",
+      "error": false
+    },
+    {
+      "name": "comments-indent",
+      "source": "# intro\n\n[APP] # section\n  # before\n  x=1    # inline\n\n  [[child]]\n    z=2 # z\n\n# final\n",
+      "data": null,
+      "edit": [
+        [
+          [
+            "APP",
+            "x"
+          ],
+          "3"
+        ],
+        [
+          [
+            "APP",
+            "new"
+          ],
+          "yes"
+        ]
+      ],
+      "parsed": {
+        "APP": {
+          "x": "1",
+          "child": {
+            "z": "2"
+          }
+        }
+      },
+      "output": "# intro\n\n[APP]   # section\n  # before\n  x = 3      # inline\n  new = yes\n  \n  [[child]]\n    z = 2   # z\n\n# final\n",
+      "error": false
+    },
+    {
+      "name": "bom-crlf",
+      "source": "﻿[APP]\r\nx=1\r\n",
+      "data": null,
+      "edit": null,
+      "parsed": {
+        "APP": {
+          "x": "1"
+        }
+      },
+      "output": "﻿[APP]\r\nx = 1\r\n",
+      "error": false
+    },
+    {
+      "name": "cr-only",
+      "source": "[APP]\rx=1\r",
+      "data": null,
+      "edit": null,
+      "parsed": {
+        "[APP]\rx": "1"
+      },
+      "output": "[APP]\rx = 1\r",
+      "error": false
+    },
+    {
+      "name": "multiline-comment",
+      "source": "[APP]\nx = '''line1\nline2'''  # comment\ny = 3\n",
+      "data": null,
+      "edit": null,
+      "parsed": {
+        "APP": {
+          "x": "line1\nline2",
+          "y": "3"
+        }
+      },
+      "output": "[APP]\nx = '''line1\nline2'''  # comment\ny = 3\n",
+      "error": false
+    },
+    {
+      "name": "end-apostrophe",
+      "source": "x = '''a\n''''\n",
+      "data": null,
+      "edit": null,
+      "parsed": {
+        "x": "a\n'"
+      },
+      "output": "x = '''a\n''''\n",
+      "error": false
+    },
+    {
+      "name": "comment-bracket",
+      "source": "[one] # something ]\nx = 1\n",
+      "data": null,
+      "edit": null,
+      "parsed": {
+        "one": {
+          "x": "1"
+        }
+      },
+      "output": "[one] # something ]\nx = 1\n",
+      "error": false
+    },
+    {
+      "name": "quoted-name",
+      "source": "[\"weird]#\"] # hi\nx=2\n",
+      "data": null,
+      "edit": null,
+      "parsed": {
+        "weird]#": {
+          "x": "2"
+        }
+      },
+      "output": "[weird]#] # hi\nx = 2\n",
+      "error": false
+    },
+    {
+      "name": "quoted-keys",
+      "source": null,
+      "data": {
+        " a ": "yes",
+        "a=b": "equals",
+        "a#b": "hash",
+        "a,b": "comma"
+      },
+      "edit": null,
+      "parsed": null,
+      "output": "\" a \" = yes\na=b = equals\n\"a#b\" = hash\n\"a,b\" = comma\n",
+      "error": false
+    },
+    {
+      "name": "template",
+      "source": "[SHAKEBOX]\nsoundcard = None\nnbr_shakers = 1\nrefresh_rate = 31\nside_enhancement = 1\nreduction_factor = 1\nmin_side_enhancement = 2\nmin_suspension_velocity = 90\nmax_suspension_velocity = 100000\nmin_bump_velocity = 70\nmax_bump_velocity = 100000\nprofile = 1 Speaker - Center\nauto_refresh_soundcard = yes\nlegacy_sound_lib = no\n\n[SHORTCUTS]\npower_wind_switch_keys = ctrl+shift+f1\npower_wind_up_keys = ctrl+shift+up\npower_wind_down_keys = ctrl+shift+down\nshake_box_switch_keys = ctrl+shift+f2\nskip_power_wind_always_on = 0\nskip_power_wind_auto = 0\nskip_power_wind_off = 0\npower_wind_switch_btns = \npower_wind_up_btns = \npower_wind_down_btns = \nshake_box_switch_btns = \nmotion_box_switch_btns = \nmotion_box_switch_keys = ctrl+shift+f3\nled_switch_btns = \nled_switch_keys = ctrl+shift+f4\nignore_joysticks = \n\n[APP]\nx_button_exit = yes\nstart_minimized = no\nuse_dark_theme = yes\nconfig_file_version = 84\nshow_deactivate_license_button = no\npause_telemetry_when_not_playing = yes\nstart_with_windows = yes\nlog_level = 30\nshift_sound = no\nuuid =\nwindow_with = 1280\nwindow_height = 800\nfirst_time_installation = yes\n\n[INTELLIBOX]\nrefresh_rate = 10\nauto_search = yes\ncom_port = \ntimeout_secs = 5\nwind_power_increment = 10\nwind_type = F\nnbr_fans = 2\n\n[MOTIONBOX]\nmodel = None\nsmoothing_threshold = 150\nsoft_crash_factor = 90\nsoft_crash_threshold = 500\nsoft_crash_enabled = yes\nallow_3rd_party_microcontroller = no\nleft_controller_com_port = \nright_controller_com_port = \nleft_debug_port = 20017\nright_debug_port = 20018\nboost_threshold = 150\nboost_multiplier = 2.0\nupdate_kp = yes\nreaction_speed = 100\n\n[NETWORK_PORT]\ndirt = 20777\nf1 = 20778\nf12018 = 20779\nf12019 = 20780\nxplane = 49000\ndcs = 9800\nnl2 = 15151\nwarthunder = 8111\nforza = 10001\napi = 33001\nmotogp = 7100\nlfs = 30000\nkartkraft = 5000\np3d = 33445\ncondor = 55278\ntouringkarts = 4123\nprojectcarsudp = 5606\nprojectcars2udp = 5606\nil2 = 4321\ngrid = 20781\nfsx = 33445\nflyinside = 31234\nsilentwings = 6060\nbeamng = 4444\nepic = 7701\njoy = 33002\n\n[CUSTOM_FEATURES]\ned_invert_yaw = no\ned_invert_pitch = no\ned_invert_roll = no\nxplane_invert_yaw = no\nxplane_invert_pitch = no\nxplane_invert_roll = no\nfsx_invert_yaw = no\nfsx_invert_pitch = no\nfsx_invert_roll = no\nwebui_port = 33733\np3d_invert_yaw = no\np3d_invert_pitch = no\np3d_invert_roll = no\n\n[LED]\nbrightness = 100\nnbr_segments = 3\nnbr_leds = 150\nsegment1_type = R\nsegment1_start = 1\nsegment1_end = 50\nsegment2_type = S\nsegment2_start = 51\nsegment2_end = 100\nsegment3_type = F\nsegment3_start = 101\nsegment3_end = 125\nsegment1_direction = F\nsegment2_direction = F\nsegment3_direction = F\nsegment4_type = F\nsegment4_start = 126\nsegment4_end = 150\nsegment4_direction = F\nsegment1_color = 255,0,0\nsegment2_color = 0,128,0\nsegment3_color = 0,0,255\nsegment4_color = 255,165,0\n",
+      "data": null,
+      "edit": null,
+      "parsed": {
+        "SHAKEBOX": {
+          "soundcard": "None",
+          "nbr_shakers": "1",
+          "refresh_rate": "31",
+          "side_enhancement": "1",
+          "reduction_factor": "1",
+          "min_side_enhancement": "2",
+          "min_suspension_velocity": "90",
+          "max_suspension_velocity": "100000",
+          "min_bump_velocity": "70",
+          "max_bump_velocity": "100000",
+          "profile": "1 Speaker - Center",
+          "auto_refresh_soundcard": "yes",
+          "legacy_sound_lib": "no"
+        },
+        "SHORTCUTS": {
+          "power_wind_switch_keys": "ctrl+shift+f1",
+          "power_wind_up_keys": "ctrl+shift+up",
+          "power_wind_down_keys": "ctrl+shift+down",
+          "shake_box_switch_keys": "ctrl+shift+f2",
+          "skip_power_wind_always_on": "0",
+          "skip_power_wind_auto": "0",
+          "skip_power_wind_off": "0",
+          "power_wind_switch_btns": "",
+          "power_wind_up_btns": "",
+          "power_wind_down_btns": "",
+          "shake_box_switch_btns": "",
+          "motion_box_switch_btns": "",
+          "motion_box_switch_keys": "ctrl+shift+f3",
+          "led_switch_btns": "",
+          "led_switch_keys": "ctrl+shift+f4",
+          "ignore_joysticks": ""
+        },
+        "APP": {
+          "x_button_exit": "yes",
+          "start_minimized": "no",
+          "use_dark_theme": "yes",
+          "config_file_version": "84",
+          "show_deactivate_license_button": "no",
+          "pause_telemetry_when_not_playing": "yes",
+          "start_with_windows": "yes",
+          "log_level": "30",
+          "shift_sound": "no",
+          "uuid": "",
+          "window_with": "1280",
+          "window_height": "800",
+          "first_time_installation": "yes"
+        },
+        "INTELLIBOX": {
+          "refresh_rate": "10",
+          "auto_search": "yes",
+          "com_port": "",
+          "timeout_secs": "5",
+          "wind_power_increment": "10",
+          "wind_type": "F",
+          "nbr_fans": "2"
+        },
+        "MOTIONBOX": {
+          "model": "None",
+          "smoothing_threshold": "150",
+          "soft_crash_factor": "90",
+          "soft_crash_threshold": "500",
+          "soft_crash_enabled": "yes",
+          "allow_3rd_party_microcontroller": "no",
+          "left_controller_com_port": "",
+          "right_controller_com_port": "",
+          "left_debug_port": "20017",
+          "right_debug_port": "20018",
+          "boost_threshold": "150",
+          "boost_multiplier": "2.0",
+          "update_kp": "yes",
+          "reaction_speed": "100"
+        },
+        "NETWORK_PORT": {
+          "dirt": "20777",
+          "f1": "20778",
+          "f12018": "20779",
+          "f12019": "20780",
+          "xplane": "49000",
+          "dcs": "9800",
+          "nl2": "15151",
+          "warthunder": "8111",
+          "forza": "10001",
+          "api": "33001",
+          "motogp": "7100",
+          "lfs": "30000",
+          "kartkraft": "5000",
+          "p3d": "33445",
+          "condor": "55278",
+          "touringkarts": "4123",
+          "projectcarsudp": "5606",
+          "projectcars2udp": "5606",
+          "il2": "4321",
+          "grid": "20781",
+          "fsx": "33445",
+          "flyinside": "31234",
+          "silentwings": "6060",
+          "beamng": "4444",
+          "epic": "7701",
+          "joy": "33002"
+        },
+        "CUSTOM_FEATURES": {
+          "ed_invert_yaw": "no",
+          "ed_invert_pitch": "no",
+          "ed_invert_roll": "no",
+          "xplane_invert_yaw": "no",
+          "xplane_invert_pitch": "no",
+          "xplane_invert_roll": "no",
+          "fsx_invert_yaw": "no",
+          "fsx_invert_pitch": "no",
+          "fsx_invert_roll": "no",
+          "webui_port": "33733",
+          "p3d_invert_yaw": "no",
+          "p3d_invert_pitch": "no",
+          "p3d_invert_roll": "no"
+        },
+        "LED": {
+          "brightness": "100",
+          "nbr_segments": "3",
+          "nbr_leds": "150",
+          "segment1_type": "R",
+          "segment1_start": "1",
+          "segment1_end": "50",
+          "segment2_type": "S",
+          "segment2_start": "51",
+          "segment2_end": "100",
+          "segment3_type": "F",
+          "segment3_start": "101",
+          "segment3_end": "125",
+          "segment1_direction": "F",
+          "segment2_direction": "F",
+          "segment3_direction": "F",
+          "segment4_type": "F",
+          "segment4_start": "126",
+          "segment4_end": "150",
+          "segment4_direction": "F",
+          "segment1_color": [
+            "255",
+            "0",
+            "0"
+          ],
+          "segment2_color": [
+            "0",
+            "128",
+            "0"
+          ],
+          "segment3_color": [
+            "0",
+            "0",
+            "255"
+          ],
+          "segment4_color": [
+            "255",
+            "165",
+            "0"
+          ]
+        }
+      },
+      "output": "[SHAKEBOX]\nsoundcard = None\nnbr_shakers = 1\nrefresh_rate = 31\nside_enhancement = 1\nreduction_factor = 1\nmin_side_enhancement = 2\nmin_suspension_velocity = 90\nmax_suspension_velocity = 100000\nmin_bump_velocity = 70\nmax_bump_velocity = 100000\nprofile = 1 Speaker - Center\nauto_refresh_soundcard = yes\nlegacy_sound_lib = no\n\n[SHORTCUTS]\npower_wind_switch_keys = ctrl+shift+f1\npower_wind_up_keys = ctrl+shift+up\npower_wind_down_keys = ctrl+shift+down\nshake_box_switch_keys = ctrl+shift+f2\nskip_power_wind_always_on = 0\nskip_power_wind_auto = 0\nskip_power_wind_off = 0\npower_wind_switch_btns = \"\"\npower_wind_up_btns = \"\"\npower_wind_down_btns = \"\"\nshake_box_switch_btns = \"\"\nmotion_box_switch_btns = \"\"\nmotion_box_switch_keys = ctrl+shift+f3\nled_switch_btns = \"\"\nled_switch_keys = ctrl+shift+f4\nignore_joysticks = \"\"\n\n[APP]\nx_button_exit = yes\nstart_minimized = no\nuse_dark_theme = yes\nconfig_file_version = 84\nshow_deactivate_license_button = no\npause_telemetry_when_not_playing = yes\nstart_with_windows = yes\nlog_level = 30\nshift_sound = no\nuuid = \"\"\nwindow_with = 1280\nwindow_height = 800\nfirst_time_installation = yes\n\n[INTELLIBOX]\nrefresh_rate = 10\nauto_search = yes\ncom_port = \"\"\ntimeout_secs = 5\nwind_power_increment = 10\nwind_type = F\nnbr_fans = 2\n\n[MOTIONBOX]\nmodel = None\nsmoothing_threshold = 150\nsoft_crash_factor = 90\nsoft_crash_threshold = 500\nsoft_crash_enabled = yes\nallow_3rd_party_microcontroller = no\nleft_controller_com_port = \"\"\nright_controller_com_port = \"\"\nleft_debug_port = 20017\nright_debug_port = 20018\nboost_threshold = 150\nboost_multiplier = 2.0\nupdate_kp = yes\nreaction_speed = 100\n\n[NETWORK_PORT]\ndirt = 20777\nf1 = 20778\nf12018 = 20779\nf12019 = 20780\nxplane = 49000\ndcs = 9800\nnl2 = 15151\nwarthunder = 8111\nforza = 10001\napi = 33001\nmotogp = 7100\nlfs = 30000\nkartkraft = 5000\np3d = 33445\ncondor = 55278\ntouringkarts = 4123\nprojectcarsudp = 5606\nprojectcars2udp = 5606\nil2 = 4321\ngrid = 20781\nfsx = 33445\nflyinside = 31234\nsilentwings = 6060\nbeamng = 4444\nepic = 7701\njoy = 33002\n\n[CUSTOM_FEATURES]\ned_invert_yaw = no\ned_invert_pitch = no\ned_invert_roll = no\nxplane_invert_yaw = no\nxplane_invert_pitch = no\nxplane_invert_roll = no\nfsx_invert_yaw = no\nfsx_invert_pitch = no\nfsx_invert_roll = no\nwebui_port = 33733\np3d_invert_yaw = no\np3d_invert_pitch = no\np3d_invert_roll = no\n\n[LED]\nbrightness = 100\nnbr_segments = 3\nnbr_leds = 150\nsegment1_type = R\nsegment1_start = 1\nsegment1_end = 50\nsegment2_type = S\nsegment2_start = 51\nsegment2_end = 100\nsegment3_type = F\nsegment3_start = 101\nsegment3_end = 125\nsegment1_direction = F\nsegment2_direction = F\nsegment3_direction = F\nsegment4_type = F\nsegment4_start = 126\nsegment4_end = 150\nsegment4_direction = F\nsegment1_color = 255, 0, 0\nsegment2_color = 0, 128, 0\nsegment3_color = 0, 0, 255\nsegment4_color = 255, 165, 0\n",
+      "error": false
+    }
+  ]
+}

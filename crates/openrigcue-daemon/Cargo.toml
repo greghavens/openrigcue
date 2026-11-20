@@ -1,0 +1,49 @@
+[package]
+name = "openrigcue-daemon"
+description = "The openrigcue service: owns sources, motion and effects loops and serves the web UI"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+
+[dependencies]
+openrigcue-model.workspace = true
+openrigcue-cueing.workspace = true
+openrigcue-devices.workspace = true
+openrigcue-sources = { path = "../openrigcue-sources" }
+openrigcue-config = { path = "../openrigcue-config" }
+openrigcue-effects = { path = "../openrigcue-effects" }
+openrigcue-ui = { path = "../openrigcue-ui" }
+# ui-server: the UI calls the API routes in-process (`api/ui_mount.rs`).
+tower = { version = "0.5", features = ["util"] }
+# vr-wiring: the rig-pose file the VR motion-compensation consumers read
+openrigcue-rigpose = { path = "../openrigcue-rigpose" }
+serde.workspace = true
+thiserror.workspace = true
+tracing.workspace = true
+rand.workspace = true
+toml.workspace = true
+chrono = { version = "0.4.45", default-features = false, features = ["clock", "std"] }
+serde_json = "1"
+axum = { version = "0.8", features = ["ws"] }
+tokio = { version = "1", features = ["rt-multi-thread", "net", "sync", "time", "macros"] }
+cpal = "0.15.3"
+# hotkeys: keyboards read through /dev/input (same versions as openrigcue-sources' joystick reader).
+evdev = "0.13"
+rustix = { version = "1.1", default-features = false, features = ["event", "std"] }
+# voice: the text-to-speech requests of spoken notifications
+reqwest = { version = "0.12", default-features = false, features = ["blocking", "rustls-tls"] }
+
+# export-and-voice: udev netlink broadcasts of sound cards added or removed (sound-device monitor)
+[target.'cfg(target_os = "linux")'.dependencies]
+nix = { version = "0.29.0", features = ["socket", "uio"] }
+
+[dev-dependencies]
+tempfile = "3"
+zip = { version = "2", default-features = false, features = ["deflate"] }
+tower = { version = "0.5", features = ["util"] }
+http-body-util = "0.1"
+rusqlite = { version = "0.32", features = ["bundled"] }
+
+[lints]
+workspace = true

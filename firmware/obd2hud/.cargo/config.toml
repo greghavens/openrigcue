@@ -1,0 +1,11 @@
+[build]
+target = "xtensa-esp32-espidf"
+
+[target.xtensa-esp32-espidf]
+linker = "../tools/esp32-link.sh"
+
+[unstable]
+build-std = ["core", "alloc", "panic_abort"]
+
+# The pinned SDK supplies its own sdkconfig.h.
+# sdkconfig.defaults documents the settings; it is not a build input.

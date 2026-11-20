@@ -1,0 +1,38 @@
+OpenRigCue includes adaptations of CPython 3.13.11's short-list sorting algorithm
+from Objects/listobject.c, non-strict path resolver from Lib/posixpath.py,
+and captured Unicode15.1 word/printability classifications from CPython builtins,
+licensed under the Python Software Foundation License Version 2. The complete
+original Python license notices accompany this file.
+
+Source: https://github.com/python/cpython/blob/v3.13.11/Objects/listobject.c
+Source: https://github.com/python/cpython/blob/v3.13.11/Lib/posixpath.py
+Source: https://github.com/python/cpython/blob/v3.13.13/Objects/listobject.c
+
+Changes: run recognition, stable binary insertion, and reverse-sort comparison
+ordering were translated into Rust for IntelliTune's lists of at most 31 samples.
+Comparisons operate on OpenRigCue's native telemetry value representation.
+Native dictionary-key sorting also retains run recognition, binary insertion,
+minimum-run calculation and Powersort merge scheduling. Valid runs of the
+represented unique builtin keys are totally ordered and use Rust's stable sort
+for merging, after retaining the original first merge comparison. Arbitrary
+objects, NaN keys and duplicate None keys are outside that key-sort contract.
+The path resolver was translated to Rust for Linux pyserial-compatible device
+labels, retaining missing targets, symlink cycles and partially resolved tails.
+
+Unicode word/printability tables are generated from CPython 3.13 classifications.
+The Rust tables retain CPython3.13/Unicode15.1 classifications independently of
+the host Rust toolchain Unicode version.
+
+HTTP transport also adapts CPython 3.13.13's request/error/header behavior from
+Lib/http/server.py, Lib/http/client.py, Lib/email/feedparser.py and
+Lib/email/_policybase.py into Rust. Header lookup retains the outer HTTPMessage
+fields consumed by Remi; MIME payloads and defect reporting are not ported.
+
+
+Static resource MIME handling ports the strict default type table and suffix
+classification from CPython 3.13.13 Lib/mimetypes.py, with filename splitting
+following Lib/ntpath.py and Lib/genericpath.py. The type table is generated as
+Rust data by scripts/generate-python-mime.awk; no Python runtime is used.
+Original Windows MIME registry additions are not imported; the existing
+TTF/WOFF/EOT compatibility entries are retained separately.
+Source: https://github.com/python/cpython/blob/v3.13.13/Lib/mimetypes.py

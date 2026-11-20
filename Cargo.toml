@@ -1,0 +1,41 @@
+[workspace]
+resolver = "2"
+members = ["crates/*"]
+exclude = ["vendor/libsqlite3-sys", "vendor/lewton", "vendor/ogg"]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+license = "GPL-3.0-or-later"
+repository = "https://github.com/greghavens/openrigcue"
+rust-version = "1.89"
+
+[workspace.dependencies]
+openrigcue-model = { path = "crates/openrigcue-model" }
+openrigcue-cueing = { path = "crates/openrigcue-cueing" }
+openrigcue-devices = { path = "crates/openrigcue-devices" }
+serde = { version = "1", features = ["derive"] }
+toml = { version = "0.8", features = ["preserve_order"] }
+thiserror = "2"
+anyhow = "1"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+rand = { version = "0.8", features = ["small_rng"] }
+clap = { version = "4", features = ["derive"] }
+serialport = { version = "4", default-features = false }
+
+# The patched crates keep their Rust API; libsqlite3-sys pins the SQLite engine.
+[patch.crates-io]
+libsqlite3-sys = { path = "vendor/libsqlite3-sys" }
+lewton = { path = "vendor/lewton" }
+ogg = { path = "vendor/ogg" }
+
+[workspace.lints.rust]
+unsafe_code = "forbid"
+
+[workspace.lints.clippy]
+all = { level = "warn", priority = -1 }
+
+[profile.release]
+lto = "thin"
+codegen-units = 1

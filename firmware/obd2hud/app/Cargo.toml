@@ -1,0 +1,20 @@
+[package]
+name = "obd2hud-firmware"
+description = "ESP32 application image of the OBD2HUD firmware rebuild"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+publish.workspace = true
+
+[[bin]]
+name = "obd2hud-firmware"
+path = "src/main.rs"
+harness = false
+test = false
+bench = false
+
+[dependencies]
+obd2hud-core = { path = "../core" }
+
+[target.'cfg(target_os = "espidf")'.dependencies]
+esp-idf-sys = { package = "openrigcue-esp-idf33-sys", path = "../../esp-idf33-sys", features = ["nimble"] }

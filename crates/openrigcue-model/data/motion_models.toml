@@ -1,0 +1,1932 @@
+# The motion platform model table, in registration order.
+# Each [[model]] is one entry: `key` is its dict key, every other field is the entry's stored value.
+
+[[model]]
+key = "None"
+"show_reaction_speed" = true
+"nav-image" = "nav-motion.png"
+"background_css_class" = "motion-bg"
+"motor_max_perc" = 95
+"type" = "serial"
+"manual_com_port" = false
+"nbr_motors" = 0
+"motors_direction" = 1
+"id" = 0
+"manufacturer" = "None"
+"controller" = "none"
+"enhanced_gforces" = false
+"nbr_controllers" = 0
+"axis_assignment" = false
+"max_motor_abs" = 1023
+"mapping_id" = 2
+"display_motion_rate" = false
+
+[[model]]
+key = "M2"
+"enable_intellicomp" = true
+"wheel_shake_factor" = 0.05
+"wheels" = { "lr" = 0, "lf" = 0, "rf" = 1, "rr" = 1 }
+"show_reaction_speed" = true
+"nav-image" = "nav-motion.png"
+"background_css_class" = "motion-bg"
+"motor_max_perc" = 95
+"type" = "serial"
+"manual_com_port" = false
+"nbr_motors" = 2
+"motors_direction" = -1
+"id" = 73
+"manufacturer" = "DOF REALITY"
+"controller" = "smc3"
+"enhanced_gforces" = false
+"nbr_controllers" = 1
+"axis_assignment" = false
+"max_motor_abs" = 4095
+"mapping_id" = 2
+"display_motion_rate" = false
+
+[[model]]
+key = "MP2"
+"enable_intellicomp" = true
+"wheel_shake_factor" = 0.05
+"wheels" = { "lr" = 0, "lf" = 0, "rf" = 1, "rr" = 1 }
+"show_reaction_speed" = true
+"nav-image" = "nav-motion.png"
+"background_css_class" = "motion-bg"
+"motor_max_perc" = 95
+"type" = "serial"
+"manual_com_port" = false
+"nbr_motors" = 2
+"motors_direction" = -1
+"id" = 70
+"manufacturer" = "DOF REALITY"
+"controller" = "smc3"
+"enhanced_gforces" = false
+"nbr_controllers" = 1
+"axis_assignment" = false
+"max_motor_abs" = 4095
+"mapping_id" = 2
+"display_motion_rate" = false
+
+[[model]]
+key = "MS2P"
+"enable_intellicomp" = true
+"wheel_shake_factor" = 0.05
+"wheels" = { "lr" = 0, "lf" = 0, "rf" = 1, "rr" = 1 }
+"show_reaction_speed" = true
+"nav-image" = "nav-motion.png"
+"background_css_class" = "motion-bg"
+"motor_max_perc" = 95
+"type" = "serial"
+"manual_com_port" = false
+"nbr_motors" = 2
+"motors_direction" = -1
+"id" = 7
+"manufacturer" = "DOF REALITY"
+"controller" = "smc3"
+"enhanced_gforces" = false
+"nbr_controllers" = 1
+"axis_assignment" = false
+"max_motor_abs" = 4095
+"mapping_id" = 2
+"display_motion_rate" = false
+
+[[model]]
+key = "MS2F"
+"enable_intellicomp" = true
+"wheel_shake_factor" = 0.05
+"wheels" = { "lr" = 0, "lf" = 0, "rf" = 1, "rr" = 1 }
+"show_reaction_speed" = true
+"nav-image" = "nav-motion.png"
+"background_css_class" = "motion-bg"
+"motor_max_perc" = 95
+"type" = "serial"
+"manual_com_port" = false
+"nbr_motors" = 2
+"motors_direction" = -1
+"id" = 23
+"manufacturer" = "DOF REALITY"
+"controller" = "smc3"
+"enhanced_gforces" = false
+"nbr_controllers" = 1
+"axis_assignment" = false
+"max_motor_abs" = 4095
+"mapping_id" = 2
+"display_motion_rate" = false
+
+[[model]]
+key = "H2"
+"enable_intellicomp" = true
+"wheel_shake_factor" = 0.05
+"wheels" = { "lr" = 0, "lf" = 0, "rf" = 1, "rr" = 1 }
+"wheels_motor_dir" = { "lr" = 1, "lf" = 1, "rf" = -1, "rr" = -1 }
+"show_reaction_speed" = true
+"nav-image" = "nav-motion.png"
+"background_css_class" = "motion-bg"
+"motor_max_perc" = 95
+"type" = "serial"
+"manual_com_port" = false
+"nbr_motors" = 2
+"motors_direction" = 1
+"id" = 4
+"manufacturer" = "DOF REALITY"
+"controller" = "smc3"
+"enhanced_gforces" = false
+"nbr_controllers" = 1
+"axis_assignment" = false
+"max_motor_abs" = 4095
+"mapping_id" = 2
+"display_motion_rate" = false
+
+[[model]]
+key = "H3"
+"enable_intellicomp" = true
+"wheel_shake_factor" = 0.05
+"wheels" = { "lr" = 0, "lf" = 0, "rf" = 1, "rr" = 1 }
+"wheels_motor_dir" = { "lr" = 1, "lf" = 1, "rf" = -1, "rr" = -1 }
+"show_reaction_speed" = true
+"nav-image" = "nav-motion.png"
+"background_css_class" = "motion-bg"
+"motor_max_perc" = 95
+"type" = "serial"
+"manual_com_port" = false
+"nbr_motors" = 3
+"motors_direction" = 1
+"id" = 3
+"manufacturer" = "DOF REALITY"
+"controller" = "smc3"
+"enhanced_gforces" = false
+"nbr_controllers" = 1
+"axis_assignment" = false
+"max_motor_abs" = 4095
+"mapping_id" = 3
+"display_motion_rate" = false
+
+[[model]]
+key = "H4"
+"enable_intellicomp" = true
+"wheel_shake_factor" = 0.05
+"wheels" = { "lr" = 0, "lf" = 0, "rf" = 1, "rr" = 1 }
+"wheels_motor_dir" = { "lr" = 1, "lf" = 1, "rf" = -1, "rr" = -1 }
+"show_reaction_speed" = true
+"nav-image" = "nav-motion.png"
+"background_css_class" = "motion-bg"
+"motor_max_perc" = 95
+"type" = "serial"
+"manual_com_port" = false
+"nbr_motors" = 4
+"motors_direction" = 1
+"id" = 77
+"manufacturer" = "DOF REALITY"
+"controller" = "smc3"
+"enhanced_gforces" = false
+"nbr_controllers" = 1
+"axis_assignment" = false
+"max_motor_abs" = 4095
+"mapping_id" = 77
+"display_motion_rate" = false
+
+[[model]]
+key = "H6"
+"enable_intellicomp" = true
+"wheel_shake_factor" = 0.05
+"wheels" = { "lr" = 1, "lf" = 0, "rf" = 3, "rr" = 4 }
+"show_reaction_speed" = true
+"nav-image" = "nav-motion.png"
+"background_css_class" = "motion-bg"
+"motor_max_perc" = 95
+"type" = "serial"
+"manual_com_port" = false
+"nbr_motors" = 6
+"motors_direction" = 1
+"id" = 5
+"manufacturer" = "DOF REALITY"
+"controller" = "smc3"
+"enhanced_gforces" = true
+"nbr_controllers" = 2
+"axis_assignment" = false
+"max_motor_abs" = 4095
+"mapping_id" = 6
+"display_motion_rate" = false
+
+[[model]]
+key = "P2"
+"enable_intellicomp" = true
+"wheel_shake_factor" = 0.05
+"wheels" = { "lr" = 0, "lf" = 0, "rf" = 1, "rr" = 1 }
+"wheels_motor_dir" = { "lr" = 1, "lf" = 1, "rf" = -1, "rr" = -1 }
+"show_reaction_speed" = true
+"nav-image" = "nav-motion.png"
+"background_css_class" = "motion-bg"
+"motor_max_perc" = 95
+"type" = "serial"
+"manual_com_port" = false
+"nbr_motors" = 2
+"motors_direction" = 1
+"id" = 2
+"manufacturer" = "DOF REALITY"
+"controller" = "smc3"
+"enhanced_gforces" = false
+"nbr_controllers" = 1
+"axis_assignment" = false
+"max_motor_abs" = 4095
+"mapping_id" = 2
+"display_motion_rate" = false
+
+[[model]]
+key = "P3"
+"enable_intellicomp" = true
+"wheel_shake_factor" = 0.05
+"wheels" = { "lr" = 0, "lf" = 0, "rf" = 1, "rr" = 1 }
+"wheels_motor_dir" = { "lr" = 1, "lf" = 1, "rf" = -1, "rr" = -1 }
+"show_reaction_speed" = true
+"nav-image" = "nav-motion.png"
+"background_css_class" = "motion-bg"
+"motor_max_perc" = 95
+"type" = "serial"
+"manual_com_port" = false
+"nbr_motors" = 3
+"motors_direction" = 1
+"id" = 1
+"manufacturer" = "DOF REALITY"
+"controller" = "smc3"
+"enhanced_gforces" = false
+"nbr_controllers" = 1
+"axis_assignment" = false
+"max_motor_abs" = 4095
+"mapping_id" = 3
+"display_motion_rate" = false
+
+[[model]]
+key = "P3U"
+"enable_intellicomp" = true
+"wheel_shake_factor" = 0.05
+"wheels" = { "lr" = 0, "lf" = 0, "rf" = 1, "rr" = 1 }
+"show_reaction_speed" = true
+"nav-image" = "nav-motion.png"
+"background_css_class" = "motion-bg"
+"motor_max_perc" = 95
+"type" = "serial"
+"manual_com_port" = false
+"nbr_motors" = 3
+"motors_direction" = -1
+"id" = -1
+"manufacturer" = "DOF REALITY"
+"controller" = "smc3"
+"enhanced_gforces" = false
+"nbr_controllers" = 1
+"axis_assignment" = false
+"max_motor_abs" = 4095
+"mapping_id" = 3
+"display_motion_rate" = false
+
+[[model]]
+key = "P4"
+"enable_intellicomp" = true
+"wheel_shake_factor" = 0.05
+"wheels" = { "lr" = 0, "lf" = 0, "rf" = 1, "rr" = 1 }
+"wheels_motor_dir" = { "lr" = 1, "lf" = 1, "rf" = -1, "rr" = -1 }
+"show_reaction_speed" = true
+"nav-image" = "nav-motion.png"
+"background_css_class" = "motion-bg"
+"motor_max_perc" = 95
+"type" = "serial"
+"manual_com_port" = false
+"nbr_motors" = 4
+"motors_direction" = 1
+"id" = 78
+"manufacturer" = "DOF REALITY"
+"controller" = "smc3"
+"enhanced_gforces" = false
+"nbr_controllers" = 1
+"axis_assignment" = false
+"max_motor_abs" = 4095
+"mapping_id" = 77
+"display_motion_rate" = false
+
+[[model]]
+key = "P6"
+"enable_intellicomp" = true
+"wheel_shake_factor" = 0.05
+"wheels" = { "lr" = 1, "lf" = 0, "rf" = 3, "rr" = 4 }
+"show_reaction_speed" = true
+"nav-image" = "nav-motion.png"
+"background_css_class" = "motion-bg"
+"motor_max_perc" = 95
+"type" = "serial"
+"manual_com_port" = false
+"nbr_motors" = 6
+"motors_direction" = 1
+"id" = 6
+"manufacturer" = "DOF REALITY"
+"controller" = "smc3"
+"enhanced_gforces" = true
+"nbr_controllers" = 2
+"axis_assignment" = false
+"max_motor_abs" = 4095
+"mapping_id" = 6
+"display_motion_rate" = false
+
+[[model]]
+key = "Yaw3"
+"enable_intellicomp" = false
+"wheel_shake_factor" = 0.009
+"wheels" = { "lr" = 0, "lf" = 0, "rf" = 0, "rr" = 0 }
+"show_reaction_speed" = false
+"nav-image" = "yawvr-nav-motion.png"
+"background_css_class" = "yawvr-bg"
+"motor_max_perc" = 100
+"type" = "network"
+"manual_com_port" = false
+"nbr_motors" = 5
+"motors_direction" = 1
+"id" = 0
+"manufacturer" = "Yaw VR"
+"controller" = "yawvr"
+"enhanced_gforces" = false
+"nbr_controllers" = 1
+"axis_assignment" = false
+"max_motor_abs" = 65536
+"mapping_id" = 9
+"default_speed" = 80
+"default_accel" = 80
+"display_motion_rate" = false
+
+[[model]]
+key = "Yaw2 PRO"
+"enable_intellicomp" = false
+"wheel_shake_factor" = 0.009
+"wheels" = { "lr" = 0, "lf" = 0, "rf" = 0, "rr" = 0 }
+"show_reaction_speed" = false
+"nav-image" = "yawvr-nav-motion.png"
+"background_css_class" = "yawvr-bg"
+"motor_max_perc" = 100
+"type" = "network"
+"manual_com_port" = false
+"nbr_motors" = 3
+"motors_direction" = 1
+"id" = 0
+"manufacturer" = "Yaw VR"
+"controller" = "yawvr"
+"enhanced_gforces" = false
+"nbr_controllers" = 1
+"axis_assignment" = false
+"max_motor_abs" = 65536
+"mapping_id" = 9
+"default_speed" = 80
+"default_accel" = 80
+"display_motion_rate" = false
+
+[[model]]
+key = "Yaw2 STANDARD"
+"enable_intellicomp" = false
+"wheel_shake_factor" = 0.009
+"wheels" = { "lr" = 0, "lf" = 0, "rf" = 0, "rr" = 0 }
+"show_reaction_speed" = false
+"nav-image" = "yawvr-nav-motion.png"
+"background_css_class" = "yawvr-bg"
+"motor_max_perc" = 100
+"type" = "network"
+"manual_com_port" = false
+"nbr_motors" = 5
+"motors_direction" = 1
+"id" = 0
+"manufacturer" = "Yaw VR"
+"controller" = "yawvr"
+"enhanced_gforces" = false
+"nbr_controllers" = 1
+"axis_assignment" = false
+"max_motor_abs" = 65536
+"mapping_id" = 9
+"default_speed" = 80
+"default_accel" = 80
+"display_motion_rate" = false
+
+[[model]]
+key = "Yaw2 ARCADE"
+"enable_intellicomp" = false
+"wheel_shake_factor" = 0.009
+"wheels" = { "lr" = 0, "lf" = 0, "rf" = 0, "rr" = 0 }
+"show_reaction_speed" = false
+"nav-image" = "yawvr-nav-motion.png"
+"background_css_class" = "yawvr-bg"
+"motor_max_perc" = 100
+"type" = "network"
+"manual_com_port" = false
+"nbr_motors" = 5
+"motors_direction" = 1
+"id" = 0
+"manufacturer" = "Yaw VR"
+"controller" = "yawvr"
+"enhanced_gforces" = false
+"nbr_controllers" = 1
+"axis_assignment" = false
+"max_motor_abs" = 65536
+"mapping_id" = 9
+"default_speed" = 80
+"default_accel" = 80
+"display_motion_rate" = false
+
+[[model]]
+key = "Yaw VR PRO"
+"enable_intellicomp" = false
+"wheel_shake_factor" = 0.009
+"wheels" = { "lr" = 0, "lf" = 0, "rf" = 0, "rr" = 0 }
+"show_reaction_speed" = false
+"nav-image" = "yawvr-nav-motion.png"
+"background_css_class" = "yawvr-bg"
+"motor_max_perc" = 100
+"type" = "network"
+"manual_com_port" = false
+"nbr_motors" = 3
+"motors_direction" = 1
+"id" = 0
+"manufacturer" = "Yaw VR"
+"controller" = "yawvr"
+"enhanced_gforces" = false
+"nbr_controllers" = 1
+"axis_assignment" = false
+"max_motor_abs" = 65536
+"mapping_id" = 9
+"default_speed" = 80
+"default_accel" = 80
+"display_motion_rate" = false
+
+[[model]]
+key = "Yaw VR STANDARD"
+"enable_intellicomp" = false
+"wheel_shake_factor" = 0.009
+"wheels" = { "lr" = 0, "lf" = 0, "rf" = 0, "rr" = 0 }
+"show_reaction_speed" = false
+"nav-image" = "yawvr-nav-motion.png"
+"background_css_class" = "yawvr-bg"
+"motor_max_perc" = 100
+"type" = "network"
+"manual_com_port" = false
+"nbr_motors" = 5
+"motors_direction" = 1
+"id" = 0
+"manufacturer" = "Yaw VR"
+"controller" = "yawvr"
+"enhanced_gforces" = false
+"nbr_controllers" = 1
+"axis_assignment" = false
+"max_motor_abs" = 65536
+"mapping_id" = 9
+"default_speed" = 80
+"default_accel" = 80
+"display_motion_rate" = false
+
+[[model]]
+key = "T1000-2M PRS200"
+"allow_change_tl_dir" = false
+"enable_intellicomp" = true
+"wheel_shake_factor" = 0.01
+"wheels" = { "lr" = 1, "lf" = 1, "rf" = 0, "rr" = 0 }
+"show_reaction_speed" = true
+"nav-image" = "prosimu-nav-motion.png"
+"background_css_class" = "prosimu-bg"
+"motor_max_perc" = 95
+"type" = "serial"
+"manual_com_port" = true
+"nbr_motors" = 2
+"motors_direction" = 1
+"id" = 0
+"manufacturer" = "PROSIMU"
+"controller" = "prs200"
+"enhanced_gforces" = false
+"nbr_controllers" = 1
+"axis_assignment" = false
+"max_motor_abs" = 65536
+"mapping_id" = 8
+"default_speed" = 80
+"default_accel" = 80
+"display_motion_rate" = true
+
+[[model]]
+key = "T1000-2M SCN6 Dyadic"
+"allow_change_tl_dir" = false
+"enable_intellicomp" = false
+"wheel_shake_factor" = 0.01
+"wheels" = { "lr" = 1, "lf" = 1, "rf" = 0, "rr" = 0 }
+"show_reaction_speed" = true
+"nav-image" = "prosimu-nav-motion.png"
+"background_css_class" = "prosimu-bg"
+"motor_max_perc" = 95
+"type" = "serial"
+"manual_com_port" = false
+"nbr_motors" = 2
+"motors_direction" = 1
+"id" = 0
+"manufacturer" = "PROSIMU"
+"controller" = "scn6"
+"enhanced_gforces" = false
+"nbr_controllers" = 2
+"axis_assignment" = true
+"assignment_options" = ["Front Left", "Front-Right", "Traction Loss"]
+"max_motor_abs" = 10000
+"mapping_id" = 7
+"default_speed" = 10000
+"default_accel" = 80
+"display_motion_rate" = true
+
+[[model]]
+key = "T1000-2M SV"
+"allow_change_tl_dir" = false
+"enable_intellicomp" = true
+"wheel_shake_factor" = 0.01
+"wheels" = { "lr" = 1, "lf" = 1, "rf" = 0, "rr" = 0 }
+"show_reaction_speed" = true
+"nav-image" = "prosimu-nav-motion.png"
+"background_css_class" = "prosimu-bg"
+"motor_max_perc" = 95
+"type" = "serial"
+"manual_com_port" = true
+"nbr_motors" = 2
+"motors_direction" = 1
+"id" = 0
+"manufacturer" = "PROSIMU"
+"controller" = "prs200_sv"
+"enhanced_gforces" = false
+"nbr_controllers" = 1
+"axis_assignment" = false
+"max_motor_abs" = 65536
+"mapping_id" = 8
+"default_speed" = 80
+"default_accel" = 80
+"display_motion_rate" = true
+
+[[model]]
+key = "T1000-3M PRS200"
+"allow_change_tl_dir" = true
+"enable_intellicomp" = true
+"wheel_shake_factor" = 0.01
+"wheels" = { "lr" = 1, "lf" = 1, "rf" = 0, "rr" = 0 }
+"main_actuators" = [0, 1, 3, 4]
+"show_reaction_speed" = true
+"nav-image" = "prosimu-nav-motion.png"
+"background_css_class" = "prosimu-bg"
+"motor_max_perc" = 95
+"type" = "serial"
+"manual_com_port" = true
+"nbr_motors" = 3
+"motors_direction" = 1
+"id" = 0
+"manufacturer" = "PROSIMU"
+"controller" = "prs200"
+"enhanced_gforces" = false
+"nbr_controllers" = 2
+"axis_assignment" = false
+"max_motor_abs" = 65536
+"mapping_id" = 8
+"default_speed" = 80
+"default_accel" = 80
+"display_motion_rate" = true
+
+[[model]]
+key = "T1000-3M SCN6 Dyadic"
+"allow_change_tl_dir" = true
+"enable_intellicomp" = false
+"wheel_shake_factor" = 0.01
+"wheels" = { "lr" = 1, "lf" = 1, "rf" = 0, "rr" = 0 }
+"main_actuators" = [0, 1, 3, 4]
+"show_reaction_speed" = true
+"nav-image" = "prosimu-nav-motion.png"
+"background_css_class" = "prosimu-bg"
+"motor_max_perc" = 95
+"type" = "serial"
+"manual_com_port" = false
+"nbr_motors" = 3
+"motors_direction" = 1
+"id" = 0
+"manufacturer" = "PROSIMU"
+"controller" = "scn6"
+"enhanced_gforces" = false
+"nbr_controllers" = 3
+"axis_assignment" = true
+"assignment_options" = ["Front Left", "Front-Right", "Traction Loss"]
+"max_motor_abs" = 10000
+"mapping_id" = 7
+"default_speed" = 10000
+"default_accel" = 80
+"display_motion_rate" = true
+
+[[model]]
+key = "T1000-3M SV"
+"allow_change_tl_dir" = true
+"enable_intellicomp" = true
+"wheel_shake_factor" = 0.01
+"wheels" = { "lr" = 1, "lf" = 1, "rf" = 0, "rr" = 0 }
+"main_actuators" = [0, 1, 3, 4]
+"show_reaction_speed" = true
+"nav-image" = "prosimu-nav-motion.png"
+"background_css_class" = "prosimu-bg"
+"motor_max_perc" = 95
+"type" = "serial"
+"manual_com_port" = true
+"nbr_motors" = 3
+"motors_direction" = 1
+"id" = 0
+"manufacturer" = "PROSIMU"
+"controller" = "prs200_sv"
+"enhanced_gforces" = false
+"nbr_controllers" = 1
+"axis_assignment" = false
+"max_motor_abs" = 65536
+"mapping_id" = 8
+"default_speed" = 80
+"default_accel" = 80
+"display_motion_rate" = true
+
+[[model]]
+key = "T1000AL-4M PRS200"
+"allow_change_tl_dir" = false
+"enable_intellicomp" = true
+"wheel_shake_factor" = 0.01
+"wheels" = { "lr" = 3, "lf" = 0, "rf" = 1, "rr" = 4 }
+"main_actuators" = [0, 1, 3, 4]
+"show_reaction_speed" = true
+"nav-image" = "prosimu-nav-motion.png"
+"background_css_class" = "prosimu-bg"
+"motor_max_perc" = 95
+"type" = "serial"
+"manual_com_port" = true
+"nbr_motors" = 4
+"motors_direction" = 1
+"id" = 0
+"manufacturer" = "PROSIMU"
+"controller" = "prs200"
+"enhanced_gforces" = false
+"nbr_controllers" = 1
+"axis_assignment" = false
+"max_motor_abs" = 65536
+"mapping_id" = 8
+"default_speed" = 80
+"default_accel" = 80
+"display_motion_rate" = true
+
+[[model]]
+key = "T1000-5M PRS200"
+"allow_change_tl_dir" = true
+"enable_intellicomp" = true
+"wheel_shake_factor" = 0.01
+"wheels" = { "lr" = 3, "lf" = 0, "rf" = 1, "rr" = 4 }
+"main_actuators" = [0, 1, 3, 4]
+"show_reaction_speed" = true
+"nav-image" = "prosimu-nav-motion.png"
+"background_css_class" = "prosimu-bg"
+"motor_max_perc" = 95
+"type" = "serial"
+"manual_com_port" = true
+"nbr_motors" = 5
+"motors_direction" = 1
+"id" = 0
+"manufacturer" = "PROSIMU"
+"controller" = "prs200"
+"enhanced_gforces" = false
+"nbr_controllers" = 2
+"axis_assignment" = false
+"max_motor_abs" = 65536
+"mapping_id" = 8
+"default_speed" = 80
+"default_accel" = 80
+"display_motion_rate" = true
+
+[[model]]
+key = "T1000-5M PRS200 (Upgrade)"
+"allow_change_tl_dir" = true
+"enable_intellicomp" = true
+"wheel_shake_factor" = 0.01
+"wheels" = { "lr" = 3, "lf" = 0, "rf" = 1, "rr" = 4 }
+"main_actuators" = [0, 1, 3, 4]
+"show_reaction_speed" = true
+"nav-image" = "prosimu-nav-motion.png"
+"background_css_class" = "prosimu-bg"
+"motor_max_perc" = 95
+"type" = "serial"
+"manual_com_port" = true
+"nbr_motors" = 5
+"motors_direction" = 1
+"id" = 0
+"manufacturer" = "PROSIMU"
+"controller" = "prs200"
+"enhanced_gforces" = false
+"nbr_controllers" = 3
+"axis_assignment" = false
+"max_motor_abs" = 65536
+"mapping_id" = 8
+"default_speed" = 80
+"default_accel" = 80
+"display_motion_rate" = true
+
+[[model]]
+key = "T1000-5M SV"
+"allow_change_tl_dir" = true
+"enable_intellicomp" = true
+"wheel_shake_factor" = 0.01
+"wheels" = { "lr" = 3, "lf" = 0, "rf" = 1, "rr" = 4 }
+"main_actuators" = [0, 1, 3, 4]
+"show_reaction_speed" = true
+"nav-image" = "prosimu-nav-motion.png"
+"background_css_class" = "prosimu-bg"
+"motor_max_perc" = 95
+"type" = "serial"
+"manual_com_port" = true
+"nbr_motors" = 5
+"motors_direction" = 1
+"id" = 0
+"manufacturer" = "PROSIMU"
+"controller" = "prs200_prs50"
+"enhanced_gforces" = false
+"nbr_controllers" = 2
+"axis_assignment" = false
+"max_motor_abs" = 65536
+"mapping_id" = 8
+"default_speed" = 80
+"default_accel" = 80
+"display_motion_rate" = true
+
+[[model]]
+key = "T1000-6M PRS200 RK"
+"allow_change_tl_dir" = true
+"enable_intellicomp" = true
+"wheel_shake_factor" = 0.01
+"wheels" = { "lr" = 3, "lf" = 0, "rf" = 1, "rr" = 4 }
+"main_actuators" = [0, 1, 3, 4]
+"show_reaction_speed" = true
+"nav-image" = "prosimu-nav-motion.png"
+"background_css_class" = "prosimu-bg"
+"motor_max_perc" = 95
+"type" = "serial"
+"manual_com_port" = true
+"nbr_motors" = 6
+"motors_direction" = 1
+"id" = 0
+"manufacturer" = "PROSIMU"
+"controller" = "prs200_tl_surge"
+"enhanced_gforces" = false
+"nbr_controllers" = 3
+"axis_assignment" = true
+"assignment_options" = ["Traction Loss", "Surge"]
+"max_motor_abs" = 65536
+"mapping_id" = 22
+"default_speed" = 80
+"default_accel" = 80
+"display_motion_rate" = true
+
+[[model]]
+key = "T1000-6M SV RK"
+"allow_change_tl_dir" = true
+"enable_intellicomp" = true
+"wheel_shake_factor" = 0.01
+"wheels" = { "lr" = 3, "lf" = 0, "rf" = 1, "rr" = 4 }
+"main_actuators" = [0, 1, 3, 4]
+"show_reaction_speed" = true
+"nav-image" = "prosimu-nav-motion.png"
+"background_css_class" = "prosimu-bg"
+"motor_max_perc" = 95
+"type" = "serial"
+"manual_com_port" = true
+"nbr_motors" = 6
+"motors_direction" = 1
+"id" = 0
+"manufacturer" = "PROSIMU"
+"controller" = "prs200_prs50"
+"enhanced_gforces" = false
+"nbr_controllers" = 2
+"axis_assignment" = false
+"max_motor_abs" = 65536
+"mapping_id" = 22
+"default_speed" = 80
+"default_accel" = 80
+"display_motion_rate" = true
+
+[[model]]
+key = "P5MP PRS200"
+"allow_change_tl_dir" = true
+"enable_intellicomp" = true
+"wheel_shake_factor" = 0.01
+"wheels" = { "lr" = 3, "lf" = 0, "rf" = 1, "rr" = 4 }
+"main_actuators" = [0, 1, 3, 4]
+"show_reaction_speed" = true
+"nav-image" = "prosimu-nav-motion.png"
+"background_css_class" = "prosimu-bg"
+"motor_max_perc" = 95
+"type" = "serial"
+"manual_com_port" = true
+"nbr_motors" = 5
+"motors_direction" = 1
+"id" = 0
+"manufacturer" = "PROSIMU"
+"controller" = "prs200"
+"enhanced_gforces" = false
+"nbr_controllers" = 2
+"axis_assignment" = false
+"max_motor_abs" = 65536
+"mapping_id" = 8
+"default_speed" = 80
+"default_accel" = 80
+"display_motion_rate" = true
+
+[[model]]
+key = "P5MP PRS200 (Upgrade)"
+"allow_change_tl_dir" = true
+"enable_intellicomp" = true
+"wheel_shake_factor" = 0.01
+"wheels" = { "lr" = 3, "lf" = 0, "rf" = 1, "rr" = 4 }
+"main_actuators" = [0, 1, 3, 4]
+"show_reaction_speed" = true
+"nav-image" = "prosimu-nav-motion.png"
+"background_css_class" = "prosimu-bg"
+"motor_max_perc" = 95
+"type" = "serial"
+"manual_com_port" = true
+"nbr_motors" = 5
+"motors_direction" = 1
+"id" = 0
+"manufacturer" = "PROSIMU"
+"controller" = "prs200"
+"enhanced_gforces" = false
+"nbr_controllers" = 3
+"axis_assignment" = false
+"max_motor_abs" = 65536
+"mapping_id" = 8
+"default_speed" = 80
+"default_accel" = 80
+"display_motion_rate" = true
+
+[[model]]
+key = "P5MP SV"
+"allow_change_tl_dir" = true
+"enable_intellicomp" = true
+"wheel_shake_factor" = 0.01
+"wheels" = { "lr" = 3, "lf" = 0, "rf" = 1, "rr" = 4 }
+"main_actuators" = [0, 1, 3, 4]
+"show_reaction_speed" = true
+"nav-image" = "prosimu-nav-motion.png"
+"background_css_class" = "prosimu-bg"
+"motor_max_perc" = 95
+"type" = "serial"
+"manual_com_port" = true
+"nbr_motors" = 5
+"motors_direction" = 1
+"id" = 0
+"manufacturer" = "PROSIMU"
+"controller" = "prs200_prs50"
+"enhanced_gforces" = false
+"nbr_controllers" = 2
+"axis_assignment" = false
+"max_motor_abs" = 65536
+"mapping_id" = 8
+"default_speed" = 80
+"default_accel" = 80
+"display_motion_rate" = true
+
+[[model]]
+key = "T3PRO"
+"allow_change_tl_dir" = true
+"enable_intellicomp" = true
+"wheel_shake_factor" = 0.01
+"wheels" = { "lr" = 1, "lf" = 1, "rf" = 0, "rr" = 0 }
+"show_reaction_speed" = true
+"nav-image" = "prosimu-nav-motion.png"
+"background_css_class" = "prosimu-bg"
+"motor_max_perc" = 95
+"type" = "serial"
+"manual_com_port" = true
+"nbr_motors" = 3
+"motors_direction" = 1
+"id" = 0
+"manufacturer" = "PROSIMU"
+"controller" = "prs200"
+"enhanced_gforces" = false
+"nbr_controllers" = 2
+"axis_assignment" = false
+"max_motor_abs" = 65536
+"mapping_id" = 8
+"default_speed" = 80
+"default_accel" = 80
+"display_motion_rate" = true
+
+[[model]]
+key = "T5PRO"
+"allow_change_tl_dir" = true
+"enable_intellicomp" = true
+"wheel_shake_factor" = 0.01
+"wheels" = { "lr" = 3, "lf" = 0, "rf" = 1, "rr" = 4 }
+"main_actuators" = [0, 1, 3, 4]
+"show_reaction_speed" = true
+"nav-image" = "prosimu-nav-motion.png"
+"background_css_class" = "prosimu-bg"
+"motor_max_perc" = 95
+"type" = "serial"
+"manual_com_port" = true
+"nbr_motors" = 5
+"motors_direction" = 1
+"id" = 0
+"manufacturer" = "PROSIMU"
+"controller" = "prs200"
+"enhanced_gforces" = false
+"nbr_controllers" = 2
+"axis_assignment" = false
+"max_motor_abs" = 65536
+"mapping_id" = 8
+"default_speed" = 80
+"default_accel" = 80
+"display_motion_rate" = true
+
+[[model]]
+key = "T5PRO (Upgrade)"
+"allow_change_tl_dir" = true
+"enable_intellicomp" = true
+"wheel_shake_factor" = 0.01
+"wheels" = { "lr" = 3, "lf" = 0, "rf" = 1, "rr" = 4 }
+"main_actuators" = [0, 1, 3, 4]
+"show_reaction_speed" = true
+"nav-image" = "prosimu-nav-motion.png"
+"background_css_class" = "prosimu-bg"
+"motor_max_perc" = 95
+"type" = "serial"
+"manual_com_port" = true
+"nbr_motors" = 5
+"motors_direction" = 1
+"id" = 0
+"manufacturer" = "PROSIMU"
+"controller" = "prs200"
+"enhanced_gforces" = false
+"nbr_controllers" = 3
+"axis_assignment" = false
+"max_motor_abs" = 65536
+"mapping_id" = 8
+"default_speed" = 80
+"default_accel" = 80
+"display_motion_rate" = true
+
+[[model]]
+key = "PTA Motion System UDP"
+"enable_intellicomp" = false
+"wheel_shake_factor" = 0.01
+"wheels" = { "lr" = 0, "lf" = 1, "rf" = 2, "rr" = 0 }
+"show_reaction_speed" = false
+"nbr_motors" = 1
+"mapping_id" = 25
+"nav-image" = "pta-nav-motion.png"
+"background_css_class" = "pta-bg"
+"motor_max_perc" = 100
+"type" = "network"
+"manual_com_port" = false
+"motors_direction" = 1
+"id" = 0
+"manufacturer" = "PT-ACTUATOR"
+"controller" = "ptamotion"
+"enhanced_gforces" = false
+"nbr_controllers" = 1
+"axis_assignment" = false
+"max_motor_abs" = 65536
+"default_speed" = 80
+"default_accel" = 80
+"display_motion_rate" = false
+
+[[model]]
+key = "3 Actuators (2 Front + 1 Rear) CANBus"
+"enable_intellicomp" = true
+"wheel_shake_factor" = 0.01
+"wheels" = { "lr" = 0, "lf" = 1, "rf" = 2, "rr" = 0 }
+"show_reaction_speed" = true
+"nbr_motors" = 3
+"mapping_id" = 12
+"nav-image" = "nav-motion.png"
+"background_css_class" = "motion-bg"
+"motor_max_perc" = 95
+"type" = "serial"
+"manual_com_port" = true
+"motors_direction" = 1
+"id" = 0
+"manufacturer" = "PT-ACTUATOR"
+"controller" = "ptcan"
+"enhanced_gforces" = false
+"nbr_controllers" = 1
+"axis_assignment" = false
+"max_motor_abs" = 65536
+"default_speed" = 80
+"default_accel" = 80
+"display_motion_rate" = false
+"port_mapping" = ["Rear", "FL", "FR"]
+
+[[model]]
+key = "3 Actuators (1 Front + 2 Rear) CANBus"
+"enable_intellicomp" = true
+"wheel_shake_factor" = 0.01
+"wheels" = { "lr" = 1, "lf" = 0, "rf" = 0, "rr" = 2 }
+"show_reaction_speed" = true
+"nbr_motors" = 3
+"mapping_id" = 13
+"nav-image" = "nav-motion.png"
+"background_css_class" = "motion-bg"
+"motor_max_perc" = 95
+"type" = "serial"
+"manual_com_port" = true
+"motors_direction" = 1
+"id" = 0
+"manufacturer" = "PT-ACTUATOR"
+"controller" = "ptcan"
+"enhanced_gforces" = false
+"nbr_controllers" = 1
+"axis_assignment" = false
+"max_motor_abs" = 65536
+"default_speed" = 80
+"default_accel" = 80
+"display_motion_rate" = false
+"port_mapping" = ["Front", "RR", "RL"]
+
+[[model]]
+key = "4 Actuators (2 Front + 2 Rear) CANBus"
+"enable_intellicomp" = true
+"wheel_shake_factor" = 0.01
+"wheels" = { "lr" = 0, "lf" = 1, "rf" = 2, "rr" = 3 }
+"show_reaction_speed" = true
+"nbr_motors" = 4
+"mapping_id" = 17
+"nav-image" = "nav-motion.png"
+"background_css_class" = "motion-bg"
+"motor_max_perc" = 95
+"type" = "serial"
+"manual_com_port" = true
+"motors_direction" = 1
+"id" = 0
+"manufacturer" = "PT-ACTUATOR"
+"controller" = "ptcan"
+"enhanced_gforces" = false
+"nbr_controllers" = 1
+"axis_assignment" = false
+"max_motor_abs" = 65536
+"default_speed" = 80
+"default_accel" = 80
+"display_motion_rate" = false
+"port_mapping" = ["RL", "FL", "FR", "RR"]
+
+[[model]]
+key = "5 Actuators (2 Front + 2 Rear + TL) CANBus"
+"enable_intellicomp" = true
+"wheel_shake_factor" = 0.01
+"wheels" = { "lr" = 0, "lf" = 1, "rf" = 2, "rr" = 3 }
+"main_actuators" = [0, 1, 2, 3]
+"show_reaction_speed" = true
+"nbr_motors" = 5
+"mapping_id" = 10
+"nav-image" = "nav-motion.png"
+"background_css_class" = "motion-bg"
+"motor_max_perc" = 95
+"type" = "serial"
+"manual_com_port" = true
+"motors_direction" = 1
+"id" = 0
+"manufacturer" = "PT-ACTUATOR"
+"controller" = "ptcan"
+"enhanced_gforces" = false
+"nbr_controllers" = 1
+"axis_assignment" = false
+"max_motor_abs" = 65536
+"default_speed" = 80
+"default_accel" = 80
+"display_motion_rate" = false
+"port_mapping" = ["RL", "FL", "FR", "RR", "TL"]
+
+[[model]]
+key = "5 Actuators (2 Front + 2 Rear + Surge) CANBus"
+"enable_intellicomp" = true
+"wheel_shake_factor" = 0.01
+"wheels" = { "lr" = 0, "lf" = 1, "rf" = 2, "rr" = 3 }
+"main_actuators" = [0, 1, 2, 3]
+"show_reaction_speed" = true
+"nbr_motors" = 5
+"mapping_id" = 14
+"nav-image" = "nav-motion.png"
+"background_css_class" = "motion-bg"
+"motor_max_perc" = 95
+"type" = "serial"
+"manual_com_port" = true
+"motors_direction" = 1
+"id" = 0
+"manufacturer" = "PT-ACTUATOR"
+"controller" = "ptcan"
+"enhanced_gforces" = false
+"nbr_controllers" = 1
+"axis_assignment" = false
+"max_motor_abs" = 65536
+"default_speed" = 80
+"default_accel" = 80
+"display_motion_rate" = false
+"port_mapping" = ["RL", "FL", "FR", "RR", "Surge"]
+
+[[model]]
+key = "6 Actuators (2 Front + 2 Rear + TL + Surge) CANBus"
+"enable_intellicomp" = true
+"wheel_shake_factor" = 0.01
+"wheels" = { "lr" = 0, "lf" = 1, "rf" = 2, "rr" = 3 }
+"main_actuators" = [0, 1, 2, 3]
+"show_reaction_speed" = true
+"nbr_motors" = 6
+"mapping_id" = 15
+"nav-image" = "nav-motion.png"
+"background_css_class" = "motion-bg"
+"motor_max_perc" = 95
+"type" = "serial"
+"manual_com_port" = true
+"motors_direction" = 1
+"id" = 0
+"manufacturer" = "PT-ACTUATOR"
+"controller" = "ptcan"
+"enhanced_gforces" = false
+"nbr_controllers" = 1
+"axis_assignment" = false
+"max_motor_abs" = 65536
+"default_speed" = 80
+"default_accel" = 80
+"display_motion_rate" = false
+"port_mapping" = ["RL", "FL", "FR", "RR", "TL", "Surge"]
+
+[[model]]
+key = "6 Actuators (2 Front + 2 Rear + Surge + Belt) CANBus"
+"belt_tensioner_motor" = 5
+"enable_intellicomp" = true
+"wheel_shake_factor" = 0.01
+"wheels" = { "lr" = 0, "lf" = 1, "rf" = 2, "rr" = 3 }
+"main_actuators" = [0, 1, 2, 3]
+"show_reaction_speed" = true
+"nbr_motors" = 6
+"mapping_id" = 21
+"nav-image" = "nav-motion.png"
+"background_css_class" = "motion-bg"
+"motor_max_perc" = 95
+"type" = "serial"
+"manual_com_port" = true
+"motors_direction" = 1
+"id" = 0
+"manufacturer" = "PT-ACTUATOR"
+"controller" = "ptcan"
+"enhanced_gforces" = false
+"nbr_controllers" = 1
+"axis_assignment" = false
+"max_motor_abs" = 65536
+"default_speed" = 80
+"default_accel" = 80
+"display_motion_rate" = false
+"port_mapping" = ["RL", "FL", "FR", "RR", "Surge", "Belt"]
+
+[[model]]
+key = "6 Actuators (2 Front + 2 Rear + 2 TL) CANBus"
+"enable_intellicomp" = true
+"wheel_shake_factor" = 0.01
+"wheels" = { "lr" = 0, "lf" = 1, "rf" = 2, "rr" = 3 }
+"main_actuators" = [0, 1, 2, 3]
+"show_reaction_speed" = true
+"nbr_motors" = 6
+"mapping_id" = 16
+"nav-image" = "nav-motion.png"
+"background_css_class" = "motion-bg"
+"motor_max_perc" = 95
+"type" = "serial"
+"manual_com_port" = true
+"motors_direction" = 1
+"id" = 0
+"manufacturer" = "PT-ACTUATOR"
+"controller" = "ptcan"
+"enhanced_gforces" = false
+"nbr_controllers" = 1
+"axis_assignment" = false
+"max_motor_abs" = 65536
+"default_speed" = 80
+"default_accel" = 80
+"display_motion_rate" = false
+"port_mapping" = ["RL", "FL", "FR", "RR", "TL Rear", "TL Front"]
+
+[[model]]
+key = "7 Actuators (2 Front + 2 Rear + TL + Surge + Belt) CANBus"
+"belt_tensioner_motor" = 6
+"enable_intellicomp" = true
+"wheel_shake_factor" = 0.01
+"wheels" = { "lr" = 0, "lf" = 1, "rf" = 2, "rr" = 3 }
+"main_actuators" = [0, 1, 2, 3]
+"show_reaction_speed" = true
+"nbr_motors" = 7
+"mapping_id" = 20
+"nav-image" = "nav-motion.png"
+"background_css_class" = "motion-bg"
+"motor_max_perc" = 95
+"type" = "serial"
+"manual_com_port" = true
+"motors_direction" = 1
+"id" = 0
+"manufacturer" = "PT-ACTUATOR"
+"controller" = "ptcan"
+"enhanced_gforces" = false
+"nbr_controllers" = 1
+"axis_assignment" = false
+"max_motor_abs" = 65536
+"default_speed" = 80
+"default_accel" = 80
+"display_motion_rate" = false
+"port_mapping" = ["RL", "FL", "FR", "RR", "TL", "Surge", "Belt"]
+
+[[model]]
+key = "7 Actuators (2 Front + 2 Rear + 2 TL + Surge) CANBus"
+"enable_intellicomp" = true
+"wheel_shake_factor" = 0.01
+"wheels" = { "lr" = 0, "lf" = 1, "rf" = 2, "rr" = 3 }
+"main_actuators" = [0, 1, 2, 3]
+"show_reaction_speed" = true
+"nbr_motors" = 7
+"mapping_id" = 11
+"nav-image" = "nav-motion.png"
+"background_css_class" = "motion-bg"
+"motor_max_perc" = 95
+"type" = "serial"
+"manual_com_port" = true
+"motors_direction" = 1
+"id" = 0
+"manufacturer" = "PT-ACTUATOR"
+"controller" = "ptcan"
+"enhanced_gforces" = false
+"nbr_controllers" = 1
+"axis_assignment" = false
+"max_motor_abs" = 65536
+"default_speed" = 80
+"default_accel" = 80
+"display_motion_rate" = false
+"port_mapping" = ["RL", "FL", "FR", "RR", "TL Rear", "Surge", "TL Front"]
+
+[[model]]
+key = "8 Actuators (2 Front + 2 Rear + 2 TL + Surge + Belt) CANBus"
+"enable_intellicomp" = true
+"wheel_shake_factor" = 0.01
+"wheels" = { "lr" = 0, "lf" = 1, "rf" = 2, "rr" = 3 }
+"main_actuators" = [0, 1, 2, 3]
+"show_reaction_speed" = true
+"nbr_motors" = 8
+"mapping_id" = 23
+"nav-image" = "nav-motion.png"
+"background_css_class" = "motion-bg"
+"motor_max_perc" = 95
+"type" = "serial"
+"manual_com_port" = true
+"motors_direction" = 1
+"id" = 0
+"manufacturer" = "PT-ACTUATOR"
+"controller" = "ptcan"
+"enhanced_gforces" = false
+"nbr_controllers" = 1
+"axis_assignment" = false
+"max_motor_abs" = 65536
+"default_speed" = 80
+"default_accel" = 80
+"display_motion_rate" = false
+"port_mapping" = ["RL", "FL", "FR", "RR", "TL Rear", "Surge", "TL Front", "Belt"]
+
+[[model]]
+key = "3 Actuators [2 Front + 1 Rear]"
+"enable_intellicomp" = true
+"wheel_shake_factor" = 0.01
+"wheels" = { "lr" = 0, "lf" = 1, "rf" = 2, "rr" = 0 }
+"show_reaction_speed" = false
+"nbr_motors" = 3
+"mapping_id" = 12
+"nav-image" = "motion-controller-nav.png"
+"background_css_class" = "motion-controller-bg"
+"motor_max_perc" = 95
+"type" = "serial"
+"manual_com_port" = false
+"motors_direction" = 1
+"id" = 0
+"manufacturer" = "THANOS"
+"controller" = "thanos"
+"enhanced_gforces" = false
+"nbr_controllers" = 1
+"axis_assignment" = false
+"max_motor_abs" = 65536
+"default_speed" = 80
+"default_accel" = 80
+"display_motion_rate" = false
+"port_mapping" = ["Rear", "FL", "FR"]
+
+[[model]]
+key = "3 Actuators [1 Front + 2 Rear]"
+"enable_intellicomp" = true
+"wheel_shake_factor" = 0.01
+"wheels" = { "lr" = 1, "lf" = 0, "rf" = 0, "rr" = 2 }
+"show_reaction_speed" = false
+"nbr_motors" = 3
+"mapping_id" = 13
+"nav-image" = "motion-controller-nav.png"
+"background_css_class" = "motion-controller-bg"
+"motor_max_perc" = 95
+"type" = "serial"
+"manual_com_port" = false
+"motors_direction" = 1
+"id" = 0
+"manufacturer" = "THANOS"
+"controller" = "thanos"
+"enhanced_gforces" = false
+"nbr_controllers" = 1
+"axis_assignment" = false
+"max_motor_abs" = 65536
+"default_speed" = 80
+"default_accel" = 80
+"display_motion_rate" = false
+"port_mapping" = ["Front", "RR", "RL"]
+
+[[model]]
+key = "4 Actuators [2 Front + 2 Rear]"
+"enable_intellicomp" = true
+"wheel_shake_factor" = 0.01
+"wheels" = { "lr" = 0, "lf" = 1, "rf" = 2, "rr" = 3 }
+"show_reaction_speed" = false
+"nbr_motors" = 4
+"mapping_id" = 17
+"nav-image" = "motion-controller-nav.png"
+"background_css_class" = "motion-controller-bg"
+"motor_max_perc" = 95
+"type" = "serial"
+"manual_com_port" = false
+"motors_direction" = 1
+"id" = 0
+"manufacturer" = "THANOS"
+"controller" = "thanos"
+"enhanced_gforces" = false
+"nbr_controllers" = 1
+"axis_assignment" = false
+"max_motor_abs" = 65536
+"default_speed" = 80
+"default_accel" = 80
+"display_motion_rate" = false
+"port_mapping" = ["RL", "FL", "FR", "RR"]
+
+[[model]]
+key = "5 Actuators [2 Front + 2 Rear + TL]"
+"enable_intellicomp" = true
+"wheel_shake_factor" = 0.01
+"wheels" = { "lr" = 0, "lf" = 1, "rf" = 2, "rr" = 3 }
+"main_actuators" = [0, 1, 2, 3]
+"show_reaction_speed" = false
+"nbr_motors" = 5
+"mapping_id" = 10
+"nav-image" = "motion-controller-nav.png"
+"background_css_class" = "motion-controller-bg"
+"motor_max_perc" = 95
+"type" = "serial"
+"manual_com_port" = false
+"motors_direction" = 1
+"id" = 0
+"manufacturer" = "THANOS"
+"controller" = "thanos"
+"enhanced_gforces" = false
+"nbr_controllers" = 1
+"axis_assignment" = false
+"max_motor_abs" = 65536
+"default_speed" = 80
+"default_accel" = 80
+"display_motion_rate" = false
+"port_mapping" = ["RL", "FL", "FR", "RR", "TL"]
+
+[[model]]
+key = "5 Actuators [2 Front + 2 Rear + Surge]"
+"enable_intellicomp" = true
+"wheel_shake_factor" = 0.01
+"wheels" = { "lr" = 0, "lf" = 1, "rf" = 2, "rr" = 3 }
+"main_actuators" = [0, 1, 2, 3]
+"show_reaction_speed" = false
+"nbr_motors" = 5
+"mapping_id" = 14
+"nav-image" = "motion-controller-nav.png"
+"background_css_class" = "motion-controller-bg"
+"motor_max_perc" = 95
+"type" = "serial"
+"manual_com_port" = false
+"motors_direction" = 1
+"id" = 0
+"manufacturer" = "THANOS"
+"controller" = "thanos"
+"enhanced_gforces" = false
+"nbr_controllers" = 1
+"axis_assignment" = false
+"max_motor_abs" = 65536
+"default_speed" = 80
+"default_accel" = 80
+"display_motion_rate" = false
+"port_mapping" = ["RL", "FL", "FR", "RR", "Surge"]
+
+[[model]]
+key = "6 Actuators [2 Front + 2 Rear + TL + Surge]"
+"enable_intellicomp" = true
+"wheel_shake_factor" = 0.01
+"wheels" = { "lr" = 0, "lf" = 1, "rf" = 2, "rr" = 3 }
+"main_actuators" = [0, 1, 2, 3]
+"show_reaction_speed" = false
+"nbr_motors" = 6
+"mapping_id" = 15
+"nav-image" = "motion-controller-nav.png"
+"background_css_class" = "motion-controller-bg"
+"motor_max_perc" = 95
+"type" = "serial"
+"manual_com_port" = false
+"motors_direction" = 1
+"id" = 0
+"manufacturer" = "THANOS"
+"controller" = "thanos"
+"enhanced_gforces" = false
+"nbr_controllers" = 1
+"axis_assignment" = false
+"max_motor_abs" = 65536
+"default_speed" = 80
+"default_accel" = 80
+"display_motion_rate" = false
+"port_mapping" = ["RL", "FL", "FR", "RR", "TL", "Surge"]
+
+[[model]]
+key = "6 Actuators [2 Front + 2 Rear + Surge + Belt]"
+"belt_tensioner_motor" = 5
+"enable_intellicomp" = true
+"wheel_shake_factor" = 0.01
+"wheels" = { "lr" = 0, "lf" = 1, "rf" = 2, "rr" = 3 }
+"main_actuators" = [0, 1, 2, 3]
+"show_reaction_speed" = false
+"nbr_motors" = 6
+"mapping_id" = 21
+"nav-image" = "motion-controller-nav.png"
+"background_css_class" = "motion-controller-bg"
+"motor_max_perc" = 95
+"type" = "serial"
+"manual_com_port" = false
+"motors_direction" = 1
+"id" = 0
+"manufacturer" = "THANOS"
+"controller" = "thanos"
+"enhanced_gforces" = false
+"nbr_controllers" = 1
+"axis_assignment" = false
+"max_motor_abs" = 65536
+"default_speed" = 80
+"default_accel" = 80
+"display_motion_rate" = false
+"port_mapping" = ["RL", "FL", "FR", "RR", "Surge", "Belt"]
+
+[[model]]
+key = "6 Actuators [2 Front + 2 Rear + 2 TL]"
+"enable_intellicomp" = true
+"wheel_shake_factor" = 0.01
+"wheels" = { "lr" = 0, "lf" = 1, "rf" = 2, "rr" = 3 }
+"main_actuators" = [0, 1, 2, 3]
+"show_reaction_speed" = false
+"nbr_motors" = 6
+"mapping_id" = 16
+"nav-image" = "motion-controller-nav.png"
+"background_css_class" = "motion-controller-bg"
+"motor_max_perc" = 95
+"type" = "serial"
+"manual_com_port" = false
+"motors_direction" = 1
+"id" = 0
+"manufacturer" = "THANOS"
+"controller" = "thanos"
+"enhanced_gforces" = false
+"nbr_controllers" = 1
+"axis_assignment" = false
+"max_motor_abs" = 65536
+"default_speed" = 80
+"default_accel" = 80
+"display_motion_rate" = false
+"port_mapping" = ["RL", "FL", "FR", "RR", "TL Rear", "TL Front"]
+
+[[model]]
+key = "7 Actuators [2 Front + 2 Rear + TL + Surge + Belt]"
+"belt_tensioner_motor" = 6
+"enable_intellicomp" = true
+"wheel_shake_factor" = 0.01
+"wheels" = { "lr" = 0, "lf" = 1, "rf" = 2, "rr" = 3 }
+"main_actuators" = [0, 1, 2, 3]
+"show_reaction_speed" = false
+"nbr_motors" = 7
+"mapping_id" = 20
+"nav-image" = "motion-controller-nav.png"
+"background_css_class" = "motion-controller-bg"
+"motor_max_perc" = 95
+"type" = "serial"
+"manual_com_port" = false
+"motors_direction" = 1
+"id" = 0
+"manufacturer" = "THANOS"
+"controller" = "thanos"
+"enhanced_gforces" = false
+"nbr_controllers" = 1
+"axis_assignment" = false
+"max_motor_abs" = 65536
+"default_speed" = 80
+"default_accel" = 80
+"display_motion_rate" = false
+"port_mapping" = ["RL", "FL", "FR", "RR", "TL", "Surge", "Belt"]
+
+[[model]]
+key = "7 Actuators [2 Front + 2 Rear + 2 TL + Surge]"
+"enable_intellicomp" = true
+"wheel_shake_factor" = 0.01
+"wheels" = { "lr" = 0, "lf" = 1, "rf" = 2, "rr" = 3 }
+"main_actuators" = [0, 1, 2, 3]
+"show_reaction_speed" = false
+"nbr_motors" = 7
+"mapping_id" = 11
+"nav-image" = "motion-controller-nav.png"
+"background_css_class" = "motion-controller-bg"
+"motor_max_perc" = 95
+"type" = "serial"
+"manual_com_port" = false
+"motors_direction" = 1
+"id" = 0
+"manufacturer" = "THANOS"
+"controller" = "thanos"
+"enhanced_gforces" = false
+"nbr_controllers" = 1
+"axis_assignment" = false
+"max_motor_abs" = 65536
+"default_speed" = 80
+"default_accel" = 80
+"display_motion_rate" = false
+"port_mapping" = ["RL", "FL", "FR", "RR", "TL Rear", "Surge", "TL Front"]
+
+[[model]]
+key = "8 Actuators [2 Front + 2 Rear + 2 TL + Surge + Belt]"
+"enable_intellicomp" = true
+"wheel_shake_factor" = 0.01
+"wheels" = { "lr" = 0, "lf" = 1, "rf" = 2, "rr" = 3 }
+"main_actuators" = [0, 1, 2, 3]
+"show_reaction_speed" = false
+"nbr_motors" = 8
+"mapping_id" = 23
+"nav-image" = "motion-controller-nav.png"
+"background_css_class" = "motion-controller-bg"
+"motor_max_perc" = 95
+"type" = "serial"
+"manual_com_port" = false
+"motors_direction" = 1
+"id" = 0
+"manufacturer" = "THANOS"
+"controller" = "thanos"
+"enhanced_gforces" = false
+"nbr_controllers" = 1
+"axis_assignment" = false
+"max_motor_abs" = 65536
+"default_speed" = 80
+"default_accel" = 80
+"display_motion_rate" = false
+"port_mapping" = ["RL", "FL", "FR", "RR", "TL Rear", "Surge", "TL Front", "Belt"]
+
+[[model]]
+key = "3 Actuators <2 Front + 1 Rear>"
+"enable_intellicomp" = true
+"wheel_shake_factor" = 0.01
+"wheels" = { "lr" = 0, "lf" = 1, "rf" = 2, "rr" = 0 }
+"show_reaction_speed" = false
+"nbr_motors" = 3
+"mapping_id" = 12
+"nav-image" = "vnm-nav-motion.png"
+"background_css_class" = "vnm-bg"
+"motor_max_perc" = 95
+"type" = "serial"
+"manual_com_port" = true
+"motors_direction" = 1
+"id" = 0
+"manufacturer" = "VNM SIMULATION"
+"controller" = "vnm"
+"enhanced_gforces" = false
+"nbr_controllers" = 1
+"axis_assignment" = false
+"max_motor_abs" = 65536
+"default_speed" = 80
+"default_accel" = 80
+"display_motion_rate" = false
+"port_mapping" = ["FL", "FR", "Rear"]
+
+[[model]]
+key = "3 Actuators <1 Front + 2 Rear>"
+"enable_intellicomp" = true
+"wheel_shake_factor" = 0.01
+"wheels" = { "lr" = 1, "lf" = 0, "rf" = 0, "rr" = 2 }
+"show_reaction_speed" = false
+"nbr_motors" = 3
+"mapping_id" = 13
+"nav-image" = "vnm-nav-motion.png"
+"background_css_class" = "vnm-bg"
+"motor_max_perc" = 95
+"type" = "serial"
+"manual_com_port" = true
+"motors_direction" = 1
+"id" = 0
+"manufacturer" = "VNM SIMULATION"
+"controller" = "vnm"
+"enhanced_gforces" = false
+"nbr_controllers" = 1
+"axis_assignment" = false
+"max_motor_abs" = 65536
+"default_speed" = 80
+"default_accel" = 80
+"display_motion_rate" = false
+"port_mapping" = ["Front", "RR", "RL"]
+
+[[model]]
+key = "4 Actuators <2 Front + 2 Rear>"
+"enable_intellicomp" = true
+"wheel_shake_factor" = 0.01
+"wheels" = { "lr" = 0, "lf" = 1, "rf" = 2, "rr" = 3 }
+"show_reaction_speed" = false
+"nbr_motors" = 4
+"mapping_id" = 17
+"nav-image" = "vnm-nav-motion.png"
+"background_css_class" = "vnm-bg"
+"motor_max_perc" = 95
+"type" = "serial"
+"manual_com_port" = true
+"motors_direction" = 1
+"id" = 0
+"manufacturer" = "VNM SIMULATION"
+"controller" = "vnm"
+"enhanced_gforces" = false
+"nbr_controllers" = 1
+"axis_assignment" = false
+"max_motor_abs" = 65536
+"default_speed" = 80
+"default_accel" = 80
+"display_motion_rate" = false
+"port_mapping" = ["FL", "FR", "RR", "RL"]
+
+[[model]]
+key = "5 Actuators <2 Front + 2 Rear + TL>"
+"enable_intellicomp" = true
+"wheel_shake_factor" = 0.01
+"wheels" = { "lr" = 0, "lf" = 1, "rf" = 2, "rr" = 3 }
+"main_actuators" = [0, 1, 2, 3]
+"show_reaction_speed" = false
+"nbr_motors" = 5
+"mapping_id" = 10
+"nav-image" = "vnm-nav-motion.png"
+"background_css_class" = "vnm-bg"
+"motor_max_perc" = 95
+"type" = "serial"
+"manual_com_port" = true
+"motors_direction" = 1
+"id" = 0
+"manufacturer" = "VNM SIMULATION"
+"controller" = "vnm"
+"enhanced_gforces" = false
+"nbr_controllers" = 1
+"axis_assignment" = false
+"max_motor_abs" = 65536
+"default_speed" = 80
+"default_accel" = 80
+"display_motion_rate" = false
+"port_mapping" = ["FL", "FR", "RR", "RL", "TL"]
+
+[[model]]
+key = "5 Actuators <2 Front + 2 Rear + Surge>"
+"enable_intellicomp" = true
+"wheel_shake_factor" = 0.01
+"wheels" = { "lr" = 0, "lf" = 1, "rf" = 2, "rr" = 3 }
+"main_actuators" = [0, 1, 2, 3]
+"show_reaction_speed" = false
+"nbr_motors" = 5
+"mapping_id" = 14
+"nav-image" = "vnm-nav-motion.png"
+"background_css_class" = "vnm-bg"
+"motor_max_perc" = 95
+"type" = "serial"
+"manual_com_port" = true
+"motors_direction" = 1
+"id" = 0
+"manufacturer" = "VNM SIMULATION"
+"controller" = "vnm"
+"enhanced_gforces" = false
+"nbr_controllers" = 1
+"axis_assignment" = false
+"max_motor_abs" = 65536
+"default_speed" = 80
+"default_accel" = 80
+"display_motion_rate" = false
+"port_mapping" = ["FL", "FR", "RR", "RL", "Surge"]
+
+[[model]]
+key = "6 Actuators <2 Front + 2 Rear + TL + Surge>"
+"enable_intellicomp" = true
+"wheel_shake_factor" = 0.01
+"wheels" = { "lr" = 0, "lf" = 1, "rf" = 2, "rr" = 3 }
+"main_actuators" = [0, 1, 2, 3]
+"show_reaction_speed" = false
+"nbr_motors" = 6
+"mapping_id" = 15
+"nav-image" = "vnm-nav-motion.png"
+"background_css_class" = "vnm-bg"
+"motor_max_perc" = 95
+"type" = "serial"
+"manual_com_port" = true
+"motors_direction" = 1
+"id" = 0
+"manufacturer" = "VNM SIMULATION"
+"controller" = "vnm"
+"enhanced_gforces" = false
+"nbr_controllers" = 1
+"axis_assignment" = false
+"max_motor_abs" = 65536
+"default_speed" = 80
+"default_accel" = 80
+"display_motion_rate" = false
+"port_mapping" = ["FL", "FR", "RR", "RL", "TL", "Surge"]
+
+[[model]]
+key = "6 Actuators <2 Front + 2 Rear + Surge + Belt>"
+"belt_tensioner_motor" = 5
+"enable_intellicomp" = true
+"wheel_shake_factor" = 0.01
+"wheels" = { "lr" = 0, "lf" = 1, "rf" = 2, "rr" = 3 }
+"main_actuators" = [0, 1, 2, 3]
+"show_reaction_speed" = false
+"nbr_motors" = 6
+"mapping_id" = 21
+"nav-image" = "vnm-nav-motion.png"
+"background_css_class" = "vnm-bg"
+"motor_max_perc" = 95
+"type" = "serial"
+"manual_com_port" = true
+"motors_direction" = 1
+"id" = 0
+"manufacturer" = "VNM SIMULATION"
+"controller" = "vnm"
+"enhanced_gforces" = false
+"nbr_controllers" = 1
+"axis_assignment" = false
+"max_motor_abs" = 65536
+"default_speed" = 80
+"default_accel" = 80
+"display_motion_rate" = false
+"port_mapping" = ["FL", "FR", "RR", "RL", "Surge", "Belt"]
+
+[[model]]
+key = "6 Actuators <2 Front + 2 Rear + 2 TL>"
+"enable_intellicomp" = true
+"wheel_shake_factor" = 0.01
+"wheels" = { "lr" = 0, "lf" = 1, "rf" = 2, "rr" = 3 }
+"main_actuators" = [0, 1, 2, 3]
+"show_reaction_speed" = false
+"nbr_motors" = 6
+"mapping_id" = 16
+"nav-image" = "vnm-nav-motion.png"
+"background_css_class" = "vnm-bg"
+"motor_max_perc" = 95
+"type" = "serial"
+"manual_com_port" = true
+"motors_direction" = 1
+"id" = 0
+"manufacturer" = "VNM SIMULATION"
+"controller" = "vnm"
+"enhanced_gforces" = false
+"nbr_controllers" = 1
+"axis_assignment" = false
+"max_motor_abs" = 65536
+"default_speed" = 80
+"default_accel" = 80
+"display_motion_rate" = false
+"port_mapping" = ["FL", "FR", "RR", "RL", "TL Front", "TL Rear"]
+
+[[model]]
+key = "7 Actuators <2 Front + 2 Rear + TL + Surge + Belt>"
+"belt_tensioner_motor" = 6
+"enable_intellicomp" = true
+"wheel_shake_factor" = 0.01
+"wheels" = { "lr" = 0, "lf" = 1, "rf" = 2, "rr" = 3 }
+"main_actuators" = [0, 1, 2, 3]
+"show_reaction_speed" = false
+"nbr_motors" = 7
+"mapping_id" = 20
+"nav-image" = "vnm-nav-motion.png"
+"background_css_class" = "vnm-bg"
+"motor_max_perc" = 95
+"type" = "serial"
+"manual_com_port" = true
+"motors_direction" = 1
+"id" = 0
+"manufacturer" = "VNM SIMULATION"
+"controller" = "vnm"
+"enhanced_gforces" = false
+"nbr_controllers" = 1
+"axis_assignment" = false
+"max_motor_abs" = 65536
+"default_speed" = 80
+"default_accel" = 80
+"display_motion_rate" = false
+"port_mapping" = ["FL", "FR", "RR", "RL", "TL", "Surge", "Belt"]
+
+[[model]]
+key = "7 Actuators <2 Front + 2 Rear + 2 TL + Surge>"
+"enable_intellicomp" = true
+"wheel_shake_factor" = 0.01
+"wheels" = { "lr" = 0, "lf" = 1, "rf" = 2, "rr" = 3 }
+"main_actuators" = [0, 1, 2, 3]
+"show_reaction_speed" = false
+"nbr_motors" = 7
+"mapping_id" = 11
+"nav-image" = "vnm-nav-motion.png"
+"background_css_class" = "vnm-bg"
+"motor_max_perc" = 95
+"type" = "serial"
+"manual_com_port" = true
+"motors_direction" = 1
+"id" = 0
+"manufacturer" = "VNM SIMULATION"
+"controller" = "vnm"
+"enhanced_gforces" = false
+"nbr_controllers" = 1
+"axis_assignment" = false
+"max_motor_abs" = 65536
+"default_speed" = 80
+"default_accel" = 80
+"display_motion_rate" = false
+"port_mapping" = ["FL", "FR", "RR", "RL", "TL Front", "TL Rear", "Surge"]
+
+[[model]]
+key = "8 Actuators <2 Front + 2 Rear + 2 TL + Surge + Belt>"
+"enable_intellicomp" = true
+"wheel_shake_factor" = 0.01
+"wheels" = { "lr" = 0, "lf" = 1, "rf" = 2, "rr" = 3 }
+"main_actuators" = [0, 1, 2, 3]
+"show_reaction_speed" = false
+"nbr_motors" = 8
+"mapping_id" = 23
+"nav-image" = "vnm-nav-motion.png"
+"background_css_class" = "vnm-bg"
+"motor_max_perc" = 95
+"type" = "serial"
+"manual_com_port" = true
+"motors_direction" = 1
+"id" = 0
+"manufacturer" = "VNM SIMULATION"
+"controller" = "vnm"
+"enhanced_gforces" = false
+"nbr_controllers" = 1
+"axis_assignment" = false
+"max_motor_abs" = 65536
+"default_speed" = 80
+"default_accel" = 80
+"display_motion_rate" = false
+"port_mapping" = ["FL", "FR", "RR", "RL", "TL Front", "TL Rear", "Surge", "Belt"]
+
+# Registered only when the SimRacingTech build flag is enabled, which it is not by
+# default. Drivers retain both definitions for their explicit flag.
+[[simracingtech_model]]
+key = "STR-SCN6150"
+nbr_controllers = 4
+nbr_motors = 4
+enable_intellicomp = false
+wheel_shake_factor = 0.01
+wheels = { lr = 0, lf = 1, rf = 2, rr = 3 }
+main_actuators = [0, 1, 2, 3]
+show_reaction_speed = false
+nav-image = "nav-motion.png"
+background_css_class = "motion-bg"
+motor_max_perc = 95
+type = "serial"
+manual_com_port = false
+motors_direction = 1
+id = 0
+manufacturer = "SIMTECHREVOLUTION"
+controller = "simtechrevolution"
+enhanced_gforces = false
+axis_assignment = true
+max_motor_abs = 15000
+mapping_id = 24
+default_speed = 10000
+default_accel = 80
+display_motion_rate = false
+assignment_options = ["Front Left", "Front Right", "Rear Left", "Rear Right"]
+
+[[simracingtech_model]]
+key = "STR-SCN6150-TL"
+allow_change_tl_dir = false
+nbr_controllers = 5
+nbr_motors = 5
+enable_intellicomp = false
+wheel_shake_factor = 0.01
+wheels = { lr = 0, lf = 1, rf = 2, rr = 3 }
+main_actuators = [0, 1, 2, 3]
+show_reaction_speed = false
+nav-image = "nav-motion.png"
+background_css_class = "motion-bg"
+motor_max_perc = 95
+type = "serial"
+manual_com_port = false
+motors_direction = 1
+id = 0
+manufacturer = "SIMTECHREVOLUTION"
+controller = "simtechrevolution"
+enhanced_gforces = false
+axis_assignment = true
+max_motor_abs = 15000
+mapping_id = 24
+default_speed = 10000
+default_accel = 80
+display_motion_rate = false
+assignment_options = ["Front Left", "Front Right", "Rear Left", "Rear Right", "Traction Loss"]

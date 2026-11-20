@@ -1,0 +1,45 @@
+# OpenRigCue SteamVR driver settings. Copy to ~/.config/openrigcue/steamvr-driver.toml
+# (or point $OPENRIGCUE_STEAMVR_CONFIG at a file). Every key is optional; the values below are the
+# defaults. The driver re-reads the file within a second of it changing.
+
+# Master switch for the driver (the daemon's on/off switch in the rig-pose file also applies).
+enabled = true
+
+# Which devices to compensate. The headset always is.
+compensate_controllers = true
+# Off by default: a tracker may be mounted on the rig itself.
+compensate_trackers = false
+
+# Calibrate from the first headset pose once the rig pose is live. Recentre at any time with the
+# daemon's re-centre action, or: touch /dev/shm/openrigcue/steamvr-driver.recenter
+# Sit facing straight ahead along the seat when calibrating.
+auto_calibrate = true
+
+# Where the rig's centre of rotation (CoR) is relative to your head at calibration:
+# "file" uses the daemon's setting from the rig-pose file, "config" uses the cor_* keys below.
+cor_source = "file"
+cor_forward_m = 0.0     # + in front of the eyes
+cor_down_m = 0.0        # + below the eyes
+cor_right_m = 0.0       # + to the right
+cor_yaw_offset_deg = 0.0 # seat heading relative to your heading at calibration, + left
+
+# The contract ranks this driver above the OpenXR layer (on SteamVR the driver also covers OpenXR
+# games and the compositor). Set true to let a running OpenXR layer compensate instead.
+yield_to_openxr_layer = false
+
+# Prediction. rig_latency_ms: delay from the rig moving to the sample's timestamp (sensor filter,
+# serial link). The rig pose is extrapolated to each device pose's time, at most max_extrapolation_ms.
+rig_latency_ms = 0.0
+max_extrapolation_ms = 50.0
+# Smoothing of rates estimated from successive samples when the daemon publishes none.
+rate_smoothing_ms = 15.0
+
+# A rig sample older than stale_after_ms starts fading compensation out over fade_ms.
+stale_after_ms = 250.0
+fade_ms = 500.0
+
+# SteamVR predicts poses from the velocities the tracking driver reports.
+# "compensate": remove the rig-induced part (incl. the lever arm about the CoR) - recommended;
+# "zero": report no velocities (disables SteamVR prediction for compensated devices);
+# "keep": leave the rig's motion in them (SteamVR will extrapolate the rig motion back in).
+velocity = "compensate"

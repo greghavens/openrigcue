@@ -1,0 +1,1100 @@
+# Game catalog. Do not edit.
+
+[[game]]
+id = "ac"
+name = "Assetto Corsa"
+kind = "racing"
+listener = "ac"
+process_name = "acs.exe"
+window_name = "Assetto Corsa"
+window_match = "M"
+
+[[game]]
+id = "acc"
+name = "Assetto Corsa Competizione"
+kind = "racing"
+listener = "ac"
+process_name = "acc.exe"
+window_name = "AC2"
+window_match = "M"
+
+[[game]]
+id = "acevo"
+name = "Assetto Corsa EVO"
+kind = "racing"
+listener = "acevo"
+process_name = "AssettoCorsaEVO.exe"
+window_name = "SRS Assetto Corsa EVO"
+window_match = "M"
+
+[[game]]
+id = "acrally"
+name = "Assetto Corsa Rally"
+kind = "racing"
+listener = "ac"
+process_name = "acr.exe"
+window_name = "Assetto Corsa RallyX"
+window_match = "M"
+
+[[game]]
+id = "actc"
+name = "Simulador Turismo Carretera"
+kind = "racing"
+listener = "rf1"
+window_name = "Simulador Turismo Carretera"
+window_match = "P"
+
+[[game]]
+id = "aeroflyfs2"
+name = "Aerofly FS2"
+kind = "flying"
+listener = "aeroflyfs2"
+process_name = "aerofly_fs_2.exe"
+window_name = "Aerofly FS 2 Flight Simulator"
+window_match = "M"
+
+[[game]]
+id = "api"
+name = "API"
+kind = "others"
+listener = "api"
+window_name = "superapi1234"
+window_match = "M"
+platforms = ["Console", "PC"]
+
+[[game]]
+id = "arca"
+name = "ARCA Simracing"
+kind = "racing"
+listener = "rf1"
+window_name = "ARCA Simracing"
+window_match = "P"
+
+[[game]]
+id = "ats"
+name = "American Truck Simulator"
+kind = "others"
+listener = "trucksim"
+process_name = "amtrucks.exe"
+window_name = "American Truck Simulator"
+window_match = "M"
+
+[[game]]
+id = "automobilista"
+name = "Automobilista"
+kind = "racing"
+listener = "rf1"
+process_name = "AMS.exe"
+window_name = "SRSAUTOMOBILISTA"
+window_match = "M"
+
+[[game]]
+id = "automobilista2"
+name = "Automobilista 2"
+kind = "racing"
+listener = "automobilista2"
+process_name = "AMS2AVX.exe"
+window_name = "Automobilista 2"
+window_match = "M"
+
+[[game]]
+id = "beamng"
+name = "BeamNG"
+kind = "racing"
+listener = "beamng"
+window_name = "BeamNG.drive"
+window_match = "P"
+
+[[game]]
+id = "condor"
+name = "Condor"
+kind = "flying"
+listener = "condor"
+process_name = "Condor.exe"
+window_name = "SRSCONDOR"
+window_match = "M"
+
+[[game]]
+id = "dcs"
+name = "DCS World"
+kind = "flying"
+listener = "dcs"
+process_name = "DCS.exe"
+window_name = "Digital Combat Simulator"
+window_match = "M"
+
+[[game]]
+id = "falconbms"
+name = "Falcon BMS"
+kind = "flying"
+listener = "falconbms"
+process_name = "Falcon BMS.exe"
+window_name = "Falcon BMS"
+window_match = "M"
+
+[[game]]
+id = "dirt2"
+name = "Dirt 2"
+kind = "racing"
+listener = "dirt"
+window_name = "DiRT 2"
+window_match = "M"
+
+[[game]]
+id = "dirt3"
+name = "Dirt 3"
+kind = "racing"
+listener = "dirt"
+process_name = "dirt3_game.exe"
+window_name = "DiRT 3"
+window_match = "M"
+
+[[game]]
+id = "dirt4"
+name = "Dirt 4"
+kind = "racing"
+listener = "dirt"
+process_name = "dirt4.exe"
+window_name = "DiRT 4"
+window_match = "M"
+
+[[game]]
+id = "dirtrally"
+name = "Dirt Rally"
+kind = "racing"
+listener = "dirt"
+process_name = "drt.exe"
+window_name = "DiRT Rally"
+window_match = "M"
+
+[[game]]
+id = "dirtrally2.0"
+name = "Dirt Rally 2.0"
+kind = "racing"
+listener = "dirt"
+process_name = "dirtrally2.exe"
+window_name = "DiRT Rally 2.0"
+window_match = "M"
+
+[[game]]
+id = "dirtshowdown"
+name = "Dirt Showdown"
+kind = "racing"
+listener = "dirt"
+window_name = "DiRT Showdown"
+window_match = "M"
+
+[[game]]
+id = "ed"
+name = "Elite Dangerous"
+kind = "others"
+listener = "ed"
+process_name = "EliteDangerous32.exe"
+window_name = "Elite - Dangerous (CLIENT)"
+window_match = "M"
+
+[[game]]
+id = "emulator"
+name = "Emulator"
+kind = "others"
+listener = "emulator"
+
+[[game]]
+id = "epic"
+name = "Epic Roller Coasters"
+kind = "others"
+listener = "epic"
+window_name = "Epic Roller Coasters"
+window_match = "M"
+
+[[game]]
+id = "ets"
+name = "Euro Truck Simulator 2"
+kind = "others"
+listener = "trucksim"
+process_name = "eurotrucks2.exe"
+window_name = "Euro Truck Simulator 2"
+window_match = "M"
+
+[[game]]
+id = "f12011"
+name = "F1 2011"
+kind = "racing"
+listener = "dirt"
+window_name = "F1 2011"
+window_match = "M"
+
+[[game]]
+id = "f12012"
+name = "F1 2012"
+kind = "racing"
+listener = "dirt"
+window_name = "F1 2012"
+window_match = "M"
+
+[[game]]
+id = "f12013"
+name = "F1 2013"
+kind = "racing"
+listener = "f1"
+window_name = "F1 2013"
+window_match = "M"
+
+[[game]]
+id = "f12014"
+name = "F1 2014"
+kind = "racing"
+listener = "f1"
+process_name = "f1_2014.exe"
+window_name = "F1 2014"
+window_match = "M"
+
+[[game]]
+id = "f12015"
+name = "F1 2015"
+kind = "racing"
+listener = "f1"
+process_name = "F1_2015.exe"
+window_name = "F1 2015"
+window_match = "M"
+
+[[game]]
+id = "f12016"
+name = "F1 2016"
+kind = "racing"
+listener = "f1"
+process_name = "F1_2016.exe"
+window_name = "F1 2016"
+window_match = "M"
+platforms = ["Console", "PC"]
+
+[[game]]
+id = "f12017"
+name = "F1 2017"
+kind = "racing"
+listener = "f1"
+process_name = "F1_2017.exe"
+window_name = "F1 2017"
+window_match = "M"
+platforms = ["Console", "PC"]
+
+[[game]]
+id = "f12018"
+name = "F1 2018"
+kind = "racing"
+listener = "f12018"
+process_name = "F1_2018.exe"
+window_name = "F1 2018"
+window_match = "M"
+platforms = ["Console", "PC"]
+
+[[game]]
+id = "f12019"
+name = "F1 2019"
+kind = "racing"
+listener = "f12019"
+process_name = "F1_2019_dx12.exe"
+window_name = "F1 2019"
+window_match = "P"
+platforms = ["Console", "PC"]
+
+[[game]]
+id = "f12020"
+name = "F1 2020"
+kind = "racing"
+listener = "f12020"
+process_name = "F1_2020_dx12.exe"
+window_name = "F1 2020"
+window_match = "P"
+platforms = ["Console", "PC"]
+
+[[game]]
+id = "f12021"
+name = "F1 2021"
+kind = "racing"
+listener = "f12021"
+process_name = "F1_2021_dx12.exe"
+window_name = "F1 2021"
+window_match = "P"
+platforms = ["Console", "PC"]
+
+[[game]]
+id = "f12022"
+name = "F1 22"
+kind = "racing"
+listener = "f12022"
+window_name = "F1 22 ("
+window_match = "P"
+platforms = ["Console", "PC"]
+
+[[game]]
+id = "f12023"
+name = "F1 23"
+kind = "racing"
+listener = "f12023"
+process_name = "F1_23.exe"
+window_name = "F1 23"
+window_match = "M"
+platforms = ["Console", "PC"]
+
+[[game]]
+id = "f12024"
+name = "F1 24"
+kind = "racing"
+listener = "f12024"
+process_name = "F1_24.exe"
+window_name = "F1 24"
+window_match = "M"
+platforms = ["Console", "PC"]
+
+[[game]]
+id = "f12025"
+name = "F1 25"
+kind = "racing"
+listener = "f12025"
+process_name = "F1_25.exe"
+window_name = "F1 25"
+window_match = "M"
+platforms = ["Console", "PC"]
+
+[[game]]
+id = "fernbus"
+name = "Fernbus Simulator"
+kind = "racing"
+listener = "bussim"
+process_name = "Fernbus-Win64-Shipping.exe"
+window_name = "Fernbus Simulator"
+window_match = "P"
+
+[[game]]
+id = "thebus"
+name = "The Bus"
+kind = "racing"
+listener = "bussim"
+window_name = "The Bus"
+window_match = "P"
+
+[[game]]
+id = "flyinside"
+name = "FlyInside Flight Simulator"
+kind = "flying"
+listener = "flyinside"
+window_name = "FlyInside Flight Simulator"
+window_match = "P"
+
+[[game]]
+id = "gt7"
+name = "Grand Turismo 7"
+kind = "racing"
+listener = "gt7"
+process_name = "neversearchforanythingtall.exe"
+window_name = "Fneversearchforanythingtallever1234"
+window_match = "M"
+platforms = ["Console"]
+
+[[game]]
+id = "gtsport"
+name = "Grand Turismo Sport"
+kind = "racing"
+listener = "gtsport"
+process_name = "neversearchforanythingtall5.exe"
+window_name = "Fneversearchforanythingtallever1235"
+window_match = "M"
+platforms = ["Console"]
+
+[[game]]
+id = "forzahorizon4"
+name = "Forza Horizon 4"
+kind = "racing"
+listener = "forza"
+process_name = "ForzaHorizon4.exe"
+window_name = "Forza Horizon 4"
+window_match = "M"
+platforms = ["Console", "PC"]
+
+[[game]]
+id = "forzahorizon5"
+name = "Forza Horizon 5"
+kind = "racing"
+listener = "forza"
+process_name = "ForzaHorizon5.exe"
+window_name = "Forza Horizon 5"
+window_match = "M"
+platforms = ["Console", "PC"]
+
+[[game]]
+id = "forzahorizon6"
+name = "Forza Horizon 6"
+kind = "racing"
+listener = "forza"
+process_name = "forzahorizon6.exe"
+window_name = "Forza Horizon 6"
+window_match = "M"
+platforms = ["Console", "PC"]
+
+[[game]]
+id = "forzamotorsports7"
+name = "Forza Motorsports 7"
+kind = "racing"
+listener = "forza"
+process_name = "forzamotorsport7.exe"
+window_name = "Forza Motorsport 7"
+window_match = "M"
+platforms = ["Console", "PC"]
+
+[[game]]
+id = "forzamotorsports8"
+name = "Forza Motorsports 8"
+kind = "racing"
+listener = "forza"
+process_name = "forzamotorsport.exe"
+window_name = "Forza Motorsport"
+window_match = "M"
+platforms = ["Console", "PC"]
+
+[[game]]
+id = "fs2020"
+name = "Flight Simulator 2020"
+kind = "flying"
+listener = "fs2k"
+window_name = "Microsoft Flight Simulator -"
+window_match = "P"
+
+[[game]]
+id = "fs2024"
+name = "Flight Simulator 2024"
+kind = "flying"
+listener = "fs2k"
+window_name = "Microsoft Flight Simulator 2024 -"
+window_match = "P"
+
+[[game]]
+id = "fsx"
+name = "Flight Simulator X"
+kind = "flying"
+listener = "fsx"
+process_name = "fsx.exe"
+window_name = "Microsoft Flight Simulator X"
+window_match = "M"
+
+[[game]]
+id = "ftruck2013"
+name = "Formula Truck 2013"
+kind = "racing"
+listener = "rf1"
+window_name = "FTrucks"
+window_match = "P"
+
+[[game]]
+id = "furidashi"
+name = "FURIDASHI: Drift Cyber Sport"
+kind = "racing"
+listener = "driftphysicscrew"
+process_name = "Furidashi.exe"
+window_name = "FURIDASH Drift Cyber Sport"
+window_match = "P"
+
+[[game]]
+id = "gpbikes"
+name = "GP Bike"
+kind = "racing"
+listener = "gpbikes"
+window_name = "GP Bikes"
+window_match = "M"
+
+[[game]]
+id = "grid2"
+name = "GRID 2"
+kind = "racing"
+listener = "grid"
+process_name = "grid2_avx.exe"
+window_name = "GRID 2"
+window_match = "M"
+
+[[game]]
+id = "grid2019"
+name = "GRID 2019"
+kind = "racing"
+listener = "grid"
+process_name = "Grid_dx12.exe"
+window_name = "GRID (2019) "
+window_match = "P"
+
+[[game]]
+id = "wreckfest2"
+name = "Wreckfest 2"
+kind = "racing"
+listener = "wreckfest2"
+process_name = "Wreckfest2.exe"
+window_name = "Wreckfest 2 |"
+window_match = "P"
+
+[[game]]
+id = "gsc2012"
+name = "Game Stock Car Extreme"
+kind = "racing"
+listener = "rf1"
+window_name = "Game Stock Car v"
+window_match = "P"
+
+[[game]]
+id = "gridlegends"
+name = "GRID Legends"
+kind = "racing"
+listener = "grid"
+process_name = "GridLegends.exe"
+window_name = "GRID Legends"
+window_match = "P"
+
+[[game]]
+id = "gtav"
+name = "GTAV"
+kind = "racing"
+listener = "gtav"
+process_name = "GTA5.exe"
+window_name = "GTAV"
+window_match = "M"
+
+[[game]]
+id = "gtl"
+name = "GT Legends"
+kind = "racing"
+listener = "gtl"
+window_name = "GT Legends"
+window_match = "M"
+
+[[game]]
+id = "gtr"
+name = "GTR"
+kind = "racing"
+listener = "gtr"
+window_name = "GTR"
+window_match = "M"
+
+[[game]]
+id = "gtr2"
+name = "GTR 2"
+kind = "racing"
+listener = "gtr2"
+window_name = "GTR2"
+window_match = "M"
+
+[[game]]
+id = "hyperstorm"
+name = "HyperStorm"
+kind = "others"
+listener = "hyperstorm"
+process_name = "HyperStorm.exe"
+window_name = "`HyperStorm`"
+window_match = "P"
+
+[[game]]
+id = "vector36"
+name = "Vector36"
+kind = "others"
+listener = "vector36"
+process_name = "Vector36.exe"
+window_name = "Vector36"
+window_match = "P"
+
+[[game]]
+id = "il2"
+name = "Il-2 Sturmovik"
+kind = "flying"
+listener = "il2"
+process_name = "Il-2.exe"
+window_name = "Il-2 Sturmovik"
+window_match = "P"
+
+[[game]]
+id = "il2_cliffs"
+name = "IL-2 Sturmovik: Cliffs of Dover"
+kind = "flying"
+listener = "il2cliffs"
+process_name = "Launcher64.exe"
+window_name = "IL-2 Sturmovik: Cliffs of Dover"
+window_match = "P"
+
+[[game]]
+id = "iracing"
+name = "iRacing"
+kind = "racing"
+listener = "iracing"
+process_name = "iRacingSim64DX11.exe"
+window_name = "iRacing.com Simulator"
+window_match = "M"
+
+[[game]]
+id = "ironrebellion"
+name = "Iron Rebellion"
+kind = "others"
+listener = "ironrebellion"
+process_name = "Iron Rebellion.exe"
+window_name = "Iron Rebellion"
+window_match = "M"
+
+[[game]]
+id = "joy"
+name = "Joy"
+kind = "others"
+listener = "joy"
+window_name = "JOYCRAZYNAMESOITDOESNOTFINDEVER"
+window_match = "M"
+
+[[game]]
+id = "kart"
+name = "Kart Racing Pro"
+kind = "racing"
+listener = "kart"
+process_name = "kart.exe"
+window_name = "Kart Racing Pro"
+window_match = "M"
+
+[[game]]
+id = "kartkraft"
+name = "KartKraft"
+kind = "racing"
+listener = "kartkraft"
+process_name = "project_k-Win64-Shipping.exe"
+window_name = "KartKraft"
+window_match = "M"
+
+[[game]]
+id = "lfs"
+name = "Live for Speed"
+kind = "racing"
+listener = "lfs"
+process_name = "LFS"
+window_name = "Live for Speed"
+window_match = "M"
+
+[[game]]
+id = "marcas"
+name = "Marcas"
+kind = "racing"
+listener = "rf1"
+window_name = "Marcas"
+window_match = "P"
+
+[[game]]
+id = "motogp"
+name = "MotoGP 2018"
+kind = "racing"
+listener = "motogp"
+process_name = "motogp18-Win64-Shipping.exe"
+window_name = "MOTOGP™18"
+window_match = "M"
+
+[[game]]
+id = "mxbikes"
+name = "MX Bikes"
+kind = "racing"
+listener = "mxbikes"
+process_name = "mxbikes.exe"
+window_name = "MX Bikes"
+window_match = "M"
+
+[[game]]
+id = "nl2"
+name = "NoLimits2 Roller Coaster"
+kind = "others"
+listener = "nl2"
+process_name = "nolimits2stm.exe"
+window_name = "NoLimits 2"
+window_match = "S"
+
+[[game]]
+id = "p3d"
+name = "Prepar3d"
+kind = "flying"
+listener = "p3d"
+window_name = "Lockheed Martin® Prepar3D®"
+window_match = "P"
+
+[[game]]
+id = "projectcars"
+name = "Project Cars"
+kind = "racing"
+listener = "projectcars"
+process_name = "pCARS64.exe"
+window_name = "Project CARS™"
+window_match = "M"
+
+[[game]]
+id = "projectcars2"
+name = "Project Cars 2"
+kind = "racing"
+listener = "projectcars2"
+process_name = "pCARS2AVX.exe"
+window_name = "Project CARS 2™"
+window_match = "M"
+
+[[game]]
+id = "projectcars2udp"
+name = "Project Cars 2 XBOX/PS4"
+kind = "racing"
+listener = "projectcars2udp"
+window_name = "pcars2udp"
+window_match = "M"
+platforms = ["Console", "PC"]
+
+[[game]]
+id = "projectcars3"
+name = "Project Cars 3"
+kind = "racing"
+listener = "projectcars2"
+process_name = "pCARS3.exe"
+window_name = "Project CARS 3™"
+window_match = "M"
+
+[[game]]
+id = "projectcars3udp"
+name = "Project Cars 3 Console"
+kind = "racing"
+listener = "projectcars2udp"
+window_name = "pcars3udp"
+window_match = "M"
+
+[[game]]
+id = "projectcarspro"
+name = "Project Cars Pro"
+kind = "racing"
+listener = "projectcars2"
+window_name = "Project CARS Pro"
+window_match = "P"
+
+[[game]]
+id = "projectcarsudp"
+name = "Project Cars XBOX/PS4"
+kind = "racing"
+listener = "projectcarsudp"
+window_name = "pcarsudp"
+window_match = "M"
+platforms = ["Console", "PC"]
+
+[[game]]
+id = "pmracing"
+name = "Project Motor Racing"
+kind = "racing"
+listener = "pmracing"
+process_name = "ProjectMotorRacingGame.exe"
+window_name = "ProjectMotorRacing 64bit"
+window_match = "S"
+platforms = ["PC"]
+
+[[game]]
+id = "acudp"
+name = "Assetto Corsa PS4"
+kind = "racing"
+listener = "acudp"
+window_name = "acudp1234"
+window_match = "M"
+platforms = ["Console", "PC"]
+
+[[game]]
+id = "race07"
+name = "Race 07"
+kind = "racing"
+listener = "race07"
+window_name = "RACE 07"
+window_match = "M"
+
+[[game]]
+id = "raceinjection"
+name = "Race Injection"
+kind = "racing"
+listener = "race07"
+window_name = "Race Injection"
+window_match = "M"
+
+[[game]]
+id = "rbr"
+name = "Richard Burns Rally"
+kind = "racing"
+listener = "rbr"
+process_name = "RichardBurnsRally_SSE.exe"
+window_name = "Richard Burns Rally - DirectX9"
+window_match = "M"
+
+[[game]]
+id = "rds"
+name = "RDS: The Official Drift Videogame"
+kind = "racing"
+listener = "driftphysicscrew"
+process_name = "RDS.exe"
+window_name = "RDS - The Official Drift Videogame"
+window_match = "P"
+
+[[game]]
+id = "rfpro"
+name = "RFpro"
+kind = "racing"
+listener = "rfpro"
+process_name = "rFactor.exe"
+window_name = "rFproDX11"
+window_match = "P"
+
+[[game]]
+id = "rf1"
+name = "RFactor"
+kind = "racing"
+listener = "rf1"
+process_name = "rFactor.exe"
+window_name = "rFactor v"
+window_match = "P"
+
+[[game]]
+id = "rf2"
+name = "RFactor 2"
+kind = "racing"
+listener = "rf2"
+process_name = "rFactor2.exe"
+window_name = "rFactor2 v"
+window_match = "P"
+
+[[game]]
+id = "lemans"
+name = "Le Mans Ultimate"
+kind = "racing"
+listener = "rf2"
+process_name = "Le Mans Ultimate.exe"
+window_name = "Le Mans Ultimate v"
+window_match = "P"
+
+[[game]]
+id = "rre"
+name = "RaceRoom Racing Experience"
+kind = "racing"
+listener = "rre"
+window_name = "RaceRoom Racing Experience"
+window_match = "M"
+
+[[game]]
+id = "rrevo"
+name = "RaceRoom EvO"
+kind = "racing"
+listener = "rre"
+window_name = "RaceRoom EvO"
+window_match = "M"
+
+[[game]]
+id = "silentwings"
+name = "Silent Wings"
+kind = "flying"
+listener = "silentwings"
+window_name = "Silent Wings"
+window_match = "P"
+
+[[game]]
+id = "aceshigh"
+name = "Aces High III"
+kind = "flying"
+listener = "aceshigh"
+window_name = "Aces High III (Steam)"
+window_match = "M"
+
+[[game]]
+id = "simraceway"
+name = "Simraceway"
+kind = "racing"
+listener = "rf1"
+window_name = "Simraceway"
+window_match = "P"
+
+[[game]]
+id = "spacemonkey"
+name = "Space Monkey"
+kind = "racing"
+listener = "spacemonkey"
+window_name = "SpaceMonkey v"
+window_match = "P"
+
+[[game]]
+id = "thecrew"
+name = "The Crew"
+kind = "racing"
+listener = "thecrew"
+process_name = "TheCrew.exe"
+window_name = "TheCrew"
+window_match = "M"
+
+[[game]]
+id = "thecrew2"
+name = "The Crew 2"
+kind = "racing"
+listener = "thecrew"
+process_name = "TheCrew2.exe"
+window_name = "TheCrew2"
+window_match = "M"
+
+[[game]]
+id = "touringkarts"
+name = "Touring Karts"
+kind = "racing"
+listener = "touringkarts"
+process_name = "Touring Karts.exe"
+window_name = "Touring Karts"
+window_match = "M"
+
+[[game]]
+id = "touristbus"
+name = "Tourist Bus Simulator"
+kind = "racing"
+listener = "bussim"
+process_name = "TouristBusSimulator.exe"
+window_name = "Tourist Bus Simulator Fuerteventura"
+window_match = "P"
+
+[[game]]
+id = "trackmaniaturbo"
+name = "TrackManiaTurbo"
+kind = "racing"
+listener = "trackmania"
+process_name = "TrackmaniaTurbo.exe"
+window_name = "TrackManiaTurbo"
+window_match = "M"
+
+[[game]]
+id = "trackmania2"
+name = "TrackMania2"
+kind = "racing"
+listener = "trackmania"
+process_name = "Trackmania2.exe"
+window_name = "TrackMania2"
+window_match = "M"
+
+[[game]]
+id = "volvo"
+name = "Volvo The Game"
+kind = "racing"
+listener = "race07"
+window_name = "Volvo - The Game"
+window_match = "M"
+
+[[game]]
+id = "vracer"
+name = "V-Racer Hoverbike"
+kind = "racing"
+listener = "vracer"
+process_name = "vracer_hoverbike.exe"
+window_name = "vracer_hoverbike"
+window_match = "M"
+
+[[game]]
+id = "warthunder"
+name = "War Thunder"
+kind = "flying"
+listener = "warthunder"
+window_name = "War Thunder - In battle"
+window_match = "P"
+
+[[game]]
+id = "wrs"
+name = "World Racing Series"
+kind = "racing"
+listener = "wrs"
+window_name = "World Racing Series"
+window_match = "M"
+
+[[game]]
+id = "wrcg"
+name = "WRC Generations"
+kind = "racing"
+listener = "wrc"
+process_name = "WRCG.exe"
+window_name = "WRCG"
+window_match = "M"
+
+[[game]]
+id = "wrc2023"
+name = "EA Sports WRC"
+kind = "racing"
+listener = "wrc2023"
+window_name = "EA SPORTS™ WRC  "
+window_match = "M"
+
+[[game]]
+id = "wtcc"
+name = "Race - WTCC Game"
+kind = "racing"
+listener = "race07"
+process_name = "Race_Steam.exe"
+window_name = "dsaf805aaiosdffda"
+window_match = "M"
+
+[[game]]
+id = "xplane"
+name = "Xplane"
+kind = "flying"
+listener = "xplane"
+process_name = "X-Plane.exe"
+window_name = "X-System"
+window_match = "M"
+
+[[game]]
+id = "redrover"
+name = "Red Rover"
+kind = "racing"
+listener = "redrover"
+process_name = "RedRover.exe"
+window_name = "Red Rover"
+window_match = "M"
+
+[[game]]
+id = "fs25"
+name = "Farming Simulator 25"
+kind = "racing"
+listener = "fs"
+window_name = "Farming Simulator 25"
+window_match = "M"
+
+[[game]]
+id = "fs22"
+name = "Farming Simulator 22"
+kind = "racing"
+listener = "fs"
+window_name = "Farming Simulator 22"
+window_match = "M"
+
+[[game]]
+id = "fs19"
+name = "Farming Simulator 19"
+kind = "racing"
+listener = "fs"
+window_name = "Farming Simulator 19"
+window_match = "M"
+
+[[game]]
+id = "warplanes_ww1"
+name = "Warplanes WW1 Fighters"
+kind = "flying"
+listener = "warplanes"
+process_name = "WW1.exe"
+window_name = "xdfsadsdsfadasfddfsafdsa"
+window_match = "M"
+
+[[game]]
+id = "warplanes_bop"
+name = "Warplanes Battles over Pacific"
+kind = "flying"
+listener = "warplanes"
+process_name = "WW2VR.exe"
+window_name = "X-Systemfdafdsafdsafdsadsfadsewrwqeqw"
+window_match = "M"
+
+[[game]]
+id = "tdusc"
+name = "Test Drive Unlimited Solar Crown"
+kind = "racing"
+listener = "tdusc"
+process_name = "TDUSC.exe"
+window_name = "Test Drive Unlimited Solar Crown"
+window_match = "M"
+
+[[game]]
+id = "acesofthunder"
+name = "Aces of Thunder"
+kind = "flying"
+listener = "warthunder"
+window_name = "Aces of Thunder ("
+window_match = "P"

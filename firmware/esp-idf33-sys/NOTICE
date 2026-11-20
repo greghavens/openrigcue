@@ -1,0 +1,26 @@
+Original-generation public ESP32 runtime boundary for OpenRigCue Rust firmware
+
+The application, String ownership, protocols, device control and callback
+logic remain Rust. This crate binds the independently published original
+C/FreeRTOS/NimBLE substrate. It does not extract or execute SRS application
+code. No original firmware image is copied into the resulting application.
+
+Pinned redistributable substrate:
+- espressif/arduino-esp32 release 1.0.6, tools/sdk: IDF
+  v3.3.5-1-g85c43024c. Official release archive, SHA256 in
+  ../tools/esp32-runtime.sh. The archive includes original SDK library code,
+  headers, linker scripts and original-generation public bootloaders.
+  https://github.com/espressif/arduino-esp32/releases/tag/1.0.6
+- Espressif Xtensa GCC5.2.0, 1.22.0-97-gc752ad5. Official archive and SHA256
+  in ../tools/esp32-runtime.sh. Runtime library use is covered by the GCC
+  Runtime Library Exception. The compiler itself is not redistributed.
+- h2zero/NimBLE-Arduino 1.3.1, commit
+  725079ade938d5e0f4de16695ba2b9039f5ffeb8. Only the original C host and
+  transport substrate is compiled. Original C++ application-facing classes
+  are implemented in the OpenRigCue Rust source.
+  https://github.com/h2zero/NimBLE-Arduino/tree/725079ade938d5e0f4de16695ba2b9039f5ffeb8
+
+Unmodified license and notice texts are retained under licenses/. SDK and
+NimBLE sources preserve their own additional source-level copyright notices.
+The private build prepends #line directives to the NimBLE C copies solely to
+retain source diagnostic __FILE__ strings; it changes no C implementation.

@@ -1,0 +1,12 @@
+<article class="game-setup">
+<h3>Silent Wings</h3>
+<ol>
+<li>Open the simulator’s options.dat configuration file. For a Windows installation under Proton, its writable copy may be inside the prefix’s Local AppData/VirtualStore directory.</li>
+<li>Set the UDP output entries shown below, then save the file and restart the simulator.</li>
+</ol>
+<pre>use_output_udp = true
+output_udp_protocol = binary
+output_udp_address = 127.0.0.1
+output_udp_port = ^port^
+output_udp_rate = 30</pre>
+</article>

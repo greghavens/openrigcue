@@ -1,0 +1,324 @@
+/* OpenRigCue interface: the approved Redline, Apex and Vector stylesheet.
+   The frame's root is `.orc` with the theme's class (`redline`, `apex` or `vector`); the approved rules are
+   kept as approved, scoped to that root. The rules after "Components" add what the screens' controls,
+   menus and dialogs need, in the same tokens. */
+
+@font-face{font-family:DM;src:url(/res:fonts/dmsans.ttf)}
+@font-face{font-family:Barlow;src:url(/res:fonts/barlowcondensed.ttf);font-weight:600}
+
+/* ---- The approved base ---- */
+html,body{margin:0;background:#101112}
+.orc *{box-sizing:border-box}
+.orc{box-sizing:border-box;margin:0;min-height:100vh;font:14px/1.5 var(--body);background:var(--bg);color:var(--text)}
+.orc button,.orc input,.orc select{font:inherit}
+.orc button,.orc a,.orc input{touch-action:manipulation}
+.orc button{cursor:pointer}
+.orc button{color:inherit;background:var(--panel);border:1px solid var(--line);padding:10px 15px;border-radius:var(--radius);min-height:44px}
+.orc button:hover{border-color:var(--accent)}
+.orc button:focus-visible,.orc a:focus-visible,.orc input:focus-visible,.orc select:focus-visible,.orc summary:focus-visible{outline:3px solid var(--accent);outline-offset:4px}
+.orc a{color:inherit}
+.orc h1,.orc h2,.orc h3,.orc p{margin:0}
+.orc h1{font:500 44px/1.1 var(--heading);letter-spacing:-1.6px}
+.orc h2{font:600 20px/1.3 var(--heading);letter-spacing:-.4px}
+.orc h3{font-size:14px}
+.orc small,.orc .muted{color:var(--muted)}
+.orc small{font-size:12px}
+.orc .eyebrow{text-transform:uppercase;letter-spacing:2px;font-size:10px;font-weight:700;color:var(--muted)}
+.orc .mono{font-family:ui-monospace,monospace;font-variant-numeric:tabular-nums}
+.orc .primary{background:var(--accent);border-color:var(--accent);color:var(--on-accent);font-weight:700}
+.orc .quiet{background:transparent}
+.orc .icon{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
+.orc .brand{font-family:var(--heading);font-weight:700;font-size:20px;display:flex;gap:10px;align-items:center;white-space:nowrap}
+.orc .brand-mark{background:var(--accent);color:var(--on-accent);width:30px;height:30px;display:grid;place-items:center;border-radius:var(--radius);font:700 20px var(--heading)}
+.orc .brand-dot{color:var(--accent)}
+.orc .shell{min-height:100vh;display:grid;grid-template-columns:210px minmax(0,1fr)}
+.orc .sidebar{border-right:1px solid var(--line);padding:28px 20px;display:flex;flex-direction:column;gap:34px;background:var(--panel)}
+.orc .sidebar nav{display:grid;gap:7px}
+.orc .sidebar .eyebrow{margin-bottom:16px}
+.orc .nav-item{display:flex;align-items:center;gap:12px;border-color:transparent;text-align:left;background:transparent;color:var(--muted)}
+.orc .nav-item.active{color:var(--accent);background:var(--tint)}
+.orc .side-bottom{margin-top:auto;padding-top:60px}
+.orc .side-bottom p{margin-top:8px;font-size:12px;color:var(--muted)}
+.orc .workspace{min-width:0}
+.orc .topbar{height:76px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 34px;gap:12px}
+.orc .topbar-left{display:flex;align-items:center;gap:12px}
+.orc .status-dot{display:inline-block;background:var(--success);width:6px;height:6px;border-radius:50%;margin-right:7px}
+.orc .top-actions{display:flex;gap:10px;align-items:center}
+.orc .pill{font-size:11px;border:1px solid var(--line);border-radius:30px;padding:6px 11px;white-space:nowrap}
+.orc .activity-button{display:flex;gap:8px;align-items:center}
+.orc .activity-button b{background:var(--tint);color:var(--accent);font-size:10px;padding:2px 6px;border-radius:20px}
+.orc .content{padding:32px 34px 20px;max-width:1540px;margin:auto}
+.orc .page-heading{display:flex;align-items:flex-end;justify-content:space-between;gap:18px;margin-bottom:28px}
+.orc .page-heading h1{margin:7px 0 9px}
+.orc .page-heading p{color:var(--muted)}
+.orc .profile{min-width:210px}
+.orc .profile label{display:block;margin-bottom:7px}
+.orc .profile select{width:100%;padding:10px 12px;min-height:44px;border:1px solid var(--line);background:var(--panel);color:var(--text);border-radius:var(--radius)}
+.orc .hero{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:var(--panel);margin-bottom:24px}
+.orc .hero-copy{padding:23px 26px;display:flex;flex-direction:column;justify-content:center}
+.orc .hero-copy h2{font-size:26px;margin:8px 0}
+.orc .hero-copy p{color:var(--muted);font-size:12px}
+.orc .hero-copy .pill{align-self:flex-start;color:var(--success);margin-bottom:12px}
+.orc .telemetry-art{min-height:175px;position:relative;background:var(--tint);overflow:hidden;display:flex;align-items:center;justify-content:center;gap:22px}
+.orc .telemetry-art:before{content:'';position:absolute;inset:0;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:24px 24px;opacity:.35;transform:skewY(-12deg) scale(1.5)}
+.orc .speed{z-index:1}
+.orc .speed strong{display:block;font:500 62px/1 var(--heading);letter-spacing:-3px}
+.orc .speed small{font-size:10px;letter-spacing:2px}
+.orc .wave{position:relative;width:45%;height:100px;color:var(--accent)}
+.orc .wave svg{width:100%;height:100%}
+.orc .telemetry-label{position:absolute;bottom:12px;right:15px;font:10px ui-monospace,monospace;color:var(--muted)}
+.orc .grid{display:grid;grid-template-columns:minmax(0,1fr) 280px;gap:24px;align-items:start}
+.orc .panel{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+.orc .panel-head{padding:21px 23px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line)}
+.orc .tabs{display:flex;gap:5px;padding:12px 16px;border-bottom:1px solid var(--line)}
+.orc .tabs button{flex:1;border:0;background:transparent;color:var(--muted);padding:8px}
+.orc .tabs button.active{background:var(--tint);color:var(--accent);font-weight:700}
+.orc .control-row{padding:18px 23px;border-bottom:1px solid var(--line)}
+.orc .control-row:last-child{border:0}
+.orc .control-label{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.orc .control-label output{font:500 18px var(--heading);color:var(--accent);min-width:45px;text-align:right}
+.orc .control-row small{display:block;margin-bottom:10px}
+.orc .range-endpoints{display:flex;justify-content:space-between;font-size:10px;color:var(--muted)}
+.orc input[type=range]{width:100%;height:22px;accent-color:var(--accent);cursor:pointer}
+.orc .device{padding:17px 21px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:12px}
+.orc .device:last-child{border:0}
+.orc .device-icon{width:38px;height:38px;border:1px solid var(--line);border-radius:var(--radius);display:grid;place-items:center;color:var(--accent)}
+.orc .device small{display:block;margin-top:3px}
+.orc .device .status-dot{margin-left:auto}
+.orc .device.warning .device-icon{color:var(--warning)}
+.orc .device.warning .status-dot{background:var(--warning)}
+.orc .aside-note{padding:22px;margin-top:18px;border:1px solid var(--line);border-radius:var(--radius)}
+.orc .aside-note h3{margin-top:8px}
+.orc .aside-note p{font-size:12px;color:var(--muted);margin:8px 0 12px}
+.orc .text-button{border:0;background:transparent;padding:0;color:var(--accent);font-size:12px;min-height:0}
+.orc .savebar{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:16px 0;margin-top:8px}
+.orc .savebar .buttons{display:flex;gap:9px}
+.orc .save-state{font-size:12px;color:var(--muted)}
+.orc .toast-area{position:fixed;z-index:20;width:340px;display:grid;gap:10px;pointer-events:none}
+.orc .toast{pointer-events:auto;background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--success);border-radius:var(--radius);padding:17px;box-shadow:0 16px 55px #0003;display:grid;grid-template-columns:20px 1fr 28px;gap:10px;animation:appear .2s ease}
+.orc .toast .icon{color:var(--success);margin-top:3px}
+.orc .toast h3{font-size:13px}
+.orc .toast p{font-size:12px;color:var(--muted);margin-top:3px}
+.orc .toast .close{padding:0;min-height:28px;border:0;background:transparent;align-self:start}
+.orc .toast.warning{border-left-color:var(--warning)}
+.orc .toast.warning .icon{color:var(--warning)}
+.orc .toast.error{border-left-color:var(--danger)}
+.orc .toast.error .icon{color:var(--danger)}
+.orc .toast button.action{font-size:12px;margin-top:9px;padding:4px 8px;min-height:32px;margin-right:6px}
+.orc .toast-area:not(:has(.toast)){display:none}
+.orc .critical{padding:13px 18px;border:1px solid var(--danger);border-radius:var(--radius);margin-bottom:18px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.orc .critical strong{color:var(--danger)}
+.orc .critical p{font-size:12px;color:var(--muted)}
+.orc .drawer{position:fixed;right:16px;top:120px;bottom:24px;width:370px;max-width:calc(100vw - 32px);background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);z-index:30;box-shadow:0 20px 80px #0005;overflow:auto}
+.orc .drawer[hidden]{display:none}
+.orc .drawer header{display:flex;align-items:center;justify-content:space-between;padding:20px;border-bottom:1px solid var(--line)}
+.orc .drawer ol{list-style:none;padding:0;margin:0}
+.orc .drawer li{padding:20px;border-bottom:1px solid var(--line)}
+.orc .drawer li p{font-size:12px;color:var(--muted);margin-top:5px}
+.orc .drawer li small{display:block;margin-bottom:6px}
+.orc .mobile-nav{display:none}
+@keyframes appear{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+
+/* APEX / purposeful, technical, tightly drawn */
+.orc.apex{--bg:#101315;--panel:#181d20;--line:#31393e;--text:#edf2f1;--muted:#a0adaf;--accent:#d2fb5d;--on-accent:#172008;--tint:#d2fb5d0c;--success:#a8dca9;--warning:#f1bc68;--danger:#ff9a90;--radius:4px;--body:DM, sans-serif;--heading:Barlow,sans-serif}
+.orc.apex h1{text-transform:uppercase;font-size:54px}
+.orc.apex .toast-area{right:24px;bottom:100px}
+.orc.apex .hero{border-left:3px solid var(--accent)}
+.orc.apex .savebar{position:sticky;bottom:0;background:var(--bg);z-index:5;border-top:1px solid var(--line)}
+
+@media(min-width:1550px){.orc .content{padding-top:45px}.orc .hero{min-height:210px}.orc .control-row{padding-top:23px;padding-bottom:23px}}
+@media(max-width:1050px) and (min-width:761px){.orc .shell{grid-template-columns:165px minmax(0,1fr)}.orc .sidebar{padding:24px 12px}.orc .brand{font-size:16px}.orc .grid{grid-template-columns:minmax(0,1fr) 230px;gap:16px}.orc .content{padding:24px}.orc .topbar{padding:0 24px}.orc .hero-copy{padding:20px}}
+@media(max-width:760px){
+.orc .shell{display:block}.orc .sidebar{display:none}
+.orc .topbar{height:66px;padding:0 18px}.orc .topbar-left{font-size:12px}.orc .top-actions>.pill{display:none}
+.orc .activity-button{padding:8px 11px;font-size:11px}
+.orc .content{padding:24px 18px 80px}.orc .page-heading{display:block;margin-bottom:20px}
+.orc h1,.orc.apex h1{font-size:40px}.orc .page-heading p{font-size:12px}.orc .profile{margin-top:18px}
+.orc .hero{grid-template-columns:1fr}.orc .hero-copy{padding:20px}.orc .hero-copy h2{font-size:24px}.orc .telemetry-art{min-height:120px}.orc .speed strong{font-size:48px}.orc .hero{margin-bottom:18px}
+.orc .grid{display:flex;flex-direction:column;gap:18px}.orc .tuning-panel,.orc .right-column{width:100%}.orc .right-column{display:grid;grid-template-columns:1fr}
+.orc .panel-head{padding:17px 19px}.orc .control-row{padding:16px 19px}.orc .aside-note{margin-top:14px}
+.orc .savebar{bottom:70px;margin-top:16px;padding:12px 8px;gap:8px}.orc .savebar button{padding:10px 12px;font-size:12px}.orc .save-state{font-size:10px;max-width:115px}
+.orc .mobile-nav{display:flex;justify-content:space-around;position:fixed;bottom:0;left:0;right:0;padding:6px 8px max(8px,env(safe-area-inset-bottom));z-index:10;background:var(--panel);border-top:1px solid var(--line);min-height:70px}
+.orc .mobile-nav button{display:flex;align-items:center;flex-direction:column;gap:3px;font-size:10px;border:0;background:transparent;padding:6px 15px;color:var(--muted)}
+.orc .mobile-nav button.active{color:var(--accent)}
+.orc .toast-area,.orc.apex .toast-area{bottom:145px;left:16px;right:16px;transform:none;width:auto}
+.orc .toast{padding:14px}.orc .drawer{top:108px;bottom:82px}.orc .critical{align-items:flex-start}
+}
+@media(prefers-reduced-motion:reduce){.orc *,.orc *:before,.orc *:after{animation:none!important;transition:none!important}}
+/* Keep tuning within reach on the companion: compact the session summary. */
+@media(max-width:760px){.orc .hero{grid-template-columns:minmax(0,1fr) 86px}.orc .hero-copy{padding:15px}.orc .hero-copy h2{font-size:20px;margin:6px 0;line-height:1.15}.orc .hero-copy p{font-size:10px}.orc .hero-copy .eyebrow{display:none}.orc .hero-copy .pill{font-size:9px;margin-bottom:6px;padding:4px 7px}.orc .telemetry-art{min-height:0;gap:0}.orc .speed strong{font-size:34px;letter-spacing:-1px}.orc .speed small{font-size:7px;letter-spacing:.3px}.orc .wave,.orc .telemetry-label{display:none}.orc .content{padding-top:20px}.orc .page-heading h1{margin-top:6px}.orc .toast .close{min-height:36px}}
+@media(max-width:760px){.orc .savebar,.orc.apex .savebar{position:fixed;left:18px;right:18px;bottom:70px;margin:0;z-index:11}.orc .content{padding-bottom:155px}}
+
+/* ROUND TWO / VECTOR and REDLINE: instruments first. */
+.orc.vector{--bg:#0b1112;--panel:#111a1c;--line:#2c3d3e;--text:#e6eeea;--muted:#9cadaa;--accent:#a6e6b4;--on-accent:#0d2116;--tint:#a6e6b40b;--success:#a6e6b4;--warning:#edbd6e;--danger:#ff9c8d;--radius:2px;--body:DM,sans-serif;--heading:Barlow,sans-serif}
+.orc.redline{--bg:#101112;--panel:#191b1d;--line:#343739;--text:#f2f0e9;--muted:#a6a9aa;--accent:#ff7952;--on-accent:#1d100a;--tint:#ff79520d;--success:#b9dbb2;--warning:#f3c36e;--danger:#ff9c8d;--radius:0px;--body:DM,sans-serif;--heading:Barlow,sans-serif}
+.orc:is(.vector,.redline) .content{max-width:1600px;padding:24px 30px 12px}
+.orc:is(.vector,.redline) .shell{grid-template-columns:170px minmax(0,1fr)}
+.orc:is(.vector,.redline) .sidebar{padding:24px 14px;gap:32px}
+.orc:is(.vector,.redline) .brand{font:600 21px Barlow,sans-serif;gap:8px}
+.orc:is(.vector,.redline) .brand-mark{font:600 25px Barlow,sans-serif;border-radius:0;background:transparent;border:1px solid var(--accent);color:var(--accent)}
+.orc:is(.vector,.redline) .nav-item{font-size:12px;min-height:48px}
+.orc:is(.vector,.redline) .nav-item.active{border-left:2px solid var(--accent)}
+.orc:is(.vector,.redline) .sidebar nav{gap:5px}
+.orc:is(.vector,.redline) .topbar{height:60px;padding:0 30px}
+.orc:is(.vector,.redline) .topbar-left strong{font:600 17px Barlow,sans-serif;letter-spacing:1px}
+.orc:is(.vector,.redline) .topbar-left small{font:9px ui-monospace,monospace;letter-spacing:1px}
+.orc:is(.vector,.redline) .pill{border-radius:2px;font:10px ui-monospace,monospace}
+.orc:is(.vector,.redline) .eyebrow{font-family:ui-monospace,monospace;font-weight:400;font-size:9px;letter-spacing:1.6px}
+.orc:is(.vector,.redline) .page-heading{align-items:center;margin-bottom:20px}
+.orc:is(.vector,.redline) .page-heading h1{font:600 55px/.95 Barlow,sans-serif;letter-spacing:.2px;margin:9px 0}
+.orc:is(.vector,.redline) .page-heading p{font-size:11px}
+.orc:is(.vector,.redline) .profile{display:grid;grid-template-columns:1fr 1fr;column-gap:12px;min-width:310px}
+.orc:is(.vector,.redline) .profile label{grid-row:1;margin-bottom:6px;font-size:8px}
+.orc:is(.vector,.redline) .profile select{grid-row:2;font-size:11px;min-height:40px;margin:0!important;padding:9px}
+.orc .profile .profile-level{display:block;margin-top:6px;font-size:11px;font-style:italic;line-height:1.4;color:var(--muted)}
+.orc:is(.vector,.redline) .profile .profile-level{grid-row:3;grid-column:1/-1;font-size:10px}
+.orc:is(.vector,.redline) .hero{grid-template-columns:minmax(200px,.72fr) minmax(0,2fr);margin-bottom:12px;min-height:230px}
+.orc:is(.vector,.redline) .hero-copy{padding:24px;border-right:1px solid var(--line);position:relative;background:repeating-linear-gradient(135deg,transparent,transparent 10px,#ffffff02 10px,#ffffff02 11px)}
+.orc:is(.vector,.redline) .hero-copy h2{font:600 29px/1.1 Barlow,sans-serif;text-transform:uppercase;margin:10px 0;max-width:260px}
+.orc:is(.vector,.redline) .hero-copy p{font:10px/1.6 ui-monospace,monospace}
+.orc .source-meta{display:flex;gap:18px;margin-top:24px;font:8px ui-monospace,monospace;color:var(--muted)}.orc .source-meta b{color:var(--text);margin-left:5px;font-size:10px}
+.orc .instrument{padding:13px 19px 10px;background:#080d0e;min-width:0;color:var(--accent)}
+.orc .instrument-heading,.orc .instrument-footer{display:flex;justify-content:space-between;gap:12px;font:8px ui-monospace,monospace;letter-spacing:1px;color:var(--muted)}
+.orc .instrument-tag{color:var(--accent)}.orc .instrument-body{display:grid;grid-template-columns:minmax(95px,.7fr) minmax(150px,1.3fr) minmax(95px,.7fr);align-items:center;gap:10px;min-height:183px}
+.orc .instrument-speed{display:flex;flex-direction:column;gap:4px}.orc .instrument-caption{font:8px ui-monospace,monospace;letter-spacing:1px;color:var(--muted)}.orc .instrument-speed>strong{font:600 70px/.95 Barlow,sans-serif;letter-spacing:-2px}.orc .instrument-speed>small{font:9px ui-monospace,monospace;color:var(--accent)}
+.orc .instrument-display svg{display:block;width:100%;height:180px;max-width:320px;margin:auto}.orc .instrument-metrics{display:grid;gap:14px}.orc .instrument-metrics span{display:block;font:8px ui-monospace,monospace;color:var(--muted);letter-spacing:1px;margin-bottom:3px}.orc .instrument-metrics b{font:400 20px ui-monospace,monospace}.orc .instrument-metrics small{font:8px ui-monospace,monospace;margin-left:6px}
+.orc .instrument-footer{border-top:1px solid var(--line);padding-top:8px;font-size:7px}.orc .instrument-footer .status-dot{width:4px;height:4px}
+.orc .channel-strip{display:grid;grid-template-columns:repeat(3,1fr) 175px;border:1px solid var(--line);margin-bottom:18px;background:var(--panel)}.orc .channel-strip>div{position:relative;padding:10px 16px 14px;border-right:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:8px}.orc .channel-strip span{font:8px ui-monospace,monospace;color:var(--muted);letter-spacing:.7px}.orc .channel-strip b{font:12px ui-monospace,monospace}.orc .channel-strip i{position:absolute;bottom:5px;left:16px;right:16px;height:2px;background:var(--line)}.orc .channel-strip i:after{content:'';width:var(--level);height:2px;display:block;background:var(--accent)}.orc .channel-strip button{border:0;font:9px ui-monospace,monospace;display:flex;align-items:center;justify-content:center;gap:8px;color:var(--accent);background:transparent;padding:9px}
+.orc:is(.vector,.redline) .grid{grid-template-columns:minmax(0,1fr) 270px;gap:18px}
+.orc:is(.vector,.redline) .panel-head{padding:15px 18px}
+.orc:is(.vector,.redline) .panel-head h2{font:600 20px Barlow,sans-serif;letter-spacing:.8px}
+.orc:is(.vector,.redline) .panel-head small{font-size:10px}
+.orc:is(.vector,.redline) .tabs{padding:6px 10px;gap:4px}
+.orc:is(.vector,.redline) .tabs button{min-height:36px;font:500 10px ui-monospace,monospace;text-transform:uppercase;letter-spacing:1px}
+.orc:is(.vector,.redline) .control-row{display:grid;grid-template-columns:170px 1fr;column-gap:20px;padding:14px 18px;align-items:center}
+.orc:is(.vector,.redline) .control-label{grid-column:1;grid-row:1/3;margin:0;gap:8px}
+.orc:is(.vector,.redline) .control-label label{font-size:12px}
+.orc:is(.vector,.redline) .control-label output{font:17px ui-monospace,monospace}
+.orc:is(.vector,.redline) .control-row>small{grid-column:2;font-size:9px;margin-bottom:4px}
+.orc:is(.vector,.redline) .control-row input{grid-column:2;grid-row:2;height:18px;margin:0}
+.orc:is(.vector,.redline) .range-endpoints{display:none}
+.orc:is(.vector,.redline) .device{padding:13px 16px;gap:10px}
+.orc:is(.vector,.redline) .device h3{font-size:11px}
+.orc:is(.vector,.redline) .device small{font:9px ui-monospace,monospace}
+.orc:is(.vector,.redline) .device-icon{width:30px;height:30px;border:0}
+.orc:is(.vector,.redline) .aside-note{margin-top:14px;padding:16px}
+.orc:is(.vector,.redline) .aside-note h3{font-size:12px}
+.orc:is(.vector,.redline) .aside-note p{font-size:10px;margin:7px 0}
+.orc:is(.vector,.redline) .savebar{position:sticky;bottom:0;background:var(--bg);border-top:1px solid var(--line);padding:12px 0;z-index:5}
+.orc:is(.vector,.redline) .savebar button{font:11px ui-monospace,monospace;min-width:105px}
+.orc:is(.vector,.redline) .save-state{font:10px ui-monospace,monospace}
+.orc:is(.vector,.redline) .toast-area{right:24px;bottom:100px}
+.orc:is(.vector,.redline) .toast{border-radius:3px}.orc.vector .toast{border-left-width:2px}.orc.redline .toast{border-left-width:4px}
+.orc:is(.vector,.redline) .drawer{border-radius:3px}
+/* VECTOR / matte avionics. A slim navigation rail and engraved instrument divisions. */
+.orc.vector .sidebar{background:#0e1516}.orc.vector .instrument{background:radial-gradient(ellipse at 50% 55%,#172e232e,transparent 70%),#080e0c}
+.orc.vector .hero{border-top:2px solid #719882}.orc.vector .page-heading h1{letter-spacing:2px}.orc.vector .panel{border-top-color:#52635f}.orc.vector .primary{background:#c3e7c9;color:#0b2012}
+.orc.vector .rail-note{font:8px/2 ui-monospace,monospace;color:var(--muted);margin:0 0 20px}
+/* REDLINE / race engineering. Horizontal pit-wall navigation and oversized numeric hierarchy.
+   The shell stacks the navigation over the workspace as a one-column grid, not in block flow: in block flow
+   WebKitGTK repainted a card that grew in place (Settings > App, Measurement > General) only to its old height. */
+.orc.redline .shell{grid-template-columns:minmax(0,1fr);align-content:start}.orc.redline .sidebar{flex-direction:row;align-items:center;justify-content:space-between;padding:14px 30px;gap:20px;border-right:0;border-bottom:1px solid var(--line);background:#e9e7df;color:#141617}.orc.redline .sidebar nav{display:flex;gap:7px}.orc.redline .sidebar .eyebrow,.orc.redline .side-bottom{display:none}.orc.redline .sidebar .brand{font-size:25px;font-style:italic}.orc.redline .sidebar .brand-mark{color:#bd3711;border-color:#bd3711}.orc.redline .sidebar .brand-dot{color:#bd3711!important}.orc.redline .sidebar .nav-item{color:#424645;min-height:40px;padding:8px 18px;font-size:11px;border:0}.orc.redline .sidebar .nav-item.active{background:#17191a;color:#fff;border-left:3px solid #c4411d}.orc.redline .topbar{height:44px}.orc.redline .topbar .activity-button{min-height:32px;padding:4px 12px}.orc.redline .content{max-width:1450px}.orc.redline .page-heading h1{font-size:66px;font-style:italic;letter-spacing:-.8px}.orc.redline .hero{border-left:4px solid var(--accent);grid-template-columns:minmax(210px,.85fr) minmax(0,2fr)}.orc.redline .hero-copy:after{content:'///';position:absolute;right:16px;bottom:8px;color:var(--accent);font:600 italic 48px Barlow,sans-serif;opacity:.22}.orc.redline .hero-copy h2{font-style:italic;font-size:34px}.orc.redline .instrument{background:#111213}.orc.redline .instrument-speed>strong{color:var(--text);font-size:86px;font-style:italic}.orc.redline .instrument-speed{border-left:2px solid var(--accent);padding-left:14px}.orc.redline .tabs button.active{color:var(--text);background:transparent;border-bottom:2px solid var(--accent)}.orc.redline .primary{background:var(--text);border-color:var(--text);color:#131516}.orc.redline .savebar .primary:after{content:' ↗';color:#a32e0c}.orc.redline .channel-strip button{background:var(--tint)}.orc.redline .panel-head{border-left:2px solid var(--accent)}
+@media(max-width:1150px) and (min-width:761px){.orc:is(.vector,.redline) .profile{min-width:260px;max-width:300px}.orc:is(.vector,.redline) .page-heading h1{font-size:42px}.orc:is(.vector,.redline) .hero{grid-template-columns:1fr}.orc .instrument-body{grid-template-columns:1fr 1.4fr 1fr}.orc:is(.vector,.redline) .hero-copy{border-right:0;border-bottom:1px solid var(--line);padding:12px 18px;display:grid;grid-template-columns:1fr auto}.orc .source-meta{grid-column:2;grid-row:1/4;margin:0;align-items:center;flex-direction:column;justify-content:center}.orc:is(.vector,.redline) .hero-copy h2{font-size:24px;margin:4px 0;max-width:none}.orc:is(.vector,.redline) .hero-copy .eyebrow{display:none}.orc:is(.vector,.redline) .hero-copy .pill{justify-self:start;margin:0}.orc:is(.vector,.redline) .grid{grid-template-columns:minmax(0,1fr) 210px}.orc:is(.vector,.redline) .control-row{grid-template-columns:1fr;padding:12px 16px;gap:6px}.orc:is(.vector,.redline) .control-label{grid-row:auto;grid-column:1}.orc:is(.vector,.redline) .control-row>small{grid-column:1}.orc:is(.vector,.redline) .control-row input{grid-column:1;grid-row:auto}.orc.redline .sidebar .nav-item{padding:8px 12px}.orc .channel-strip{grid-template-columns:repeat(3,1fr)}.orc .channel-strip button{grid-column:1/-1;min-height:32px}}
+@media(max-width:760px){.orc:is(.vector,.redline) .shell{display:block}.orc:is(.vector,.redline) .sidebar{display:none}.orc:is(.vector,.redline) .topbar{padding:0 16px;height:56px}.orc:is(.vector,.redline) .topbar-left small{display:none}.orc:is(.vector,.redline) .topbar .activity-button{min-height:40px}.orc:is(.vector,.redline) .content{padding:20px 14px 155px}.orc:is(.vector,.redline) .page-heading{margin-bottom:16px}.orc:is(.vector,.redline) .page-heading h1{font-size:44px;letter-spacing:0}.orc:is(.vector,.redline) .page-heading p{font-size:10px}.orc:is(.vector,.redline) .profile{min-width:0;max-width:none;margin-top:16px;gap:6px 10px}.orc:is(.vector,.redline) .profile label{font-size:8px;margin:0}.orc:is(.vector,.redline) .profile select{min-height:44px;font-size:10px}.orc:is(.vector,.redline) .hero{grid-template-columns:1fr;min-height:0}.orc .source-meta{display:none}.orc:is(.vector,.redline) .hero-copy{padding:12px 15px;border-right:0;border-bottom:1px solid var(--line)}.orc:is(.vector,.redline) .hero-copy .pill{font-size:8px;letter-spacing:.5px;margin-bottom:2px}.orc:is(.vector,.redline) .hero-copy h2{font-size:23px;max-width:none;margin:6px 0 3px}.orc:is(.vector,.redline) .hero-copy p{font-size:9px}.orc .instrument{padding:10px 12px}.orc .instrument-heading{font-size:7px}.orc .instrument-body{grid-template-columns:70px minmax(100px,1fr) 65px;gap:8px;min-height:145px}.orc .instrument-display svg{height:135px}.orc .instrument-speed>strong,.orc.redline .instrument-speed>strong{font-size:48px;letter-spacing:-1px}.orc .instrument-speed>small{font-size:7px;line-height:1.6}.orc .instrument-caption{font-size:6px;letter-spacing:.3px}.orc .instrument-metrics{gap:12px}.orc .instrument-metrics b{font-size:12px}.orc .instrument-metrics small{font-size:6px;display:block;margin:2px 0 0}.orc .instrument-metrics span{font-size:6px;letter-spacing:.5px}.orc .instrument-footer{font-size:6px;letter-spacing:.2px}.orc.redline .instrument-speed{padding-left:8px}.orc .channel-strip{grid-template-columns:repeat(3,1fr);margin-bottom:14px}.orc .channel-strip>div{padding:9px 9px 14px;display:block}.orc .channel-strip span{font-size:7px;display:block;margin-bottom:4px}.orc .channel-strip b{font-size:11px}.orc .channel-strip i{left:9px;right:9px}.orc .channel-strip button{grid-column:1/-1;min-height:40px;border-top:1px solid var(--line)}.orc:is(.vector,.redline) .grid{display:flex;gap:14px}.orc:is(.vector,.redline) .control-row{display:block;padding:14px 16px}.orc:is(.vector,.redline) .control-label{margin-bottom:7px}.orc:is(.vector,.redline) .control-row>small{display:block;margin-bottom:6px}.orc:is(.vector,.redline) .tabs button{min-height:44px}.orc:is(.vector,.redline) .savebar{position:fixed;left:14px;right:14px;bottom:70px;padding:10px 8px;margin:0;z-index:11}.orc:is(.vector,.redline) .savebar button{font-size:10px;min-width:80px;padding:10px}.orc:is(.vector,.redline) .save-state{font-size:9px}.orc:is(.vector,.redline) .toast-area{left:14px;right:14px;bottom:145px;width:auto}.orc.redline .page-heading h1{font-size:46px}.orc.redline .hero-copy:after{font-size:32px}}
+
+/* ---- Language switcher (top right, beside Activity) ---- */
+.orc .top-actions{flex-shrink:0}.orc .topbar-left{min-width:0}
+.orc .language-button{display:flex;align-items:center;justify-content:center;gap:6px;min-width:58px;padding:8px 10px;font-size:11px}
+.orc .language-button svg{width:12px;height:12px;flex-shrink:0}
+.orc .language-menu{position:fixed;z-index:45;width:200px;max-height:calc(100vh - 110px);overflow:auto;padding:6px;background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);box-shadow:0 16px 55px #0003}
+.orc .language-menu[hidden]{display:none}
+.orc .language-menu button{display:flex;justify-content:space-between;align-items:center;width:100%;min-height:44px;background:transparent;border-color:transparent;text-align:left;padding:8px 12px;font-size:13px}
+.orc .language-menu button[aria-checked=true]{color:var(--accent);background:var(--tint)}
+.orc .language-menu button:hover{border-color:var(--accent)}
+.orc.redline .language-button{min-height:32px;padding:4px 10px}
+@media(max-width:760px){.orc .top-actions{gap:6px}.orc .topbar-left{gap:6px}.orc .topbar-left small{display:none}.orc .topbar-left strong{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.orc .language-button,.orc.redline .language-button{min-height:44px;min-width:54px;padding:8px}}
+
+/* ---- Components ---- */
+.orc .orc-region{display:contents}
+.orc .brand-mark img{display:block;width:100%;height:100%;border-radius:inherit}
+.orc:is(.vector,.redline) .brand-mark{padding:2px}
+.orc .status-dot.idle{background:var(--muted)}
+.orc .status-dot.wait{background:var(--warning)}
+.orc .field-input{width:100%;min-width:0;min-height:44px;padding:10px 12px;border:1px solid var(--line);border-radius:var(--radius);background:var(--panel);color:var(--text);font:inherit}
+.orc .field-input.stepper{max-width:140px}
+.orc .control-body{grid-column:2;min-width:0}
+.orc .control-body p{margin:0 0 8px}
+.orc .control-row>select,.orc .control-row>.switch,.orc .control-row>.range-pair,.orc .control-row>.mono,.orc .control-row>button,.orc .control-row>details{grid-column:2}
+.orc .control-row.is-disabled .control-label{opacity:.55}
+.orc:is(.vector,.redline) .control-row input.field-input{height:auto;min-height:36px}
+.orc:is(.vector,.redline) .control-row>details.options,.orc:is(.vector,.redline) .control-row>.range-pair{grid-column:2;grid-row:3}
+.orc:is(.vector,.redline) .control-row>.range-pair{grid-row:2}
+.orc:is(.vector,.redline) .control-row .options-body input,.orc:is(.vector,.redline) .control-row .switch input{grid-column:auto;grid-row:auto}
+.orc input:disabled,.orc select:disabled,.orc button:disabled{cursor:not-allowed;opacity:.5}
+/* Every select draws in the theme's colours, not the toolkit's: the desktop window's engine otherwise paints a light box. */
+.orc{color-scheme:dark}
+.orc select{border:1px solid var(--line);border-radius:var(--radius);padding:8px 12px;min-height:40px}
+.orc select,.orc select.field-input,.orc .profile select{-webkit-appearance:none;appearance:none;background-color:var(--panel);color:var(--text);padding-right:32px;background-image:linear-gradient(45deg,transparent 50%,var(--muted) 50%),linear-gradient(135deg,var(--muted) 50%,transparent 50%);background-position:calc(100% - 17px) 50%,calc(100% - 12px) 50%;background-size:5px 5px,5px 5px;background-repeat:no-repeat}
+.orc select option{background-color:var(--panel);color:var(--text)}
+.orc .control-label output:empty{display:none}
+.orc .note-row small{margin:0}
+.orc .switch{display:inline-flex;align-items:center;gap:8px;min-height:32px;cursor:pointer}
+.orc .switch input{accent-color:var(--accent);width:18px;height:18px;margin:0}
+.orc .range-pair{display:grid;grid-template-columns:minmax(0,1fr);gap:4px}
+.orc .control-row .range-pair>input{grid-column:1;grid-row:auto;width:100%;min-width:0}
+.orc details>summary{cursor:pointer}
+.orc details.more>summary.device{list-style:revert;color:var(--muted);font-size:12px;border-bottom:1px solid var(--line)}
+.orc details.options{margin-top:8px}
+.orc details.options>summary{color:var(--muted);font-size:11px}
+.orc .options-body{display:flex;gap:8px;flex-wrap:wrap;align-items:center;padding-top:10px}
+.orc .options-body button,.orc .action-row button{min-height:36px;padding:6px 12px;font-size:12px}
+.orc .inline-field{display:inline-flex;align-items:center;gap:8px;font-size:12px;color:var(--muted)}
+.orc .action-row{display:flex;flex-wrap:wrap;gap:8px}
+.orc .panel-tool{border:0;min-height:36px;padding:6px;color:var(--text)}
+.orc .section-picker{max-width:48%;min-width:0}
+.orc .screen-picker{display:block;min-width:0;max-width:300px;width:100%}
+.orc:is(.vector,.redline) .profile.single,.orc:is(.vector,.redline) .profile.screen-picker{display:block;min-width:0;max-width:300px;width:100%}
+.orc:is(.vector,.redline) .profile.single label,.orc:is(.vector,.redline) .profile.screen-picker label{display:block}
+.orc .screen-note{padding:13px 18px;margin:14px 18px;border:1px solid var(--warning);border-radius:var(--radius);display:flex;align-items:center;justify-content:space-between;gap:12px}
+.orc .screen-note p{font-size:12px;color:var(--muted)}
+.orc .critical-actions{display:flex;gap:8px;flex-wrap:wrap}
+.orc .device-link{display:block;flex:1;min-width:0;text-align:left;border:0;background:transparent;padding:0;min-height:0}
+.orc .device-link small,.orc .device-link h3{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.orc .device-mode{min-height:30px;padding:3px 10px;font-size:11px;margin-left:auto;white-space:nowrap}
+.orc .device-mode+.status-dot{margin-left:8px}
+.orc .search-button{min-height:40px;padding:8px 10px}
+.orc.redline .search-button{min-height:32px;padding:4px 10px}
+.orc .search-menu{width:340px;display:grid;gap:6px}
+.orc .search-menu .search-results{display:grid;gap:2px;max-height:min(300px,calc(100vh - 190px));overflow-y:auto}
+.orc .search-menu .search-results button{flex-direction:column;align-items:flex-start;gap:2px}
+.orc .search-hint{font-size:12px;color:var(--muted);padding:8px 12px}
+.orc .drawer-tools{display:flex;gap:6px;align-items:center}
+.orc .drawer-tools .quiet{font-size:11px;min-height:36px;padding:6px 10px}
+.orc .entry-actions{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}
+.orc .entry-actions button{font-size:12px;padding:4px 8px;min-height:32px}
+.orc .drawer li.warning strong{color:var(--warning)}.orc .drawer li.error strong{color:var(--danger)}
+.orc dialog.orc-dialog{padding:0;color:var(--text);width:620px;max-width:calc(100vw - 32px);max-height:85vh;overflow:auto;box-shadow:0 20px 80px #0008}
+.orc dialog.orc-dialog::backdrop{background:#000a}
+.orc .dialog-body{padding:6px 0}
+.orc .dialog-text{padding:12px 23px;font-size:13px;color:var(--text)}
+.orc .dialog-text p{margin:0 0 10px}
+.orc .dialog-text.instructions img{max-width:100%}
+.orc .dialog-buttons{justify-content:flex-end;gap:8px;border-top:1px solid var(--line)}
+.orc .dialog-x{border:0;min-height:36px;padding:4px 10px}
+.orc .warning-text{color:var(--warning)}
+.orc .captured{display:flex;gap:8px}
+.orc .companion img{display:block;max-width:100%;height:auto;margin-top:8px;background:#fff}
+.orc .data-table{width:calc(100% - 46px);margin:8px 23px 16px;border-collapse:collapse;font-size:12px}
+.orc .data-table th,.orc .data-table td{text-align:left;padding:8px 6px;border-bottom:1px solid var(--line)}
+.orc .data-table td{text-align:right}
+.orc .profile-row.vehicle{padding-left:46px}
+.orc .profile-row .control-label span{font-size:13px}
+.orc .button-like{display:inline-flex;align-items:center;justify-content:center;border:1px solid var(--line);border-radius:var(--radius);background:var(--panel);padding:6px 12px;min-height:36px;font-size:12px;cursor:pointer}
+.orc .button-like:hover{border-color:var(--accent)}
+.orc .button-like:focus-within{outline:3px solid var(--accent);outline-offset:4px}
+.orc .pager{justify-content:space-between}
+.orc .help-text p{font-size:13px;color:var(--muted);margin:0 0 10px}
+@media(max-width:760px){.orc .control-body{grid-column:auto}.orc .section-picker{max-width:60%}.orc .screen-note{margin:12px;flex-direction:column;align-items:flex-start}.orc .search-menu{width:calc(100vw - 32px)}.orc .profile-row.vehicle{padding-left:28px}}
+/* At phone width the screen body and the rig panel stack and each takes the full width, whatever its content. */
+@media(max-width:760px){.orc .grid{align-items:stretch}.orc .grid>.orc-region,.orc .grid .panel{width:100%;min-width:0;box-sizing:border-box}
+/* The heading's select (page selector, or the start screen's single Active profile) spans the content width. */
+.orc .profile.screen-picker,.orc:is(.vector,.redline) .profile.screen-picker,.orc:is(.vector,.redline) .profile.single{max-width:none;width:100%;margin-left:0}}
+/* The connection overlay while the browser reconnects. */
+#loading{position:fixed;inset:0;z-index:100;display:grid;place-items:center;background:#101112e6;color:#f2f0e9;font:14px DM,sans-serif}
+#loading-message{max-width:420px;text-align:center;padding:24px}

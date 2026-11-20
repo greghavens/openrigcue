@@ -1,0 +1,29 @@
+[package]
+name = "openrigcue-steamvr-driver"
+description = "SteamVR (vrserver) driver for Linux that removes motion-rig movement from headset and controller poses"
+version = "0.1.0"
+edition = "2021"
+license = "GPL-3.0-or-later"
+rust-version = "1.82"
+publish = false
+
+[lib]
+# cdylib: the driver_openrigcue.so that vrserver loads.
+# rlib: lets the integration tests and the pose maths be exercised in-process.
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+libc = "0.2.189"
+openrigcue-rigpose = { version = "0.1.0", path = "../openrigcue-rigpose" }
+serde = { version = "1.0.229", features = ["derive"] }
+toml = "0.8.23"
+
+# The workspace forbids unsafe code. This crate is a C++ ABI plug-in, so it opts out locally;
+# every unsafe block lives in src/openvr.rs, src/hook.rs or src/provider.rs and carries a SAFETY comment.
+[lints.rust]
+unsafe_code = "allow"
+unsafe_op_in_unsafe_fn = "deny"
+
+[lints.clippy]
+all = { level = "warn", priority = -1 }
+undocumented_unsafe_blocks = "warn"
